@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>接碗小铺 · 卡牌商店预览</title><link rel="icon" href="/icons/bobing-mark.svg" type="image/svg+xml"></head>
+<body><div id="root"></div>
+<script type="module">
+import React, { useReducer, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import Shop from '/src/game/Shop.jsx';
+import { createGame, gameReducer } from '/src/game/state.js';
+import { COUNTERCLOCKWISE_SEATS } from '/src/game/config.js';
+import { resolveAction } from '/src/game/rolls.js';
+import { initializeShop } from '/src/game/stock.js';
+import '/src/paper-theme.css';
+
+// 复用真正的商店与规则；仅预览初始盘缠不同，正式对局从游戏首页开始。
+function Preview() {
+  const [game, update] = useReducer(gameReducer, null, () => {
+    const state = createGame(COUNTERCLOCKWISE_SEATS.map((seat, index) => ({id:index?'guest-'+index:'you',name:['林小满','小美','陈主管','阿杰','大林','老吴'][index],seat,gender:index===1?'female':'male'})));
+    state.stage = 'shop';
+    state.players[0].coins = 100;
+    initializeShop(state, Math.random);
+    state.event = '商店预览：100金币体验购买，正式对局资源独立。';
+    return state;
+  });
+  const current = useRef(game); current.current = game;
+  const dispatch = action => {
+    if (action.type === 'NEXT_ROUND') { window.location.href='/'; return; }
+    update(resolveAction(current.current, action));
+  };
+  return React.createElement('main',{className:'paper-page paper-game paper-shop'},
+    React.createElement('header',{className:'paper-header'},React.createElement('div',{className:'paper-brand'},React.createElement('span',{className:'paper-seal'},'博'),React.createElement('div',null,React.createElement('b',null,'今晚谁是状元'),React.createElement('small',null,'卡牌商店预览 · 100金币体验'))),React.createElement('a',{href:'/',style:{color:'#6e7a61',fontSize:'12px'}},'返回游戏')),
+    React.createElement(Shop,{game,dispatch}));
+}
+createRoot(document.getElementById('root')).render(React.createElement(Preview));
+</script></body></html>

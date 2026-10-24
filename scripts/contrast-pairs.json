@@ -1,0 +1,13 @@
+[
+  { "fg": "color-cream", "bg": "color-night", "min": 4.5, "note": "正文 / 夜空背景" },
+  { "fg": "color-cream", "bg": "color-night-raised", "min": 4.5, "note": "正文 / 浮层卡片" },
+  { "fg": "color-muted", "bg": "color-night", "min": 4.5, "note": "次要文字 / 夜空背景" },
+  { "fg": "color-muted", "bg": "color-night-raised", "min": 4.5, "note": "次要文字 / 浮层卡片" },
+  { "fg": "color-gold", "bg": "color-night", "min": 4.5, "note": "金色数值 / 夜空背景" },
+  { "fg": "color-gold", "bg": "color-cloth", "min": 4.5, "note": "金色数值 / 桌布" },
+  { "fg": "color-cream", "bg": "color-cloth", "min": 4.5, "note": "正文 / 桌布" },
+  { "fg": "color-cream", "bg": "color-vermilion", "min": 4.5, "note": "主按钮文字 / 朱砂红" },
+  { "fg": "color-cream", "bg": "color-cloth-deep", "min": 4.5, "note": "正文 / 深桌布" },
+  { "fg": "color-night", "bg": "color-gold", "min": 4.5, "note": "金底深字(印章)" },
+  { "fg": "color-night", "bg": "color-porcelain-light", "min": 4.5, "note": "青花浅色底深字" }
+]

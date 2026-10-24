@@ -1,0 +1,122 @@
+[
+  {
+    "id": "art-01",
+    "source": "《今晚谁是状元》新员工博饼立绘.png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-01.webp",
+    "thumbnail": "/art/imported/art-01-thumb.webp",
+    "label": "素材 01"
+  },
+  {
+    "id": "art-02",
+    "source": "《今晚谁是状元》新员工博饼立绘-2.png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": true,
+    "src": "/art/imported/art-02.webp",
+    "thumbnail": "/art/imported/art-02-thumb.webp",
+    "label": "素材 02"
+  },
+  {
+    "id": "art-03",
+    "source": "《今晚谁是状元》新员工博饼立绘 (1).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-03.webp",
+    "thumbnail": "/art/imported/art-03-thumb.webp",
+    "label": "素材 03"
+  },
+  {
+    "id": "art-04",
+    "source": "《今晚谁是状元》新员工博饼立绘 (2).png",
+    "width": 2848,
+    "height": 1600,
+    "transparent": false,
+    "src": "/art/imported/art-04.webp",
+    "thumbnail": "/art/imported/art-04-thumb.webp",
+    "label": "素材 04"
+  },
+  {
+    "id": "art-05",
+    "source": "《今晚谁是状元》新员工博饼立绘 (3).png",
+    "width": 1600,
+    "height": 2848,
+    "transparent": false,
+    "src": "/art/imported/art-05.webp",
+    "thumbnail": "/art/imported/art-05-thumb.webp",
+    "label": "素材 05"
+  },
+  {
+    "id": "art-06",
+    "source": "《今晚谁是状元》新员工博饼立绘 (4).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-06.webp",
+    "thumbnail": "/art/imported/art-06-thumb.webp",
+    "label": "素材 06"
+  },
+  {
+    "id": "art-07",
+    "source": "《今晚谁是状元》新员工博饼立绘 (5).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-07.webp",
+    "thumbnail": "/art/imported/art-07-thumb.webp",
+    "label": "素材 07"
+  },
+  {
+    "id": "art-08",
+    "source": "《今晚谁是状元》新员工博饼立绘 (6).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-08.webp",
+    "thumbnail": "/art/imported/art-08-thumb.webp",
+    "label": "素材 08"
+  },
+  {
+    "id": "art-09",
+    "source": "《今晚谁是状元》新员工博饼立绘 (7).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-09.webp",
+    "thumbnail": "/art/imported/art-09-thumb.webp",
+    "label": "素材 09"
+  },
+  {
+    "id": "art-10",
+    "source": "《今晚谁是状元》新员工博饼立绘 (8).png",
+    "width": 1728,
+    "height": 2304,
+    "transparent": false,
+    "src": "/art/imported/art-10.webp",
+    "thumbnail": "/art/imported/art-10-thumb.webp",
+    "label": "素材 10"
+  },
+  {
+    "id": "art-11",
+    "source": "《今晚谁是状元》新员工博饼立绘 (9).png",
+    "width": 1600,
+    "height": 2848,
+    "transparent": false,
+    "src": "/art/imported/art-11.webp",
+    "thumbnail": "/art/imported/art-11-thumb.webp",
+    "label": "素材 11"
+  },
+  {
+    "id": "art-12",
+    "source": "《今晚谁是状元》新员工博饼立绘 (10).png",
+    "width": 2848,
+    "height": 1600,
+    "transparent": false,
+    "src": "/art/imported/art-12.webp",
+    "thumbnail": "/art/imported/art-12-thumb.webp",
+    "label": "素材 12"
+  }
+]

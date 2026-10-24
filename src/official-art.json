@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hero-b",
+    "label": "主角B",
+    "src": "/art/official/hero-b.webp",
+    "type": "character",
+    "transparent": false
+  },
+  {
+    "id": "hero-a",
+    "label": "主角A",
+    "src": "/art/official/hero-a.webp",
+    "type": "character",
+    "transparent": true
+  },
+  {
+    "id": "banquet",
+    "label": "博饼宴会厅背景",
+    "src": "/art/official/banquet.webp",
+    "type": "scene",
+    "transparent": false
+  },
+  {
+    "id": "entrance",
+    "label": "晚宴入口过场",
+    "src": "/art/official/entrance.webp",
+    "type": "scene",
+    "transparent": false
+  },
+  {
+    "id": "office",
+    "label": "黄昏办公室过场",
+    "src": "/art/official/office.webp",
+    "type": "scene",
+    "transparent": false
+  },
+  {
+    "id": "wu",
+    "label": "老吴",
+    "src": "/art/official/wu.webp",
+    "type": "character",
+    "transparent": false
+  },
+  {
+    "id": "lin",
+    "label": "大林",
+    "src": "/art/official/lin.webp",
+    "type": "character",
+    "transparent": false
+  },
+  {
+    "id": "mei",
+    "label": "小美",
+    "src": "/art/official/mei.webp",
+    "type": "character",
+    "transparent": false
+  },
+  {
+    "id": "chen",
+    "label": "陈主管",
+    "src": "/art/official/chen.webp",
+    "type": "character",
+    "transparent": false
+  },
+  {
+    "id": "hero-c",
+    "label": "主角C",
+    "src": "/art/official/hero-c.webp",
+    "type": "character",
+    "transparent": false
+  }
+]

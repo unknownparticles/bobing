@@ -1,0 +1,90 @@
+.effect-layer {
+  --effect-color: #ad442e;
+  --effect-source: #345a46;
+  --effect-target: #ad442e;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  background: transparent;
+  z-index: 160;
+  pointer-events: none;
+  color: var(--effect-color);
+  animation: effect-presence 1100ms ease both;
+}
+.effect-layer::backdrop { background: transparent; pointer-events: none; }
+.effect-kind-champion, .effect-kind-transfer, .effect-kind-score { --effect-color: #986a20; --effect-target: #986a20; }
+.effect-kind-shield { --effect-color: #345a46; --effect-target: #345a46; }
+.effect-kind-reflect { --effect-color: #76508a; --effect-target: #76508a; }
+.effect-kind-substitute { --effect-color: #47667b; --effect-target: #47667b; }
+.effect-kind-bond { --effect-color: #b04e62; --effect-target: #b04e62; }
+.effect-outcome-blocked { --effect-color: #345a46; --effect-target: #345a46; }
+.effect-banner {
+  position: absolute;
+  top: clamp(90px, 18vh, 175px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100vw - 28px);
+  padding: 12px 18px;
+  border: 1px solid color-mix(in srgb, var(--effect-color) 55%, #ede1ca);
+  border-radius: 5px 17px 5px 17px;
+  background: #fff9ebf5;
+  box-shadow: 0 8px 28px #47341c23, inset 0 0 0 3px #fff9eb, inset 0 0 0 4px #b8935633;
+  animation: effect-banner-enter 1100ms ease both;
+}
+.effect-banner-icon { display: grid; place-items: center; flex: 0 0 38px; height: 38px; border: 1px solid currentColor; border-radius: 50%; }
+.effect-banner-icon .card-symbol-frame, .effect-token .card-symbol-frame { display: none; }
+.effect-banner-players { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 12px; line-height: 1.35; }
+.effect-banner-players b:first-child { color: var(--effect-source); }
+.effect-banner-players b:last-child { color: var(--effect-target); }
+.effect-banner strong { display: block; margin-top: 3px; font-size: 17px; line-height: 1.4; letter-spacing: .06em; color: #38372a; }
+.effect-outcome { display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0; align-self: flex-start; padding: 3px 5px; border: 1px solid currentColor; border-radius: 3px; font-size: 10px; }
+.effect-trajectory { position: absolute; inset: 0; overflow: visible; }
+.effect-path-shadow { fill: none; stroke: #fff7e3e8; stroke-width: 8; }
+.effect-path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-dasharray: 7 6; animation: effect-path-flow 550ms linear infinite; }
+.effect-kind-reflect .effect-path { stroke-dasharray: 3 5; stroke-width: 3; }
+.effect-kind-bond .effect-path { stroke-dasharray: 2 7; stroke-linecap: round; }
+.effect-endpoint { position: absolute; width: var(--endpoint-size); height: var(--endpoint-size); transform: translate(-50%, -50%); display: grid; place-items: center; color: var(--effect-source); }
+.effect-endpoint-target { color: var(--effect-target); }
+.effect-player-ring { position: absolute; inset: 0; border: 2px solid currentColor; border-radius: 50%; box-shadow: 0 0 0 4px #fff5d9b3, 0 0 0 6px currentColor; animation: effect-ring 1100ms ease both; }
+.effect-endpoint-target .effect-player-ring { border-style: dashed; }
+.effect-kind-shield .effect-player-ring, .is-self-effect .effect-player-ring { border-width: 3px; box-shadow: 0 0 0 5px #fff5d9b3, 0 0 0 7px currentColor, 0 0 24px #ac884f66; }
+.effect-player-label { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 5px; padding: 4px 8px; border: 1px solid currentColor; border-radius: 4px; background: #fff9edfa; box-shadow: 0 2px 8px #3c302122; white-space: nowrap; max-width: 180px; }
+.effect-player-label small { font-size: 9px; opacity: .9; }
+.effect-player-label b { max-width: 108px; overflow: hidden; text-overflow: ellipsis; font-size: 12px; }
+.effect-endpoint.is-floating { background: #fbf0d9; border-radius: 50%; box-shadow: 0 4px 18px #3b302c29; }
+.effect-endpoint.is-floating .paper-avatar { width: 56px; height: 56px; border-radius: 50%; }
+.effect-traveler { position: absolute; left: 0; top: 0; offset-distance: 0%; offset-rotate: 0deg; animation: effect-flight 1100ms cubic-bezier(.35, 0, .25, 1) both; }
+.effect-traveler.is-still { transform: translate(-50%, -50%); animation: effect-self-token 1100ms ease both; }
+.effect-token { display: grid; place-items: center; width: 49px; height: 49px; border: 2px solid currentColor; border-radius: 13px 4px 13px 4px; background: #fff6df; box-shadow: 0 3px 0 #a4814133, 0 0 0 4px #fff9e9bd, 0 6px 18px #44311e2e; }
+.effect-delta { position: absolute; right: -13px; top: -10px; background: #fff8e7; border: 1px solid currentColor; border-radius: 12px; padding: 2px 6px; font-size: 12px; }
+.effect-impact { position: absolute; width: 70px; height: 70px; border: 3px double currentColor; border-radius: 50%; animation: effect-impact 1100ms ease-out both; }
+.effect-screen-reader { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.effect-layer.is-reduced, .is-reduced .effect-banner, .is-reduced .effect-path, .is-reduced .effect-player-ring, .is-reduced .effect-traveler { animation: none; }
+.is-reduced .effect-impact { display: none; }
+@keyframes effect-presence { 0% { opacity: 0; } 10%, 85% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes effect-banner-enter { 0% { opacity: 0; transform: translate(-50%, 8px); } 15%, 87% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; transform: translate(-50%, -4px); } }
+@keyframes effect-path-flow { to { stroke-dashoffset: -26; } }
+@keyframes effect-flight { 0%, 14% { offset-distance: 0%; opacity: 0; transform: scale(.7); } 22% { opacity: 1; } 73%, 87% { offset-distance: 100%; opacity: 1; transform: scale(1); } 100% { offset-distance: 100%; opacity: 0; transform: scale(1.12); } }
+@keyframes effect-ring { 0% { transform: scale(.86); opacity: 0; } 20%, 80% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.12); opacity: 0; } }
+@keyframes effect-self-token { 0% { opacity: 0; } 20%, 80% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes effect-impact { 0%, 60% { opacity: 0; transform: translate(-50%, -50%) scale(.65); } 75% { opacity: .8; } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); } }
+@media (max-width: 600px) {
+  .effect-banner { top: 105px; gap: 8px; padding: 10px 12px; }
+  .effect-banner strong { font-size: 15px; }
+  .effect-banner-players { font-size: 11px; }
+  .effect-banner-icon { flex-basis: 32px; height: 32px; }
+  .effect-player-label { gap: 3px; padding: 3px 5px; max-width: 140px; }
+  .effect-player-label b { max-width: 78px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .effect-layer:not(.is-reduced) { animation: none; }
+}

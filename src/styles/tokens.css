@@ -1,0 +1,61 @@
+/*
+ * 设计令牌:夜色红金。
+ * 场景样式只通过 var(--...) 引用这里的值,不要在别处写颜色字面量。
+ * 颜色配对的对比度由 scripts/check-contrast.mjs 校验。
+ */
+:root {
+  /* 颜色 */
+  --color-night: #140d1f;
+  --color-night-raised: #231735;
+  --color-cloth: #5a1320;
+  --color-cloth-deep: #3d0c16;
+  --color-vermilion: #b3261e;
+  --color-vermilion-bright: #e0432f;
+  --color-gold: #f2c35b;
+  --color-gold-deep: #b8892b;
+  --color-cream: #fff1d6;
+  --color-muted: #cdbba0;
+  --color-porcelain: #2f5aa8;
+  --color-porcelain-light: #8fb0e6;
+  --color-shadow: #05020a;
+
+  /* 字号:最小 12px */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-display: 56px;
+
+  /* 字体 */
+  --font-body: system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --font-display: 'STKaiti', 'KaiTi', 'Songti SC', 'Noto Serif SC', serif;
+
+  /* 间距 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* 阴影 */
+  --shadow-soft: 0 6px 18px rgb(5 2 10 / 45%);
+  --shadow-press: 0 3px 0 var(--color-shadow);
+
+  /* 触控尺寸 */
+  --tap-min: 44px;
+  --button-primary-height: 56px;
+
+  /* 动画时长 */
+  --dur-fast: 120ms;
+  --dur-base: 240ms;
+  --dur-slow: 480ms;
+}

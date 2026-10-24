@@ -1,0 +1,56 @@
+/* 沿用桌面的深色与金色；商店独占内容区域，避免键盘焦点进入已暂停的对局。 */
+.round-shop { position: relative; max-width: 1080px; margin: 0 auto; padding: 46px 24px; }
+.shop-kicker { display: flex; align-items: center; gap: 8px; color: var(--gold); font-size: 12px; letter-spacing: 2px; }
+.shop-intro h1 { font: 700 clamp(26px, 4vw, 40px)/1.4 serif; margin: 18px 0 12px; }
+.shop-intro h1:focus { outline: none; }
+.shop-intro p, .shop-rule { color: #d3c5ac; font-size: 13px; line-height: 1.8; }
+.shop-wallet { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 24px 0; padding: 16px 20px; background: #20291e; border: 1px solid var(--line); }
+.shop-wallet svg, .shop-wallet strong { color: var(--gold); }
+.shop-wallet strong { font-size: 30px; }
+.shop-wallet span { font-size: 13px; }
+.shop-wallet small { margin-left: auto; color: #d3c5ac; }
+.shop-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.shop-product { display: flex; flex-direction: column; padding: 24px; background: #1b251eeF; border: 1px solid #89734e; box-shadow: 4px 5px #10160e; }
+.shop-item-icon { width: 58px; height: 58px; display: grid; place-items: center; background: #354532; border: 1px solid #89734e; color: #f5d88c; }
+.shop-product h2 { font-size: 20px; margin: 20px 0 8px; }
+.shop-product p { flex: 1; color: #d3c5ac; font-size: 13px; line-height: 1.9; margin: 0 0 22px; }
+.shop-owned { font-size: 12px; color: #d3c5ac; margin-bottom: 14px; }
+.shop-owned b { color: #fff0c7; }
+.shop-product button, .shop-footer button, .target-picker button { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px; min-height: 48px; background: #94472f; border: 1px solid #d7a065; }
+.shop-product button:disabled { opacity: 1; color: #c2baa9; background: #2a3026; border-color: #5a5e4b; }
+.shop-rule { margin: 24px 0; }
+.shop-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 22px; border-top: 1px solid var(--line); }
+.shop-footer span { font-size: 12px; color: #d3c5ac; line-height: 1.8; }
+.shop-footer button { flex-shrink: 0; padding: 14px 24px; }
+.shop-record { margin-top: 28px; color: #d3c5ac; font-size: 12px; line-height: 2; }
+.shop-record summary { cursor: pointer; }
+.shop-record ul { padding-left: 20px; }
+.game-coins { display: flex; align-items: center; gap: 5px; color: #f5d88c; margin: 5px 0; }
+/* 事件参与正常排版，给底部座位留出空间，避免结果被主角立绘遮挡。 */
+.game-shell .event-pop { position: relative; top: auto; left: auto; transform: none; width: fit-content; max-width: calc(100% - 32px); margin: 36px auto 18px; animation: none; }
+/* 活跃光圈固定在头像上，不能以整个座位为定位容器。 */
+.game-shell .seat-avatar { position: relative; }
+.round-info .turn-name { display: inline-block; white-space: nowrap; }
+.seat-protection { display: inline-flex; align-items: center; gap: 3px; background: #244b3b; color: #c8f0d8; padding: 3px 6px; font-size: 10px; margin-top: 3px; }
+.turn-order i { display: inline-flex; align-items: center; gap: 3px; }
+.game-actions { flex-wrap: wrap; }
+.game-actions button { min-width: 112px; }
+.game-actions .action-note { flex: 1 0 100%; font-size: 11px; color: #d3c5ac; margin: 4px 0 0; line-height: 1.7; }
+.target-picker { grid-column: 1 / -1; padding: 16px; background: #253123; border: 1px solid var(--line); }
+.target-picker h2 { margin: 0 0 12px; font-size: 15px; }
+.target-options { display: flex; flex-wrap: wrap; gap: 10px; }
+.target-picker button { font-size: 12px; background: #354532; }
+.game-log { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 12px; font-size: 12px; color: #d3c5ac; }
+.game-log summary { cursor: pointer; }
+.game-log ul { margin: 8px 0 0; padding-left: 20px; line-height: 1.9; }
+@media (max-width: 700px) {
+  .round-shop { padding: 28px 16px; }
+  .shop-products { grid-template-columns: 1fr; gap: 14px; }
+  .shop-product { padding: 20px; }
+  .shop-product h2 { margin-top: 14px; }
+  .shop-product p { margin-bottom: 14px; }
+  .shop-footer { flex-direction: column; align-items: stretch; gap: 14px; }
+  .shop-wallet small { flex-basis: 100%; margin-left: 0; }
+  .game-actions .action-note { grid-column: 1 / -1; }
+  .target-options { flex-direction: column; }
+}

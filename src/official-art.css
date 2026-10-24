@@ -1,0 +1,11 @@
+/* Named assets: isolated overrides keep the base layout intact. */
+.game-shell{background:linear-gradient(#10160e99,#10160ed9),url('/art/official/banquet.webp') center top/cover fixed}
+.scene-office{background:linear-gradient(90deg,#10160e44,#10160ecf),url('/art/official/office.webp') center/cover}
+.scene-entrance{background:linear-gradient(90deg,#10160e44,#10160ecf),url('/art/official/entrance.webp') center/cover}
+.story-screen .story-copy{padding:25px;background:#132015da;border:1px solid #a88c5b77}
+.story-screen .story-lantern,.story-screen .story-table-mark{display:none}
+.game-shell .seat-name{background:#132015e8;border:1px solid #766447;padding:4px;border-radius:3px}
+.game-shell .seat-awards{background:#132015df;border-radius:3px}
+.art-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+.official-preview{height:350px}
+@media(max-width:700px){.game-shell{background-attachment:scroll}.story-screen{background-position:40% center}.story-screen .story-copy{padding:18px}.official-preview{height:280px}.seat-avatar.has-portrait{height:64px;width:48px}.seat-bottom:has(.has-portrait){bottom:-20px}}
