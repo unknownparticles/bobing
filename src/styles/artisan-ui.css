@@ -228,7 +228,8 @@
   .paper-game .paper-prize-icon { width: 29px; height: 30px; }
   .paper-game .paper-prize > div > b { font-size: 12px; }
   .paper-game .paper-prize-stock { padding: 4px; }
-  .paper-game .paper-action-dock { border-radius: 12px 12px 0 0; border-bottom: 0; box-shadow: inset 0 0 0 3px #fff8e79e, 0 -5px 20px #4c4b2620; }
+  /* 固定操作栏用不透明纸面：半透明渐变会把后面的奖池文字透出来，形成重影。 */
+  .paper-game .paper-action-dock { border-radius: 12px 12px 0 0; border-bottom: 0; box-shadow: inset 0 0 0 3px #fff8e7, inset 0 0 0 4px #c2a7754a, 0 -5px 20px #4c4b2620; background: linear-gradient(110deg, #fff8e9, #f1e6cf); }
   .paper-game .paper-self { width: 100%; }
   .paper-game .paper-self > div { display: grid; grid-template-columns: auto auto; gap: 0 8px; }
   .paper-game .paper-self > div > b { grid-row: 1; grid-column: 1; }
@@ -257,6 +258,12 @@
   .paper-game .paper-result > span, .paper-game .paper-table-note { display: none; }
   .paper-game .paper-result h1 { font-size: 18px; margin-block: 5px; }
   .paper-game .paper-self { padding-bottom: 7px; margin-bottom: 8px; }
+  /* 短屏先保证骰碗和结果可见：压缩闲聊预留、构筑细节与桌边头像，固定操作栏仍保留主要按钮。 */
+  .paper-game .paper-banter-lane { height: 58px; }
+  .paper-game .paper-speech-bubble { top: 6px; }
+  .paper-game .build-status .build-rules { display: none; }
+  .paper-game .paper-rival .paper-avatar { width: 34px; height: 34px; }
+  .paper-game .paper-turn-banner { margin-top: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .stock-shop .playing-card, .paper-game .paper-primary { transition: none; }

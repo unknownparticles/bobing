@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ArrowLeft, BookOpen, Check, Circle, Coins, Crown, Diamond, Dices, Gem, Hand, Leaf, Medal, RotateCcw, Shield, Smartphone, Sparkles } from 'lucide-react';
 import { Avatar, Brand, DiceBowl, SoundButton } from './PaperPrimitives';
 import { AWARDS } from '../game/config';
@@ -75,6 +75,25 @@ export default function PaperGame({ game, speech, archive, rewards, storageError
     // 手机保留固定操作栏；公开预告增高后，将本碗结果移到栏上方再供确认。
     if (result && dock && result.bottom > dock.top - 14) window.scrollBy({ top: result.bottom - dock.top + 14, behavior: 'instant' });
   }, [game.stage, isYourTurn]);
+  useLayoutEffect(() => {
+    // 固定操作栏高度随称号、按钮与安全区变化；按实测值预留等高的底部空间，
+    // 既不留下写死高度造成的空白，也不会在操作栏变高时盖住结果。
+    const dock = actionDock.current;
+    if (!dock) return undefined;
+    const root = document.documentElement;
+    const measure = () => root.style.setProperty('--dock-height', `${Math.ceil(dock.getBoundingClientRect().height)}px`);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(dock);
+    return () => { observer.disconnect(); root.style.removeProperty('--dock-height'); };
+  }, [game.stage]);
+  useEffect(() => {
+    // 矮屏首屏放不下整张桌子；开局时只把被操作栏压住的骰碗移进来，不替用户多做滚动。
+    if (window.innerWidth > 700 || !isYourTurn || game.stage !== 'ready') return;
+    const bowl = document.querySelector('.paper-bowl-stage')?.getBoundingClientRect();
+    const dock = actionDock.current?.getBoundingClientRect();
+    if (bowl && dock && bowl.bottom > dock.top - 14) window.scrollBy({ top: bowl.bottom - dock.top + 14, behavior: 'instant' });
+  }, [isYourTurn, game.stage]);
   useEffect(() => {
     if (window.innerWidth > 700 || !isYourTurn || !['comparison', 'changing', 'changed'].includes(presentation?.phase)) return;
     const process = document.querySelector('.dice-presentation')?.getBoundingClientRect();

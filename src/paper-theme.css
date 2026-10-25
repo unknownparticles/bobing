@@ -429,7 +429,8 @@ svg { flex-shrink: 0; vertical-align: middle; }
   .paper-story-copy > p { font-size: 12px; }
   .paper-story-copy blockquote { font-size: 16px; margin: 22px 0; }
   .paper-story-copy > .paper-primary { width: 100%; }
-  .paper-game { padding-bottom: calc(218px + env(safe-area-inset-bottom)); }
+  /* 底部空间按实测操作栏高度预留（JS 写入 --dock-height），写死值会在矮屏留下空白。 */
+  .paper-game { padding-bottom: var(--dock-height, 218px); }
   .paper-game.paper-shop { padding-bottom: 20px; }
   .paper-game .paper-header { height: 67px; }
   .paper-game .paper-brand small { font-size: 7px; }

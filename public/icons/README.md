@@ -12,8 +12,8 @@
 | `pwa-192.png` | 192×192 | PWA 安装图标 |
 | `pwa-512.png` | 512×512 | PWA 安装图标、小图标与分享封面的源图 |
 | `pwa-maskable-512.png` | 512×512 | Android 自适应图标，包含安全留白 |
-| `../social/bobing-share.png` | 1200×630 | 链接分享封面 |
+| `../social/bobing-share.png` | 1200×630 | 链接分享封面（imagegen 插画，提示词见 `output/imagegen/2026-10-24-cover/`） |
 
-在项目根目录运行 `python3 scripts/build-web-assets.py` 重新生成 ICO、16/32px PNG 和分享封面。需要 Pillow；默认使用 macOS 宋体/冬青黑体或 Linux Noto CJK 字体，也可传入 `--title-font`、`--body-font`。
+在项目根目录运行 `python3 scripts/build-web-assets.py` 重新生成 ICO 与 16/32px PNG。需要 Pillow。分享封面为插画成品，不随该脚本重新生成。
 
 网页图标使用 Vite BASE_URL，兼容根目录及 `/bobing/`。`index.html` 的 canonical、Open Graph 和 Twitter 图片使用 README 记录的 GitHub Pages 绝对地址；更换站点域名或部署目录时需要同步更新。

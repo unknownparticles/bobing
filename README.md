@@ -1,5 +1,7 @@
 # 博饼 · 今晚谁是状元
 
+![红釉金纹骰碗与六颗跃起的骰子](output/imagegen/2026-10-24-cover/bobing-cover-web.webp)
+
 六颗骰子，和同事们围坐一桌争状元。使用 React 和 Vite 构建，支持电脑和手机浏览器。
 
 在线游玩：[unknownparticles.github.io/bobing](https://unknownparticles.github.io/bobing/)
@@ -63,15 +65,17 @@ PWA 需要 HTTPS（本地 `localhost` 也可）。开发服务器不注册 Servi
 
 ## 网页图标与分享封面
 
-已提供 SVG、16/32 像素 PNG 及多尺寸 `favicon.ico`，链接分享封面位于 `public/social/bobing-share.png`（1200×630）。`index.html` 包含 Open Graph 和 Twitter 分享标题、描述及图片信息。
+已提供 SVG、16/32 像素 PNG 及多尺寸 `favicon.ico`；链接分享封面为 `public/social/bobing-share.png`（1200×630 插画），与 README 顶部横幅同属一批生成图。`index.html` 包含 Open Graph 和 Twitter 分享标题、描述及图片信息。
 
-使用 Python 3 和 Pillow 可从现有 512 像素骰碗图标重新生成兼容图标与分享封面：
+横幅与分享封面由 imagegen CLI（`gpt-image-2`）生成，提示词与原图保存在 `output/imagegen/2026-10-24-cover/`；封面不再由脚本合成，重新运行图标脚本不会覆盖它。
+
+使用 Python 3 和 Pillow 可从现有 512 像素骰碗图标重新生成兼容图标：
 
 ```sh
 python3 scripts/build-web-assets.py
 ```
 
-默认查找 macOS 宋体/冬青黑体或 Linux Noto CJK 字体；其他环境可用 `--title-font /path/to/title-font`、`--body-font /path/to/body-font` 指定中文字体。静态产物随项目一起保存，运行和构建网站无需 Python。
+静态产物随项目一起保存，运行和构建网站无需 Python。
 
 网页图标路径兼容部署子目录。分享元数据的绝对地址使用当前线上站点 `https://unknownparticles.github.io/bobing/`；更换域名或部署目录时，同步修改 `index.html` 的 canonical、`og:url`、`og:image` 和 `twitter:image`。资源用途清单见 `public/icons/README.md`。
 
