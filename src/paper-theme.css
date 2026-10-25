@@ -59,6 +59,16 @@ svg { flex-shrink: 0; vertical-align: middle; }
 .paper-home-art .paper-bowl-stage { width: 100%; --bowl-width: 350px; margin-top: 95px; }
 .paper-home-art .paper-orbit { width: 430px; }
 .paper-home-art .orbit-outer { width: 470px; }
+/* 首页骰碗可交互：点击或摇一摇都触发一次博饼，碗下给出判奖结果。 */
+.paper-home-bowl { position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.paper-home-bowl-trigger { display: block; width: 100%; padding: 0; border: 0; background: none; border-radius: 50%; }
+.paper-home-bowl-trigger:hover .bowl3d-fallback-art { filter: brightness(1.04); }
+.paper-home-bowl-trigger:hover .paper-orbit { border-color: #b9a55faa; }
+.paper-home-bowl-caption { margin: 12px 0 0; min-height: 22px; font: 15px/1.5 var(--paper-serif); letter-spacing: 2px; color: var(--paper-muted); text-align: center; transition: color .16s; }
+.paper-home-bowl-caption.is-rolling { color: #8a6a2f; }
+.paper-home-bowl-caption.tier-major { color: var(--paper-red); }
+.paper-home-bowl-caption.tier-grand { color: var(--paper-red); font-size: 17px; letter-spacing: 3px; }
+.paper-home-bowl-caption.tier-supreme { color: var(--paper-red); font-size: 19px; font-weight: 600; letter-spacing: 3px; }
 .paper-cloud { position: absolute; height: 12px; width: 94px; border-top: 1px solid #b3b89b; border-bottom: 1px solid #c6c6a9; border-radius: 20px; transform: rotate(-5deg); }
 .cloud-one { top: 122px; left: 2px; }
 .cloud-two { bottom: 62px; right: -10px; width: 130px; }
@@ -401,6 +411,7 @@ svg { flex-shrink: 0; vertical-align: middle; }
   .paper-art-label { font-size: 11px; top: 40px; }
   .paper-art-stamp { right: 6px; top: 46px; font-size: 15px; padding: 8px 6px; }
   .paper-home-art .paper-bowl-stage { --bowl-width: 240px; margin-top: 59px; height: 165px; }
+  .paper-home-bowl-caption { margin-top: 8px; font-size: 13px; letter-spacing: 1px; }
   .paper-home-art .paper-orbit { width: 280px; }
   .paper-home-art .orbit-outer { width: 310px; }
   .cloud-one { width: 48px; top: 78px; left: -5px; }

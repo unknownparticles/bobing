@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Dices, Leaf, Sparkles, UserRound } from 'lucide-react';
 import { Portrait, officialCharacters } from '../Art';
-import { Brand, DiceBowl, SoundButton } from './PaperPrimitives';
+import { Brand, SoundButton } from './PaperPrimitives';
+import HomeBowl from './HomeBowl';
 import { createMatch, GAME_MODES, isValidPlayerCount, MIN_PLAYER_COUNT, MAX_PLAYER_COUNT, STORY_CHAPTERS } from '../game/modes';
 import { getHero } from '../game/heroes';
 import CardIcon from './CardIcon';
@@ -27,8 +28,8 @@ export function Home({ onStart, muted, setMuted, initialMode = 'story', archive,
         {archive?.cyclesCompleted > 0 && <button className="paper-text-button new-cycle-button" onClick={onNewCycle}>开启第 {archive.cyclesCompleted + 1} 周目 · 试试新的构筑 <ArrowRight size={15} /></button>}
         <p className="paper-mode-description">商店随机发牌，怎样搭配由你决定。图鉴和成就自动保存。</p>
         {storageError && <p className="archive-storage-error" role="alert">{storageError}</p>}
-        <div className="paper-home-meta"><span><Dices size={14} />随机来牌 · 自由出招</span><span><Sparkles size={14} />轮间小铺 · 神明助阵</span><span>点击 / 手机摇一摇</span></div></div>
-      <div className="paper-home-art"><span className="paper-moon" /><span className="paper-art-label">一碗团圆 · 满桌好运</span><DiceBowl dice={[4, 4, 2, 6, 3, 1]} decorative /><span className="paper-art-stamp">好<br />彩<br />头</span><div className="paper-cloud cloud-one" /><div className="paper-cloud cloud-two" /></div>
+        <div className="paper-home-meta"><span><Dices size={14} />随机来牌 · 自由出招</span><span><Sparkles size={14} />轮间小铺 · 神明助阵</span><span>点击骰碗 · 手机摇一摇</span></div></div>
+      <div className="paper-home-art"><span className="paper-moon" /><span className="paper-art-label">一碗团圆 · 满桌好运</span><HomeBowl /><span className="paper-art-stamp">好<br />彩<br />头</span><div className="paper-cloud cloud-one" /><div className="paper-cloud cloud-two" /></div>
     </section>
     <footer className="paper-home-footer"><Leaf size={14} /><span>故事 · 快速 · 经典，总有一桌等你</span><span>WHO WILL BE TONIGHT’S ZHUANGYUAN?</span></footer>
   </main>;
