@@ -1,0 +1,91 @@
+{
+  "model": "gpt-image-2",
+  "size": "1024x1536",
+  "quality": "high",
+  "characters": [
+    {
+      "id": "tang",
+      "subject": "唐采购，男性，商务休闲装，青绿马甲，精明热心，手持小采购箱与无字清单。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/tang.png",
+      "archive": "public/art/archive/characters/tang.webp"
+    },
+    {
+      "id": "lu",
+      "subject": "陆会计与陆主管，同一位女性财务同事，细框眼镜，深绿职业装，细致冷静，手持算盘或计算器。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/lu.png",
+      "archive": "public/art/archive/characters/lu.webp"
+    },
+    {
+      "id": "qiao",
+      "subject": "乔经理，女性，成熟利落，墨绿色西装，端正自信，手持无字工作夹。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/qiao.png",
+      "archive": "public/art/archive/characters/qiao.webp"
+    },
+    {
+      "id": "ye",
+      "subject": "叶设计，女性，年轻设计师，米色围裙叠穿青绿衬衫，灵动审美，手持无字色卡和画笔。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/ye.png",
+      "archive": "public/art/archive/characters/ye.webp"
+    },
+    {
+      "id": "liang",
+      "subject": "梁运营，男性，青年同事，浅绿衬衫挽袖，活泼健谈，手持无字工作板。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/liang.png",
+      "archive": "public/art/archive/characters/liang.webp"
+    },
+    {
+      "id": "fei",
+      "subject": "费策划，男性，青年同事，灰绿针织衫，思考而友善，手持无字笔记本和铅笔。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/fei.png",
+      "archive": "public/art/archive/characters/fei.webp"
+    },
+    {
+      "id": "zhou",
+      "subject": "周总，男性，成熟稳重，深色西装和朱砂领带，亲切从容，手持中秋奖盒。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/zhou.png",
+      "archive": "public/art/archive/characters/zhou.webp"
+    },
+    {
+      "id": "su",
+      "subject": "苏姐，女性，成熟亲切，米色职业套装，轻松微笑，手持无字资料夹。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/su.png",
+      "archive": "public/art/archive/characters/su.webp"
+    },
+    {
+      "id": "gu",
+      "subject": "顾工，男性，技术主管，细框眼镜，深青绿色休闲衬衫，沉稳细致，手持合上的笔记本电脑。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/gu.png",
+      "archive": "public/art/archive/characters/gu.webp"
+    },
+    {
+      "id": "xuguan",
+      "subject": "许冠，男性，销售主管，利落西装，朱红口袋巾，自信爽朗，手持中秋礼盒。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/xuguan.png",
+      "archive": "public/art/archive/characters/xuguan.webp"
+    },
+    {
+      "id": "yan",
+      "subject": "严主管，男性，测试主管，整洁青灰衬衫，严谨但友善，手持放大镜与无字检查板。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/yan.png",
+      "archive": "public/art/archive/characters/yan.webp"
+    },
+    {
+      "id": "an",
+      "subject": "安主管，女性，行政主管，浅青色职业套装，温暖可靠，手持茶盘与小月饼盒。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/an.png",
+      "archive": "public/art/archive/characters/an.webp"
+    },
+    {
+      "id": "shen",
+      "subject": "沈主管，女性，风控主管，深绿西装，冷静从容，手持一柄收起的小伞和无字资料夹。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/shen.png",
+      "archive": "public/art/archive/characters/shen.webp"
+    },
+    {
+      "id": "jie",
+      "subject": "阿杰，男性，年轻同事，蓝色休闲衬衫，开朗机灵，手持一颗象牙骰子。",
+      "raw": "output/imagegen/archive-character-regeneration/20261024-225138/raw/jie.png",
+      "archive": "public/art/archive/characters/jie.webp"
+    }
+  ]
+}

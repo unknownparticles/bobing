@@ -1,0 +1,84 @@
+{
+  "model": "gpt-image-2",
+  "size": "1024x1536",
+  "quality": "high",
+  "characters": [
+    {
+      "id": "hero-a",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/hero-a.png",
+      "official": "public/art/official/hero-a.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "hero-b",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/hero-b.png",
+      "official": "public/art/official/hero-b.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "hero-c",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/hero-c.png",
+      "official": "public/art/official/hero-c.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "chen",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/chen.png",
+      "official": "public/art/official/chen.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "mei",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/mei.png",
+      "official": "public/art/official/mei.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "wu",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/wu.png",
+      "official": "public/art/official/wu.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    },
+    {
+      "id": "lin",
+      "prompt_file": "docs/art-generation-prompts.md",
+      "raw": "output/imagegen/character-regeneration/20261024-224344/raw/lin.png",
+      "official": "public/art/official/lin.webp",
+      "source_size": [
+        1024,
+        1536
+      ],
+      "source_has_alpha": true
+    }
+  ]
+}

@@ -120,7 +120,9 @@ def normalize_portrait(content: bytes) -> Image.Image:
 
 def main() -> int:
     args = parse_args()
+    args.output_dir = args.output_dir.resolve()
     if args.reuse_raw:
+        args.reuse_raw = args.reuse_raw.resolve()
         api_key = ""
     elif args.key_file:
         api_key = args.key_file.read_text().strip()
