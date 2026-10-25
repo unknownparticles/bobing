@@ -1,0 +1,79 @@
+/* 当前效果与长期档案共用纸面主题，不预设固定构筑路线。 */
+.build-status { width: 100%; margin-block: 9px; border: 1px solid var(--paper-line); border-radius: 7px 3px; padding: 10px 12px; background: var(--paper-raised); color: var(--paper-ink); font-size: 12px; text-align: left; }
+.build-status p { margin: 6px 0; line-height: 1.6; }
+.build-status-main { display: flex; align-items: center; flex-wrap: wrap; gap: 7px 14px; }
+.build-status-main > b, .build-status-main > span, .build-seat-promise, .build-forecasts > b { display: flex; align-items: center; gap: 5px; }
+.build-status-main > b { font-size: 13px; }
+.build-promise { color: var(--paper-red); }
+.build-seat-promise { flex-wrap: wrap; }
+.build-forecasts { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--paper-line); }
+.build-forecasts > b { color: var(--paper-red); }
+.build-forecasts ul { margin: 6px 0; padding-left: 18px; }
+.build-forecasts li { padding-block: 3px; }
+.build-forecasts small { display: inline-block; margin-left: 10px; font-size: 12px; color: var(--paper-muted); }
+.build-forecasts > p, .build-rules { color: var(--paper-muted); }
+.build-rules { margin-top: 3px; }
+.paper-game > .build-status { width: calc(100% - 64px); max-width: 1340px; margin: 9px auto 0; }
+.paper-game .paper-rivals:not(.is-large-table) > .paper-rival:only-child { flex: 0 1 210px; }
+.archive-page { color: var(--paper-ink); }
+.archive-home { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; border: 1px solid var(--paper-line); border-radius: 5px; padding: 8px 12px; background: var(--paper-raised); font-size: 13px; }
+.archive-body { max-width: 1060px; margin: 32px auto 64px; padding-inline: 24px; }
+.archive-intro h1 { margin: 12px 0; font: 600 clamp(30px, 4vw, 43px) var(--paper-serif); }
+.archive-intro p { margin: 9px 0; color: var(--paper-muted); font-size: 13px; line-height: 1.8; }
+.archive-storage-error { padding: 12px 15px; border: 1px solid var(--paper-red); color: var(--paper-red-deep); border-radius: 5px; line-height: 1.7; }
+.archive-paths { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-block: 22px; }
+.archive-paths > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px; background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 7px 2px; font-size: 13px; }
+.archive-paths > div > span:last-child { width: 100%; color: var(--paper-muted); font-size: 12px; }
+.archive-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--paper-line); padding-bottom: 10px; }
+.archive-tabs button { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 9px 20px; background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 5px; }
+.archive-tabs [aria-selected="true"] { color: var(--paper-raised); background: var(--paper-ink); border-color: var(--paper-ink); }
+.archive-panel { padding-top: 20px; }
+.archive-filter-bar { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; }
+.archive-filter-bar label { display: grid; gap: 7px; font-size: 12px; }
+.archive-filter-bar select { min-height: 44px; padding: 8px 30px 8px 10px; border: 1px solid var(--paper-line); border-radius: 4px; color: var(--paper-ink); background: var(--paper-raised); font: inherit; font-size: 14px; }
+.archive-filter-bar p { margin: 0 0 3px auto; text-align: right; font-size: 12px; line-height: 1.7; color: var(--paper-muted); }
+.archive-state-guide, .archive-panel-note { color: var(--paper-muted); font-size: 12px; line-height: 1.8; margin: 14px 0; }
+.archive-collection { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.archive-card { padding: 16px; min-width: 0; border: 1px solid var(--paper-line); border-radius: 8px 3px; background: var(--paper-raised); }
+.archive-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.archive-state { display: inline-flex; align-items: center; gap: 3px; color: var(--paper-muted); font-size: 12px; }
+.archive-card.is-used { border-color: var(--paper-jade); }
+.archive-card.is-used .archive-state { color: var(--paper-ink); }
+.archive-card.is-locked .archive-state { color: var(--paper-red); }
+.archive-card h2, .archive-achievement h2, .archive-title h2 { margin: 12px 0 6px; font: 600 19px var(--paper-serif); }
+.archive-card small { font-size: 12px; color: var(--paper-muted); }
+.archive-card p, .archive-achievement p, .archive-title p { font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.archive-card-source { padding-top: 10px; border-top: 1px solid var(--paper-line); color: var(--paper-muted); font-size: 12px !important; }
+.archive-achievements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.archive-achievement { border: 1px solid var(--paper-line); background: var(--paper-raised); border-radius: 8px 3px; padding: 16px; }
+.archive-achievement-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 9px; }
+.archive-achievement-heading h2 { margin-top: 0; }
+.archive-achievement-heading > span { display: flex; align-items: center; gap: 4px; white-space: nowrap; color: var(--paper-muted); font-size: 12px; }
+.archive-achievement.is-complete { border-color: var(--paper-ink); }
+.archive-achievement.is-complete .archive-achievement-heading > span { color: var(--paper-ink); }
+.archive-progress { padding: 8px 10px; border-radius: 4px; background: var(--paper); }
+.archive-reward { color: var(--paper-red-deep); margin-bottom: 0; }
+.archive-titles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.archive-title { display: grid; justify-items: start; padding: 20px; border: 1px solid var(--paper-line); border-radius: 8px 3px; background: var(--paper-raised); }
+.archive-title.is-selected { border-color: var(--paper-red); }
+.archive-title small { color: var(--paper-muted); font-size: 12px; line-height: 1.8; }
+.archive-title button { margin-top: 15px; min-height: 44px; padding: 9px 15px; border: 1px solid var(--paper-line); border-radius: 4px; background: var(--paper); }
+.archive-title [aria-pressed="true"] { color: var(--paper-red); border-color: var(--paper-red); }
+.archive-page select:focus-visible, .archive-page summary:focus-visible, .build-status summary:focus-visible { outline: 2px solid var(--paper-red); outline-offset: 3px; }
+@media (max-width: 700px) {
+  .archive-body { margin-top: 22px; padding-inline: 15px; }
+  .archive-paths, .archive-collection { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .archive-achievements { grid-template-columns: 1fr; }
+  .archive-card { padding: 12px; }
+  .archive-home { padding-inline: 9px; }
+  .build-status { padding: 8px 10px; }
+  .paper-game > .build-status { width: calc(100% - 28px); }
+  .build-forecasts small { display: block; margin-left: 0; }
+}
+@media (max-width: 420px) {
+  .archive-collection, .archive-titles { grid-template-columns: 1fr; }
+  .archive-filter-bar { gap: 10px; }
+  .archive-filter-bar p { margin-left: 0; text-align: left; width: 100%; }
+  .archive-tabs { gap: 6px; }
+  .archive-tabs button { flex: 1; padding-inline: 8px; }
+}

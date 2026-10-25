@@ -1,0 +1,14 @@
+Use case: illustration-story
+Asset type: production original Mid-Autumn strategy card illustration atlas.
+Create EXACTLY a 2-column by 2-row uniform grid, overall 1536x864 pixels. EACH cell exactly 768x432, 16:9 landscape. Exact boundaries x=768, y=432. No gutters, no outer margins, no labels or frames. Independently usable cells, no shared scene across cells.
+Style: refined warm contemporary Chinese folk game illustration, clear ink-green outlines, hand-painted gouache shading, subtle ivory rice-paper texture, celadon green, cinnabar red and restrained antique gold. Warm top-left light, elegant coherent shapes and readable silhouettes at small size. Original art, no copied logos. Each subject centered and complete, with at least 10% safe inset on all four sides; no cropped heads, hair, hands, held objects, medals or crowns. No text, no letters, no Chinese characters, no numerals, no pseudo-writing, no UI, no prices, no watermark. Paperwork, flags and plaques completely blank. Dice pips allowed.
+
+Row 1, column 1: 老骥伏枥：一匹精神矍铄的老马跃过低矮石阶，古松与金色光芒，象征积蓄经验后的爆发，完整马头与四蹄。
+
+Row 1, column 2: 双红吉位：圆桌六把椅子中一把青绿椅子被金色光环照亮，椅前恰好两颗四点朱红骰子，完整椅子与骰面。
+
+Row 2, column 1: 四进宝座：一把青绿木椅被金色罗盘光环托起，椅前恰好四颗两点象牙骰子，构图清楚可数，无数字文字。
+
+Row 2, column 2: EMPTY ivory rice-paper texture only, no subject, no objects, no text.
+
+Final check: exact equal 2x2 grid with all important subjects fully inside their own cell. Do not crop top edges, hands or objects; never put a face or medal at a cell boundary. No writing anywhere.

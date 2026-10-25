@@ -1,0 +1,17 @@
+/* 画布与回退共用尺寸，首次加载和设备降级时不会挤动结果或操作栏。 */
+.paper-bowl-stage.bowl3d-stage { width: 100%; }
+.bowl3d-stage .bowl3d-surface { position: absolute; width: calc(var(--bowl-width) * 1.1); height: calc(var(--bowl-width) * .86); left: 50%; top: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+.bowl3d-canvas { display: block; width: 100%; height: 100%; opacity: 0; }
+.has-webgl .bowl3d-canvas { opacity: 1; }
+.bowl3d-stage .bowl3d-fallback { position: absolute; width: var(--bowl-width); height: calc(var(--bowl-width) * .66); pointer-events: none; }
+.bowl3d-fallback-art { display: block; width: 100%; height: 100%; overflow: visible; }
+.has-webgl .bowl3d-fallback { visibility: hidden; }
+.bowl3d-fallback .paper-dice { position: absolute; left: 50%; top: 34%; transform: translate(-50%, -50%); grid-template-columns: repeat(3, min(9vw, 36px)); gap: 9px 15px; }
+.paper-game .bowl3d-fallback .paper-die { width: min(9vw, 36px); height: min(9vw, 36px); }
+.paper-game .bowl3d-stage .paper-orbit { border-color: #b3915540; }
+.paper-game .bowl3d-stage .orbit-outer { border-width: 1px; }
+.bowl3d-stage.is-rolling:not(.has-webgl) .bowl3d-fallback { animation: bowl3d-fallback-rock .3s ease-in-out infinite alternate; }
+@keyframes bowl3d-fallback-rock { from { transform: rotate(-2deg); } to { transform: rotate(2deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .bowl3d-stage.is-rolling .bowl3d-fallback { animation: none; }
+}

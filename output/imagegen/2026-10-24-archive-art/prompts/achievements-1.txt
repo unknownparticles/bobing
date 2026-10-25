@@ -1,0 +1,15 @@
+Use case: illustration-story
+Asset type: production original game achievement commemorative illustration atlas.
+Create EXACTLY a 2-column by 2-row uniform grid, overall 1536x864 pixels. EACH cell exactly 768x432, 16:9 landscape. Exact boundaries x=768, y=432. No gutters, no outer margins, no labels or frames. Independently usable cells, no shared scene across cells.
+Style: refined warm contemporary Chinese folk game illustration, clear ink-green outlines, hand-painted gouache shading, subtle ivory rice-paper texture, celadon green, cinnabar red and restrained antique gold. Warm top-left light, elegant coherent shapes and readable silhouettes at small size. Original art, no copied logos. Each subject centered and complete, with at least 10% safe inset on all four sides; no cropped heads, hair, hands, held objects, medals or crowns. No text, no letters, no Chinese characters, no numerals, no pseudo-writing, no UI, no prices, no watermark. Paperwork, flags and plaques completely blank. Dice pips allowed.
+Design a meaningful standalone commemorative achievement illustration: tactile gold/celadon emblem and relevant small storytelling objects, elegant celebratory composition with generous ivory negative space. This artwork is the same for locked and earned states; later UI adds status and name. Do not draw state labels.
+
+Row 1, column 1: 初登魁首：一枚金色状元奖章，朱砂绶带，一只青瓷骰碗和桂花，表达第一次夺冠的小小荣耀。
+
+Row 1, column 2: 今晚谁是王中王：三座逐级升高的闽南风格小台阶通往一枚华丽金色冠军冠，三张小桌连成旅程，圆月和灯笼庆贺最终夺冠。
+
+Row 2, column 1: 鸿运当头：朱红如意祥云托起金色圆形福运奖章，几颗象牙骰子和桂花，光芒汇聚到奖章，表达累积好运后夺冠。
+
+Row 2, column 2: 借来的好彩头：一枚装满金色月饼奖章的青绿锦袋，红绳和三枚不同奖章被一只手收入袋中，轻松机巧而喜庆。
+
+Final check: exact equal 2x2 grid with all important subjects fully inside their own cell. Do not crop top edges, hands or objects; never put a face or medal at a cell boundary. No writing anywhere.

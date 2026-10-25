@@ -1,0 +1,574 @@
+{
+  "layouts": [
+    {
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "arts": [
+        {
+          "width": 199.46875,
+          "height": 112.1875,
+          "ratio": 1.7779944289693594,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 199.46875,
+          "height": 112.1875,
+          "ratio": 1.7779944289693594,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 202.84375,
+          "height": 114.09375,
+          "ratio": 1.777869076965215,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 650.1875,
+      "leaveBottom": 584.375,
+      "detail": {
+        "width": 320,
+        "height": 180,
+        "ratio": 1.7777777777777777
+      }
+    },
+    {
+      "width": 1536,
+      "height": 1024,
+      "scrollWidth": 1536,
+      "arts": [
+        {
+          "width": 247.75,
+          "height": 139.359375,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.75,
+          "height": 139.359375,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.40625,
+          "height": 139.15625,
+          "ratio": 1.777902537615091,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.421875,
+          "height": 139.171875,
+          "ratio": 1.7778152015268889,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.40625,
+          "height": 139.15625,
+          "ratio": 1.777902537615091,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.40625,
+          "height": 139.15625,
+          "ratio": 1.777902537615091,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.421875,
+          "height": 139.171875,
+          "ratio": 1.7778152015268889,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 247.40625,
+          "height": 139.15625,
+          "ratio": 1.777902537615091,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 961.53125,
+      "leaveBottom": 756.375,
+      "detail": {
+        "width": 320,
+        "height": 180,
+        "ratio": 1.7777777777777777
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "arts": [
+        {
+          "width": 160.140625,
+          "height": 90.078125,
+          "ratio": 1.7777970511708587,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 160.140625,
+          "height": 90.078125,
+          "ratio": 1.7777970511708587,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 154.28125,
+          "height": 86.78125,
+          "ratio": 1.7778177889809146,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 627.609375,
+      "leaveBottom": 644.046875,
+      "detail": {
+        "width": 320,
+        "height": 180,
+        "ratio": 1.7777777777777777
+      }
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "arts": [
+        {
+          "width": 85.453125,
+          "height": 48.0625,
+          "ratio": 1.7779583875162548,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 85.453125,
+          "height": 48.0625,
+          "ratio": 1.7779583875162548,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.171875,
+          "height": 50.15625,
+          "ratio": 1.7778816199376948,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.1875,
+          "height": 50.15625,
+          "ratio": 1.7781931464174454,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.171875,
+          "height": 50.15625,
+          "ratio": 1.7778816199376948,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.171875,
+          "height": 50.15625,
+          "ratio": 1.7778816199376948,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.1875,
+          "height": 50.15625,
+          "ratio": 1.7781931464174454,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 89.171875,
+          "height": 50.15625,
+          "ratio": 1.7778816199376948,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 750.6875,
+      "leaveBottom": 774.375,
+      "detail": {
+        "width": 320,
+        "height": 180,
+        "ratio": 1.7777777777777777
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "arts": [
+        {
+          "width": 141,
+          "height": 79.3125,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 141,
+          "height": 79.3125,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.328125,
+          "height": 49.109375,
+          "ratio": 1.7782373528475979,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.328125,
+          "height": 49.109375,
+          "ratio": 1.7782373528475979,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.34375,
+          "height": 49.125,
+          "ratio": 1.7779898218829517,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.328125,
+          "height": 49.109375,
+          "ratio": 1.7782373528475979,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.328125,
+          "height": 49.109375,
+          "ratio": 1.7782373528475979,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 87.34375,
+          "height": 49.125,
+          "ratio": 1.7779898218829517,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 1385.3125,
+      "leaveBottom": 337.390625,
+      "detail": {
+        "width": 308,
+        "height": 173.25,
+        "ratio": 1.7777777777777777
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "arts": [
+        {
+          "width": 112,
+          "height": 63,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 112,
+          "height": 63,
+          "ratio": 1.7777777777777777,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.328125,
+          "height": 38.984375,
+          "ratio": 1.7783567134268536,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.328125,
+          "height": 38.984375,
+          "ratio": 1.7783567134268536,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.34375,
+          "height": 39,
+          "ratio": 1.7780448717948718,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.328125,
+          "height": 38.984375,
+          "ratio": 1.7783567134268536,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.328125,
+          "height": 38.984375,
+          "ratio": 1.7783567134268536,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        },
+        {
+          "width": 69.34375,
+          "height": 39,
+          "ratio": 1.7780448717948718,
+          "fit": "contain",
+          "natural": [
+            512,
+            288
+          ]
+        }
+      ],
+      "pricesBottom": 1324.359375,
+      "leaveBottom": 327.390625,
+      "detail": {
+        "width": 238,
+        "height": 133.875,
+        "ratio": 1.7777777777777777
+      }
+    }
+  ],
+  "checks": [
+    "56 张素材全部加载，尺寸均为512×288",
+    "三类商品购买、扣款、售罄、场地布置、刷新新货架与缺钱禁用通过",
+    "真实对局掷骰、确认、机器人轮转、随机商店八张插画与离店进入第二轮通过"
+  ],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+Use case: illustration-story
+Asset type: production original Mid-Autumn strategy card illustration atlas.
+Create EXACTLY a 2-column by 2-row uniform grid, overall 1536x864 pixels. EACH cell exactly 768x432, 16:9 landscape. Exact boundaries x=768, y=432. No gutters, no outer margins, no labels or frames. Independently usable cells, no shared scene across cells.
+Style: refined warm contemporary Chinese folk game illustration, clear ink-green outlines, hand-painted gouache shading, subtle ivory rice-paper texture, celadon green, cinnabar red and restrained antique gold. Warm top-left light, elegant coherent shapes and readable silhouettes at small size. Original art, no copied logos. Each subject centered and complete, with at least 10% safe inset on all four sides; no cropped heads, hair, hands, held objects, medals or crowns. No text, no letters, no Chinese characters, no numerals, no pseudo-writing, no UI, no prices, no watermark. Paperwork, flags and plaques completely blank. Dice pips allowed.
+
+Row 1, column 1: 送神符：一只朱红袖手持完全无字的米纸符，将自己身边一尊暗色小神像和灰紫云气温柔送离，保持桌面清亮。
+
+Row 1, column 2: 积福：金色小光点和铜钱般好运逐粒汇入青瓷福袋，袋中柔和光芒累积，空白红纸与桂叶装饰。
+
+Row 2, column 1: 得手就收：一只手把月饼奖章收进青绿锦袋，另一只手合上袋口，外面形成清晰青瓷护罩，守住收益。
+
+Row 2, column 2: 三投定魁：三颗彼此分开的象牙骰子沿一条金色弧路依次通向状元奖章，三次机会和最终目标清楚可辨，没有文字数字。
+
+Final check: exact equal 2x2 grid with all important subjects fully inside their own cell. Do not crop top edges, hands or objects; never put a face or medal at a cell boundary. No writing anywhere.

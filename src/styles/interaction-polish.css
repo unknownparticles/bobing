@@ -1,0 +1,91 @@
+/* 共享交互层：复用米纸、青瓷与朱砂，状态由原组件的 disabled/aria-pressed 驱动。 */
+.paper-page { --ui-focus: #896528; --ui-pressed: #733321; --ui-surface: #fff8e8; --ui-selected: #e7ecd9; }
+.paper-page .paper-seal.paper-brand-mark { width: 40px; height: 40px; background: none; outline: none; box-shadow: none; border-radius: 10px; }
+.paper-brand-mark img { display: block; width: 100%; height: 100%; }
+.paper-page button { -webkit-tap-highlight-color: transparent; }
+.paper-page button:focus-visible, .paper-page select:focus-visible, .paper-page input:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+.paper-page .paper-primary, .paper-page .shop-leave, .paper-page .card-confirm-button { transition: background .16s, transform .16s, box-shadow .16s; }
+.paper-page .paper-primary:active:not(:disabled), .paper-page .shop-leave:active:not(:disabled), .paper-page .card-confirm-button:active:not(:disabled) { transform: translateY(2px); box-shadow: inset 0 2px 4px #553c2624; }
+.paper-page .paper-primary:disabled { color: #746e5a; background: #dfdac7; border-color: #bcb49c; box-shadow: 0 2px 0 #b7ad92; opacity: 1; }
+.paper-page .paper-skill:disabled { opacity: .72; }
+.paper-page .paper-icon-button, .paper-page .paper-text-button, .paper-page .paper-story-skip, .paper-page .paper-game-home, .paper-page .card-dialog-close { min-height: 44px; min-width: 44px; }
+.paper-page .card-dialog-close { width: 44px; height: 44px; z-index: 2; }
+.paper-page .paper-text-button, .paper-page .paper-story-skip { border-radius: 5px; padding-inline: 9px; }
+.paper-page .paper-icon-button:hover, .paper-page .paper-text-button:hover, .paper-page .paper-story-skip:hover { background-color: #d9e3c94a; }
+.paper-page .paper-icon-button:active { transform: scale(.96); }
+.paper-page .paper-game-home { padding-inline: 8px; border-radius: 6px; }
+.paper-page .paper-mode-card { position: relative; padding: 14px 18px; border-color: #c6b58f; border-radius: 9px 3px; background: linear-gradient(130deg, #fffaf0, #eee7d196); box-shadow: inset 0 0 0 2px #fffaf07a, 0 2px 0 #c0b28e2b; transition: border-color .16s, background .16s, transform .16s; }
+.paper-page .paper-mode-card:hover { border-color: #8f9c75; background: #f1f2e2; }
+.paper-page .paper-mode-card:active { transform: translateY(1px); }
+.paper-page .paper-mode-card.is-selected { border-color: #a54d35; background: linear-gradient(130deg, #fff9ea, #f2e0c7); box-shadow: inset 4px 0 #a54d35, 0 3px 7px #6a4c2610; }
+.paper-page .paper-mode-card.is-selected b::after { content: ' · 已选'; font: 10px sans-serif; color: #a04c35; }
+.paper-page .paper-character-picker button[aria-pressed="true"], .paper-page .paper-role-picker button[aria-pressed="true"] { outline: 2px solid #607d55; outline-offset: 2px; }
+.paper-page .paper-classic-options input { min-height: 44px; }
+.paper-page .card-detail-art { margin-top: 30px; }
+
+/* 手牌复用独立插画，数量与可用时机仍是真实文本，不烧进素材。 */
+.card-inventory-dialog { border-color: #b49b64; background: linear-gradient(130deg, #fff9eb, #eee7d3); box-shadow: inset 0 0 0 4px #fffaf068, inset 0 0 0 5px #bda56b30, 0 25px 100px #2335293b; }
+.inventory-header { padding-right: 52px; }
+.inventory-filters button { min-height: 36px; }
+.inventory-card-grid { grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 15px; }
+.inventory-card { padding: 10px 8px 13px; gap: 9px; border-color: #bba16b; border-radius: 7px 2px; background: linear-gradient(140deg, #fff5df, #ecd9b9); box-shadow: inset 0 0 0 2px #fff6e177, 0 3px 0 #bca17455; transition: transform .16s, box-shadow .16s; }
+.inventory-card:hover { transform: translateY(-3px); box-shadow: 0 5px 0 #bca17455, 0 8px 14px #6851331a; }
+.inventory-card:active { transform: translateY(1px); }
+.inventory-card.is-selected { background: #e8edd7; border-color: #6d895c; outline: 2px solid #6d895c; }
+.inventory-card-quantity { z-index: 1; right: 11px; top: 13px; color: #fff7df; background: #496448ed; border: 1px solid #fff4ce; border-radius: 4px; padding: 3px 6px; font-size: 12px; }
+.inventory-card-art { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid #bfa570; border-radius: 5px 2px; overflow: hidden; }
+.inventory-card-art .stock-art, .inventory-selected-art .stock-art { width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: 0; }
+.inventory-card-art .stock-illustration, .inventory-selected-art .stock-illustration { object-fit: contain; }
+.inventory-card-art .stock-art-emblem { top: 50%; left: 50%; right: auto; transform: translate(-50%, -50%); }
+.inventory-card.is-unavailable { color: #6d6957; background: #e9e5d8; border-color: #b9b49e; }
+.inventory-card.is-unavailable .inventory-card-art { filter: saturate(.5); opacity: .72; }
+.inventory-card.is-unavailable b, .inventory-card.is-unavailable small { color: #686451; }
+.inventory-card small { font-size: 10px; line-height: 1.7; }
+.inventory-card.is-available small { color: #3e6944; }
+.inventory-selection { border-color: #b5bd94; border-radius: 8px 2px; background: #f3f2df; }
+.inventory-selected-art { margin-top: 16px; width: 100%; aspect-ratio: 16 / 9; border: 1px solid #c0ab78; border-radius: 6px 2px; overflow: hidden; }
+.inventory-back { min-height: 36px; }
+.card-target-group button, .inventory-filters button, .hero-die-options button { transition: background .16s, border-color .16s; }
+.card-target-group button:hover:not(:disabled), .inventory-filters button:hover { background: #e1e8d1; border-color: #7b9568; }
+.card-target-group button.is-selected { box-shadow: inset 0 0 0 1px #5f814f; }
+.paper-page .card-confirm-button { min-height: 46px; }
+.paper-page .card-confirm-button:hover:not(:disabled) { background: #355a3e; }
+.paper-page .card-confirm-button:disabled { color: #686d5a; background: #dedfce; border-color: #b4bca1; }
+.paper-page .card-disabled-reason { border-left: 3px solid #a85a40; }
+
+@media (max-width: 700px) {
+  .paper-page .paper-seal.paper-brand-mark { width: 31px; height: 31px; }
+  .paper-page .paper-mode-card { padding: 12px 15px; }
+  .paper-page .paper-header-tools { gap: 3px; }
+  .paper-page .paper-header-tools .paper-text-button { padding-inline: 5px; font-size: 11px; }
+  .inventory-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .inventory-card { min-height: 0; }
+  .inventory-filters button { min-height: 44px; padding-inline: 10px; }
+  .card-target-group button { min-height: 44px; }
+  .paper-page .paper-skill small { line-height: 1.5; }
+}
+@media (min-width: 1100px) and (max-height: 800px) {
+  /* 短屏压缩装饰和辅助区，仍给台词预留空间，让主要操作留在首屏。 */
+  .paper-game .paper-header { height: 60px; }
+  .paper-game .paper-match-goal { margin-top: 8px; }
+  .paper-game > .build-status { display: flex; align-items: start; justify-content: space-between; gap: 12px; padding: 6px 10px; font-size: 11px; }
+  .paper-game > .build-status .build-rules { margin-top: 0; }
+  .paper-game .paper-game-layout { margin-block: 8px; }
+  .paper-game .paper-banter-lane { height: 60px; }
+  .paper-game .paper-bowl-stage { --bowl-width: 230px; height: 165px; }
+  .paper-game .paper-result { min-height: 64px; }
+  .paper-game .paper-result > span { display: none; }
+  .paper-game .paper-result h1 { margin-block: 5px; font-size: 20px; }
+  .paper-game .paper-prize-panel { padding: 12px 16px; }
+  .paper-game .paper-panel-heading .paper-eyebrow { display: none; }
+  .paper-game .paper-panel-heading h2 { margin: 0 0 10px; font-size: 19px; }
+  .paper-game .paper-pool-total { padding-block: 8px; }
+  .paper-game .paper-pool-total b { font-size: 26px; }
+  .paper-game .paper-prize { padding-block: 6px; }
+  .paper-game .paper-prize-icon { width: 28px; height: 28px; }
+  .paper-game .paper-rival .career-marker, .paper-game .paper-rival .career-short-status { font-size: 9px; line-height: 1.4; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-page button { transition: none !important; }
+  .inventory-card:hover, .paper-page .paper-primary:hover, .paper-page .paper-mode-card:active { transform: none; }
+}

@@ -1,0 +1,274 @@
+/* 对局与商店的独立美术层：只调整展示，不影响首页或游戏规则。 */
+.paper-game {
+  --artisan-gold: #b39961;
+  --artisan-line: #b69c6b80;
+  --paper-ink: #213e32;
+  --paper-muted: #696b55;
+  --paper-line: #c9b99585;
+  --paper-red: #a83c28;
+  --paper-red-deep: #7e2d20;
+  background: linear-gradient(#fbf4e5b8, #f8efddad), url('../../public/art/shop/rice-paper.webp') repeat;
+  color: var(--paper-ink);
+}
+.paper-game .paper-header { border-bottom-color: var(--artisan-line); }
+.paper-game .paper-seal { box-shadow: 0 0 0 1px #a4472f, 0 3px 7px #6f3f2520; }
+.paper-game .paper-round { padding: 6px 25px; border: 1px solid var(--artisan-line); border-radius: 5px 17px; background: #fff7e97a; box-shadow: inset 0 0 0 3px #fff9ee, inset 0 0 0 4px #b89b6438; }
+.paper-game .paper-round b { color: #234b3b; }
+.paper-game .paper-match-goal { color: #65684e; }
+.paper-game .paper-header, .paper-game .paper-game-layout, .paper-game .paper-action-dock { max-width: 1340px; }
+.paper-game .paper-game-layout { gap: 24px; }
+.paper-game .paper-play-area { padding-inline: 10px; }
+.paper-game .paper-rivals { max-width: none; gap: 8px; }
+.paper-game .paper-rival { border: 1px solid var(--artisan-line); border-radius: 9px 3px; padding: 10px 5px 8px; background: linear-gradient(135deg, #fffaf0a8, #ede2c460); box-shadow: inset 0 0 0 3px #fff9e867; }
+.paper-game .paper-rival.is-active { border-color: #ad432f; background: linear-gradient(135deg, #fffaf0, #f4dec7); box-shadow: inset 0 0 0 2px #ad432f18, 0 3px 9px #a74a2820; }
+.paper-game .paper-rival-score { font-size: 22px; color: #234b3b; }
+.paper-game .paper-rival-title { color: #77705b; }
+.paper-game .paper-rival.is-active .paper-rival-title { color: var(--paper-red); }
+.paper-game .paper-turn-banner { background: #eee7d3; border-color: #b6a27a; border-radius: 5px 13px; color: #52604a; padding-inline: 18px; box-shadow: inset 0 0 0 2px #fff8e87a; }
+.paper-game .paper-turn-banner.is-yours { color: #fff8e8; background: linear-gradient(#b94b31, #963b28); border-color: #b1894b; box-shadow: inset 0 0 0 2px #e2b77645, 0 2px 0 #7e3e27; }
+.paper-game .paper-field-banner { color: #62654c; }
+
+/* 骰碗与骰面继续由组件绘制，装饰位于后层，不遮住动画和可读点数。 */
+.paper-game .paper-bowl-stage { --bowl-width: 338px; height: 234px; }
+.paper-game .paper-bowl { height: calc(var(--bowl-width) * .65); padding: 9px; background: linear-gradient(150deg, #e4ead4, #9abf9f 40%, #38755f); box-shadow: inset 0 0 0 2px #f6deb0, 0 3px 0 #9e854b, 0 8px 0 #59826b, 0 15px 0 #285646, 0 23px 24px #29442e30; }
+.paper-game .paper-bowl-inner { border-color: #527d63; background: radial-gradient(ellipse at 40% 25%, #b3d3b88c, transparent 65%), repeating-linear-gradient(48deg, #f7f1c716 0 1px, transparent 1px 18px), radial-gradient(ellipse at 50% 70%, #89b9a0, #548d73 80%); box-shadow: inset 0 10px 17px #204d3f60, inset 0 -3px 4px #e0edc9b0; }
+.paper-game .paper-die { color: #fff8e5; box-shadow: 1px 4px 0 #baa77f, 3px 7px 8px #1a493c55; }
+.paper-game .paper-orbit { border: 1px solid #b29b6080; width: calc(var(--bowl-width) * 1.25); height: calc(var(--bowl-width) * .79); }
+.paper-game .orbit-outer { border: 3px double #b29b6070; width: calc(var(--bowl-width) * 1.36); height: calc(var(--bowl-width) * .88); transform: rotate(-7deg); }
+.paper-game .paper-bowl-stage::before, .paper-game .paper-bowl-stage::after { content: ''; position: absolute; width: 130px; height: 75px; top: 44%; background: url('../../public/art/shop/cloud-line.svg') center / contain no-repeat; pointer-events: none; opacity: .65; z-index: -1; }
+.paper-game .paper-bowl-stage::before { left: 4%; }
+.paper-game .paper-bowl-stage::after { right: 4%; transform: scaleX(-1); }
+.paper-game .paper-result { padding-inline: 10px; }
+.paper-game .paper-result > span { color: #8a723e; }
+.paper-game .paper-result h1 { color: #8f3526; }
+.paper-game .result-jackpot h1 { color: #916017; }
+.paper-game .paper-result p { color: #66644f; }
+.paper-game .paper-table-self { background: #fcf5e5e8; border-color: var(--artisan-line); border-radius: 5px; }
+.paper-game .paper-prize-panel { border: 1px solid #b69b65; border-radius: 10px 3px; background: linear-gradient(135deg, #fff9e9db, #ede2c29e); box-shadow: inset 0 0 0 4px #fff8e680, inset 0 0 0 5px #b59c6038, 0 4px 14px #6257340b; }
+.paper-game .paper-panel-heading h2 { color: #244a38; font-size: 21px; }
+.paper-game .paper-pool-total { border-color: #bca36c5c; }
+.paper-game .paper-pool-total b { color: #234b3b; }
+.paper-game .paper-prize { border-bottom: 1px solid #b79d6821; }
+.paper-game .paper-prize-icon { width: 34px; height: 34px; border: 1px solid #b89d675c; border-radius: 7px 2px; color: #4a715b; background: #e6e7cd; }
+.paper-game .prize-zhuangyuan .paper-prize-icon { color: #9b641e; background: #efdfb3; }
+.paper-game .prize-sanhong .paper-prize-icon { color: #a7422c; background: #f0d9bf; }
+.paper-game .paper-prize > div > b { font-family: var(--paper-serif); font-size: 13px; font-weight: 600; }
+.paper-game .paper-prize-stock { padding: 5px 7px; border-radius: 4px; background: #d8caa82e; }
+.paper-game .paper-event-log { color: #69674f; }
+
+.paper-game .paper-action-dock { border-color: #af925b; border-radius: 10px 3px; background: linear-gradient(110deg, #fff8e9ee, #f1e6cfec); box-shadow: inset 0 0 0 3px #fff9eaa6, inset 0 0 0 4px #c2a7754a, 0 5px 14px #5c4d2d15; gap: 12px 22px; }
+.paper-game .paper-self { width: 235px; }
+.paper-game .paper-self > strong { color: #28503b; }
+.paper-game .paper-skill { border-color: #bba779; border-radius: 7px 2px; background: linear-gradient(135deg, #fffbef, #ede5cc); color: #36543c; box-shadow: inset 0 0 0 2px #fff9e780, 0 2px 0 #bba47740; }
+.paper-game .paper-skill:disabled { opacity: .62; }
+.paper-game .paper-skill:hover:not(:disabled) { background: #e6ecd6; border-color: #7d986e; }
+.paper-game .hero-talent-button, .paper-game .hero-talent-passive { background: linear-gradient(135deg, #edf0dc, #dde5c8); }
+.paper-game .paper-roll { background: linear-gradient(#b84b31, #9c3525); border-color: #b79855; border-radius: 8px 3px; box-shadow: inset 0 0 0 2px #e7bd743d, 0 3px 0 #793823; }
+.paper-game .paper-roll:hover:not(:disabled) { background: linear-gradient(#a9432c, #812e20); }
+.paper-game .paper-motion { color: #68694f; }
+.paper-game button:focus-visible { outline-color: #83672f; }
+
+/* 商店静态素材与真实文字分离，刷新、限购和目标选择继续由规则层管理。 */
+.stock-shop { --card-ink: #263d30; --card-muted: #645e48; border-color: #ae8d4d; border-radius: 11px 3px; background: radial-gradient(ellipse at 70% 0, #4b73523d, transparent 65%), repeating-linear-gradient(0deg, #1f4433 0 2px, #224735 2px 4px); box-shadow: inset 0 0 0 4px #d9b76b20, inset 0 0 0 5px #d9b76b4a, 0 5px 0 #5d4c32, 0 12px 24px #2e392920; padding: 18px; gap: 22px; }
+.stock-shop .shop-counter { border-color: #b39860; border-radius: 8px 2px; background: linear-gradient(135deg, #fff5dfe8, #eee0bcf0), url('../../public/art/shop/rice-paper.webp'); box-shadow: inset 0 0 0 3px #fff6e1a8, inset 0 0 0 4px #bba16a63, 0 4px 0 #9b824f, 0 6px 12px #102d2455; }
+.stock-shop .shop-counter-brand { color: #2b4e37; }
+.stock-shop .shop-counter-brand > span { font-size: 20px; letter-spacing: 1px; }
+.stock-shop .shop-counter-brand small { color: #71694f; }
+.stock-shop .shop-counter h1 { font-size: 24px; margin-block: 16px; }
+.stock-shop .card-wallet { border-color: #ba9b5c80; border-radius: 6px 2px; background: #fff3d696; }
+.stock-shop .card-wallet strong { color: #315239; }
+.stock-shop .card-wallet p, .stock-shop .shop-counter-tip, .stock-shop .stock-refresh-note { color: #675f45; }
+.stock-shop .offering-slots > div > span { border-color: #b5986090; background: #f5e7c585; color: #716348; border-radius: 5px 2px; }
+.stock-shop .shop-field-note { border-top-color: #b59b675c; }
+.stock-shop .shop-field-note p { color: #665f49; }
+.stock-shop .shop-table-heading { display: none; }
+.stock-shop .shop-table-heading h2 { font-size: 23px; }
+.stock-shop .shop-overline { color: #d0c494; }
+.stock-shop .stock-canopy { height: 43px; margin-bottom: 17px; border-color: #bf9b52; border-radius: 7px 2px; background: linear-gradient(#92502c, #6d3d24); box-shadow: inset 0 0 0 3px #c29c493b, 0 3px 0 #133429; }
+.stock-shop .stock-canopy > span { font-size: 20px; letter-spacing: 7px; }
+.stock-shop .stock-collection { border-color: #a18d555c; border-radius: 7px 2px; background: linear-gradient(#32553c75, #14362665); box-shadow: inset 0 0 0 3px #b49c4621; padding: 12px 12px 0; }
+.stock-shop .stock-god { border-color: #b59a5c9c; background: linear-gradient(#9f893d26, #102f254d); }
+.stock-shop .stock-zone-heading { color: #faebc7; }
+.stock-shop .stock-zone-heading h3 { font-size: 18px; letter-spacing: 2px; }
+.stock-shop .stock-zone-heading > div > span { color: #c1c59b; }
+.stock-shop .stock-zone-description { color: #c4caa9; border-top-color: #b7a36740; }
+.stock-shop .playing-card { background: #f8eccf; border-color: #c3a261; border-radius: 7px 2px; box-shadow: inset 0 0 0 2px #fff8df99, 0 3px 0 #92733e, 0 7px 11px #0b271d66; --card-tilt: 0deg !important; }
+.stock-shop .card-skill { background: #f7e9cf; border-color: #c0a16d; }
+.stock-shop .card-field { background: #f0ebcf; border-color: #a8b58a; }
+.stock-shop .playing-card-inspect { padding: 8px 8px 12px; }
+.stock-shop .playing-card-top { color: #806135; }
+/* 先固定卡面比例；完整显示人物与法器，不通过 cover 裁切来凑满容器。 */
+.stock-shop .stock-art, .stock-shop .stock-god .stock-art { height: auto; aspect-ratio: 16 / 9; border-color: #a9905f7a; border-radius: 5px 2px; background: #ecdcab; }
+.stock-shop .stock-art.has-illustration { box-shadow: inset 0 0 0 2px #fff0cc55; }
+.stock-shop .stock-art.has-illustration .stock-illustration { object-fit: contain; object-position: center; }
+.stock-shop .playing-card h3 { color: #263f30; font-size: 17px; margin: 8px 0 4px; }
+.stock-shop .playing-card-timing { font-size: 9px; color: #755d37; letter-spacing: 0; }
+.stock-shop .playing-card-inspect > p { color: #645d45; font-size: 10px; line-height: 1.6; height: 32px; }
+.stock-shop .card-buy-tag { min-height: 33px; border-color: #c8a15f; background: linear-gradient(#b45333, #9b3f28); color: #fff5dc; border-radius: 5px 2px; box-shadow: inset 0 0 0 1px #e8be7352, 0 2px 0 #673a23; }
+.stock-shop .card-buy-tag > span { font-size: 10px; }
+.stock-shop .card-buy-tag:hover:not(:disabled) { background: #863824; }
+.stock-shop .stock-refresh { border-color: #b29860; background: linear-gradient(#597d53, #3e6446); box-shadow: inset 0 0 0 2px #e6d3962d, 0 3px 0 #264a35; min-height: 48px; }
+.stock-shop .shop-leave { background: linear-gradient(#b34b2f, #963b26); border-color: #bf9d5a; box-shadow: inset 0 0 0 2px #e6ba763d, 0 3px 0 #703821; min-height: 48px; }
+.stock-shop .shop-leave:hover { background: #853421; }
+.stock-shop .shop-receipt > span { color: #e0c285; }
+.stock-shop .shop-receipt p, .stock-shop .shop-purchase-log { color: #d2d8b9; }
+.stock-shop .card-detail-dialog { border-color: #b49a64; background: linear-gradient(#fff8e9ed, #f9efdbed), url('../../public/art/shop/rice-paper.webp'); box-shadow: inset 0 0 0 4px #bca36b24, 0 25px 100px #152b214f; }
+/* 顶部留出关闭按钮的位置，窄屏放大的插画也不能挡住关闭入口。 */
+.stock-shop .card-detail-art { width: min(100%, 320px); height: auto; aspect-ratio: 16 / 9; margin-top: 20px; border-radius: 7px 2px; overflow: hidden; border-color: #b89a5e; }
+.stock-shop .card-detail-art .stock-art { width: 100%; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; }
+.stock-shop .card-detail-dialog .shop-overline { color: #75613d; }
+.stock-shop .shop-counter-details { min-width: 0; }
+
+@media (min-width: 1100px) {
+  .paper-game .paper-rival { display: grid; grid-template-columns: 49px minmax(0, 1fr); column-gap: 8px; padding: 10px 8px; text-align: left; align-content: center; }
+  .paper-game .paper-rival-avatar { grid-row: 1 / 4; margin: auto 0; }
+  .paper-game .paper-rival .paper-avatar { width: 47px; height: 47px; }
+  .paper-game .paper-rival > b, .paper-game .paper-rival-title, .paper-game .paper-rival-score { grid-column: 2; }
+  .paper-game .paper-rival-title { font-size: 9px; margin-block: 4px; }
+  .paper-game .paper-rival-effects { grid-column: 1 / -1; }
+}
+@media (min-width: 1450px) {
+  .stock-shop .playing-card h3 { font-size: 19px; }
+  .stock-shop .playing-card-inspect > p { font-size: 11px; height: 36px; }
+}
+@media (min-width: 761px) and (max-height: 820px) {
+  .stock-shop { padding: 13px; margin-top: 10px; gap: 18px; }
+  .stock-shop .shop-counter { display: flex; flex-direction: column; padding: 14px 12px; max-height: calc(100svh - 148px); }
+  .stock-shop .shop-counter h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .stock-shop .shop-counter-brand, .stock-shop .card-wallet, .stock-shop .offering-slots, .stock-shop .shop-counter-actions { flex-shrink: 0; }
+  .stock-shop .card-wallet { margin-top: 14px; }
+  .stock-shop .shop-counter-details { min-height: 36px; overflow-y: auto; flex: 1; scrollbar-width: thin; }
+  .stock-shop .shop-field-note { padding-top: 8px; }
+  .stock-shop .shop-field-note p { margin-block: 5px 8px; }
+  .stock-shop .shop-hero-talent { margin-top: 7px; padding-top: 7px; }
+  .stock-shop .shop-counter-tip { display: none; }
+  .stock-shop .shop-table-heading { display: none; }
+  .stock-shop .shop-table-heading h2 { font-size: 20px; }
+  .stock-shop .stock-canopy { height: 33px; margin-bottom: 13px; }
+  .stock-shop .stock-canopy > span { font-size: 17px; }
+  .stock-shop .stock-zone-heading { margin-bottom: 8px; }
+  .stock-shop .stock-zone-heading h3 { font-size: 16px; }
+  .stock-shop .playing-card-inspect > p { display: none; }
+  .stock-shop .playing-card h3 { font-size: 15px; margin-block: 5px 3px; }
+  .stock-shop .stock-zone-description { padding-block: 7px; }
+  .stock-shop .card-wallet { padding: 9px 12px; }
+  .stock-shop .offering-slots { margin-block: 13px; }
+  .stock-shop .stock-refresh { margin-top: 12px; }
+}
+@media (min-width: 701px) and (max-height: 800px) {
+  .paper-game .paper-header { height: 68px; }
+  .paper-game .paper-game-layout { margin-block: 12px; }
+  .paper-game .paper-rival { padding-block: 8px; }
+  .paper-game .paper-bowl-stage { --bowl-width: 275px; height: 190px; }
+  .paper-game .paper-bowl-stage::before, .paper-game .paper-bowl-stage::after { width: 100px; }
+  .paper-game .paper-result { min-height: 72px; }
+  .paper-game .paper-result h1 { font-size: 21px; margin-block: 7px 5px; }
+  .paper-game .paper-prize-panel { padding-block: 15px 10px; }
+  .paper-game .paper-action-dock { padding: 13px 16px; }
+}
+@media (min-width: 1100px) and (min-height: 850px) {
+  .paper-game .paper-bowl-stage { --bowl-width: 420px; height: 300px; }
+  .paper-game .paper-dice { grid-template-columns: repeat(3, 46px); gap: 17px 24px; }
+  .paper-game .paper-die { width: 46px; height: 46px; }
+  .paper-game .paper-rival > b { font-size: 13px; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .paper-game .paper-self { width: 200px; }
+  .paper-game .paper-action-dock { gap: 12px; }
+  .paper-game .paper-skill { padding-inline: 6px; gap: 6px; }
+  .paper-game .paper-skill b { font-size: 11px; }
+  .stock-shop .stock-collection { padding-inline: 8px; }
+  .stock-shop .playing-card h3 { font-size: 13px; }
+  .stock-shop .playing-card-timing { font-size: 8px; }
+}
+@media (min-width: 701px) and (max-width: 880px) {
+  .paper-game .paper-self { width: 100%; }
+  .paper-game .paper-game-actions { flex-basis: 100%; }
+}
+@media (max-width: 760px) {
+  .stock-shop { padding: 12px; gap: 20px; }
+  .stock-shop .shop-counter { padding: 13px; }
+  .stock-shop .shop-counter h1 { margin: 0; }
+  .stock-shop .shop-counter-details { grid-column: 1 / -1; }
+  .stock-shop .shop-counter-actions { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 13px; }
+  .stock-shop .shop-counter-actions .stock-refresh-note { grid-column: 1 / -1; grid-row: 2; }
+  .stock-shop .shop-counter-brand > span { font-size: 17px; }
+  .stock-shop .stock-refresh { margin-top: 2px; }
+  .stock-shop .shop-table-heading h2 { font-size: 20px; }
+  .stock-shop .stock-canopy { height: 38px; }
+  .stock-shop .stock-canopy > span { font-size: 18px; letter-spacing: 4px; }
+  .stock-shop .stock-collection { padding-inline: 9px; }
+  .stock-shop .playing-card-inspect { padding-inline: 5px; }
+  .stock-shop .playing-card h3 { font-size: 13px; }
+  .stock-shop .playing-card-timing { font-size: 8px; letter-spacing: -.3px; }
+  .stock-shop .playing-card-inspect > p { font-size: 9px; height: 29px; }
+  .stock-shop .card-buy-tag { min-height: 40px; }
+  .stock-shop .card-submit-field { min-height: 40px; }
+  .stock-shop .stock-zone-description { font-size: 9px; }
+}
+@media (max-width: 700px) {
+  .paper-game .paper-round { padding: 4px 10px; }
+  .paper-game .paper-round > span { font-size: 8px; letter-spacing: 0; }
+  .paper-game .paper-play-area { padding-inline: 0; }
+  .paper-game .paper-rivals { gap: 4px; }
+  .paper-game .paper-rival { padding: 8px 2px 6px; border-radius: 6px 2px; }
+  .paper-game .paper-rival .paper-avatar { width: 39px; height: 39px; }
+  .paper-game .paper-rival-avatar { margin-bottom: 7px; }
+  .paper-game .paper-rival > b { font-size: 10px; }
+  .paper-game .paper-rival-score { font-size: 18px; }
+  .paper-game .paper-turn-banner { padding-inline: 12px; }
+  .paper-game .paper-bowl-stage { --bowl-width: 237px; height: 193px; }
+  .paper-game .paper-bowl-stage::before, .paper-game .paper-bowl-stage::after { width: 60px; opacity: .45; }
+  .paper-game .paper-bowl-stage::before { left: 0; }
+  .paper-game .paper-bowl-stage::after { right: 0; }
+  .paper-game .paper-result h1 { font-size: 20px; }
+  .paper-game .paper-table-self { display: none; }
+  .paper-game .paper-prize-panel { border-radius: 7px 2px; }
+  .paper-game .paper-panel-heading h2 { font-size: 19px; }
+  .paper-game .paper-prize-icon { width: 29px; height: 30px; }
+  .paper-game .paper-prize > div > b { font-size: 12px; }
+  .paper-game .paper-prize-stock { padding: 4px; }
+  .paper-game .paper-action-dock { border-radius: 12px 12px 0 0; border-bottom: 0; box-shadow: inset 0 0 0 3px #fff8e79e, 0 -5px 20px #4c4b2620; }
+  .paper-game .paper-self { width: 100%; }
+  .paper-game .paper-self > div { display: grid; grid-template-columns: auto auto; gap: 0 8px; }
+  .paper-game .paper-self > div > b { grid-row: 1; grid-column: 1; }
+  .paper-game .paper-self > div > span:not(.paper-self-coins) { grid-row: 2; grid-column: 1 / -1; }
+  .paper-game .paper-self > div > .paper-self-coins { grid-row: 1; grid-column: 2; margin-top: 0; align-self: center; }
+  .paper-game .paper-skill { min-height: 48px; }
+  .paper-game .paper-motion { min-height: 44px; }
+  .paper-game .paper-roll { min-height: 54px; }
+}
+@media (max-width: 360px) {
+  .paper-game .paper-bowl-stage { --bowl-width: 216px; height: 180px; }
+  .paper-game .paper-rival .paper-avatar { width: 34px; height: 34px; }
+  .paper-game .paper-round { padding-inline: 6px; }
+  .paper-game .paper-round b { font-size: 23px; padding-inline: 2px; }
+  .paper-game .paper-rival-title { font-size: 7px; }
+  .stock-shop { padding: 9px; }
+  .stock-shop .playing-card h3 { font-size: 11px; }
+  .stock-shop .playing-card-timing { font-size: 7px; }
+  .stock-shop .card-buy-tag > span { font-size: 8px; }
+}
+@media (max-width: 700px) and (max-height: 780px) {
+  /* 首屏给真实结果留空间，固定操作栏仍保留技能状态和主要按钮。 */
+  .paper-game .paper-game-layout { margin-top: 12px; }
+  .paper-game .paper-rival { padding-block: 6px; }
+  .paper-game .paper-bowl-stage { --bowl-width: 205px; height: 156px; }
+  .paper-game .paper-result > span, .paper-game .paper-table-note { display: none; }
+  .paper-game .paper-result h1 { font-size: 18px; margin-block: 5px; }
+  .paper-game .paper-self { padding-bottom: 7px; margin-bottom: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stock-shop .playing-card, .paper-game .paper-primary { transition: none; }
+}
+
+@media (min-width: 761px) and (max-height: 820px) {
+  .stock-shop .stock-zone-heading > div > span,
+  .stock-shop .stock-zone-description,
+  .stock-shop .playing-card-top { display: none; }
+  .stock-shop .stock-zone-heading { margin-bottom: 6px; }
+  .stock-shop .stock-zone-heading h3 { margin-top: 0; }
+  .stock-shop .stock-collection { padding-top: 8px; }
+  .stock-shop .stock-card-grid { padding-bottom: 14px; }
+  .stock-shop .stock-collections { gap: 10px; }
+}

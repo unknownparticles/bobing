@@ -1,0 +1,17 @@
+Use case: illustration-story
+Asset type: a production atlas of ORIGINAL MODERN OFFICE COWORKER CHARACTER PORTRAITS for a Chinese Mid-Autumn tabletop dice game.
+EXACT geometry: 1152x1536 overall. TWO equal columns by TWO equal rows. Each cell EXACTLY 576x768 pixels, portrait 3:4. Boundaries at x=576, y=768. No gutters, no outer margin, no grid lines, no frames, no labels. Every tile an independent portrait with its own quiet ivory rice-paper background, faint celadon circular wash and subtle restrained cloud motifs.
+Consistent art direction: high quality hand-painted contemporary Chinese indie game character art, warm gouache, clear dark ink-green fine outlines, limited soft dimensional shading, warm natural top-left light, harmonious celadon, cinnabar and cream clothes. Friendly believable adults, individual original faces, natural anatomy and five-finger hands, modern clothing. No ancient costumes, no fantasy armor, no deities. All four characters have the same body proportions, face scale, framing and lighting.
+STRICT FRAMING in EVERY 576x768 cell: show the COMPLETE hair/head down to mid thigh, including both hands and all props. Top of hair between y=50 and y=80 in its own cell; face center around x=288,y=180. Face must remain within x=200..376 and y=100..260. Keep hair and ears fully inside x=165..411. Upper body centered, waist around y=560. Bottom edge can cut at mid thigh, never cut hands or important props. Keep entire hands and props within x=55..521 and y=320..665. No hand covering the face. At least 7% clear margin above the hair. No huge closeups. The face must be large enough for a clear small avatar crop, and the whole upper-body portrait must remain usable.
+NO TEXT whatsoever, no names, no Chinese characters, no letters, no numerals, no badges, no brand logos, no watermark. Books, folders and boxes are unlettered. Faces have calm friendly expressions, no exaggerated comedy.
+Render the following exact row-major sequence, do not mix genders or exchange props:
+
+Row 1, column 1: 年轻女性同组伙伴，二十多岁，乌黑长发半扎，轻松明快的笑容，柔和珊瑚粉衬衫和浅米长裙，双手拿一个小中秋礼盒，友善温暖。 Sex: female. Keep complete hair, ears, hands and objects inside the cell.
+
+Row 1, column 2: 男性同组前辈，四十多岁，略微壮实，短黑发有少许灰白，眉眼带笑，橄榄绿挽袖衬衫和深色长裤，一手托金色月饼，另一只手放腰边，热心直爽。 Sex: male. Keep complete hair, ears, hands and objects inside the cell.
+
+Row 2, column 1: 男性同组同事，三十多岁，细框方眼镜，整齐深棕短发，细心沉静，深青蓝针织衫搭米色衬衣，手持无字小笔记本和铅笔，温和周到。 Sex: male. Keep complete hair, ears, hands and objects inside the cell.
+
+Row 2, column 2: 阿杰，男性，年轻同事，蓝色休闲衬衫，开朗机灵，手持一颗象牙骰子。 Sex: male. Keep complete hair, ears, hands and objects inside the cell.
+
+Final audit: exact two by two grid, correct modern coworkers in order, consistent face center and size, complete hair and head, all hands and props visible. No text or UI.

@@ -1,0 +1,15 @@
+Use case: illustration-story
+Asset type: production original contemporary office coworker character portrait atlas.
+Create EXACTLY a 2-column by 2-row uniform grid, overall 1152x1536 pixels. EACH cell exactly 576x768, 3:4 portrait. Exact boundaries x=576, y=768. No gutters, no outer margins, no labels or frames. Independently usable cells, no shared scene across cells.
+Style: refined warm contemporary Chinese folk game illustration, clear ink-green outlines, hand-painted gouache shading, subtle ivory rice-paper texture, celadon green, cinnabar red and restrained antique gold. Warm top-left light, elegant coherent shapes and readable silhouettes at small size. Original art, no copied logos. Each subject centered and complete, with at least 10% safe inset on all four sides; no cropped heads, hair, hands, held objects, medals or crowns. No text, no letters, no Chinese characters, no numerals, no pseudo-writing, no UI, no prices, no watermark. Paperwork, flags and plaques completely blank. Dice pips allowed.
+CHARACTERS ARE MODERN OFFICE COWORKERS, contemporary clothing, not deities or historical costumes. Each portrait shows the complete hairstyle and entire upper body down to hips, both hands and personal props fully inside the tile. Friendly original faces, consistent adult proportions, relaxed front/three-quarter pose. Plain softly illuminated ivory background with faint celadon circle and subtle cloud texture. Do not add names or badges with text. Follow the specified gender; do not invent extra people.
+
+Row 1, column 1: 阿杰，男性，年轻同事，蓝色休闲衬衫，开朗机灵，手持一颗象牙骰子。
+
+Row 1, column 2: 小许，女性，年轻同事，浅青色针织衫，干练亲切，手持中秋小礼盒。
+
+Row 2, column 1: 乔经理，女性，成熟利落，墨绿色西装，端正自信，手持无字工作夹。
+
+Row 2, column 2: 周总，男性，成熟稳重，深色西装和朱砂领带，亲切从容，手持中秋奖盒。
+
+Final check: exact equal 2x2 grid with all important subjects fully inside their own cell. Do not crop top edges, hands or objects; never put a face or medal at a cell boundary. No writing anywhere.

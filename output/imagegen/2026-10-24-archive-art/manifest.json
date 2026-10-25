@@ -1,0 +1,160 @@
+{
+  "sheets": [
+    {
+      "sheet": "achievements-1.png",
+      "group": "achievements",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "first_win",
+        "story_clear",
+        "luck_master",
+        "theft_master"
+      ]
+    },
+    {
+      "sheet": "achievements-2.png",
+      "group": "achievements",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "fengshui_master",
+        "forecast_master",
+        "patience_master",
+        "all_paths"
+      ]
+    },
+    {
+      "sheet": "cards-1.png",
+      "group": "cards",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "thief_god",
+        "geomancer",
+        "luck_blessing",
+        "summon_god"
+      ]
+    },
+    {
+      "sheet": "cards-2.png",
+      "group": "cards",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "dismiss_god",
+        "gather_luck",
+        "secure_loot",
+        "forecast_three"
+      ]
+    },
+    {
+      "sheet": "cards-3.png",
+      "group": "cards",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "bitter_sweet",
+        "never_too_late",
+        "double_steal",
+        "forecast_one"
+      ]
+    },
+    {
+      "sheet": "cards-4.png",
+      "group": "cards",
+      "columns": 2,
+      "tile_width": 768,
+      "tile_height": 432,
+      "ids": [
+        "old_master",
+        "lucky_seat",
+        "four_twos"
+      ]
+    },
+    {
+      "sheet": "characters-1.png",
+      "group": "characters",
+      "columns": 2,
+      "tile_width": 576,
+      "tile_height": 768,
+      "ids": [
+        "jie",
+        "xu",
+        "qiao",
+        "zhou"
+      ]
+    },
+    {
+      "sheet": "characters-2.png",
+      "group": "characters",
+      "columns": 2,
+      "tile_width": 576,
+      "tile_height": 768,
+      "ids": [
+        "su",
+        "tang",
+        "lu",
+        "ye"
+      ]
+    },
+    {
+      "sheet": "characters-3.png",
+      "group": "characters",
+      "columns": 2,
+      "tile_width": 576,
+      "tile_height": 768,
+      "ids": [
+        "liang",
+        "fei",
+        "gu",
+        "xuguan"
+      ]
+    },
+    {
+      "sheet": "characters-4.png",
+      "group": "characters",
+      "columns": 2,
+      "tile_width": 576,
+      "tile_height": 768,
+      "ids": [
+        "yan",
+        "an",
+        "shen"
+      ]
+    }
+  ],
+  "characterAliases": {
+    "jie": "jie",
+    "xu": "xu",
+    "qiao": "qiao",
+    "zhou": "zhou",
+    "su": "su",
+    "story:group:jie": "jie",
+    "story:department:tang": "tang",
+    "story:department:lu": "lu",
+    "story:department:qiao": "qiao",
+    "story:department:xu": "xu",
+    "story:department:ye": "ye",
+    "story:department:liang": "liang",
+    "story:department:fei": "fei",
+    "story:company:zhou": "zhou",
+    "story:company:su": "su",
+    "story:company:gu": "gu",
+    "story:company:lu": "lu",
+    "story:company:xuguan": "xuguan",
+    "story:company:qiao": "qiao",
+    "story:company:yan": "yan",
+    "story:company:an": "an",
+    "story:company:shen": "shen"
+  },
+  "corrections": {
+    "lucky_seat": "lucky_seat-retouched.png",
+    "four_twos": "four_twos-corrected.png"
+  }
+}

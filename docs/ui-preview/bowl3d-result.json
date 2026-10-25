@@ -1,0 +1,45 @@
+{
+  "checks": [
+    "真实对局正常投掷，3D 结果与规则显示点数一致",
+    "整碗重掷消耗原有券，throwCount 只增加一次",
+    "真实免费单骰重投仅第三颗翻滚，其余五颗点数不变",
+    "确认结果后电脑完成行动，正常进入轮间商店",
+    "4–8 骰几何数量和可读结果一致，逐个截图检查",
+    "改点沿用第三颗 3→4，保留改点标记",
+    "减少动态效果仍显示完整 3D 点数",
+    "连续卸载重建四次，没有页面错误",
+    "WebGL 上下文丢失后静态红金碗与骰点可见",
+    "禁用 WebGL 的手机仍能投掷并到达确认结果",
+    "手机390px真实入局及投掷：结果自动滚动至操作栏上方",
+    "手机320px真实入局及投掷：结果可读且无横向溢出"
+  ],
+  "errors": [],
+  "warnings": [
+    "3D 骰碗不可用，已切换静态呈现。 WebGL context lost"
+  ],
+  "screenshots": [
+    "bowl3d-home-desktop.png",
+    "bowl3d-game-desktop.png",
+    "bowl3d-rolling-desktop.png",
+    "bowl3d-result-desktop.png",
+    "bowl3d-single-reroll.png",
+    "bowl3d-result-390.png",
+    "bowl3d-result-320.png",
+    "bowl3d-game-short-desktop.png",
+    "bowl3d-faces-1-to-6.png",
+    "bowl3d-4-dice.png",
+    "bowl3d-5-dice.png",
+    "bowl3d-6-dice.png",
+    "bowl3d-7-dice.png",
+    "bowl3d-8-dice.png",
+    "bowl3d-changing.png",
+    "bowl3d-changed.png",
+    "bowl3d-reduced-motion.png",
+    "bowl3d-context-lost-fallback.png"
+  ],
+  "mobileLayout": {
+    "resultBottom": 582,
+    "dockTop": 649,
+    "scroll": 147
+  }
+}

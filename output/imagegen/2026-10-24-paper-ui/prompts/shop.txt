@@ -1,0 +1,25 @@
+Use case: ui-mockup
+Asset type: desktop web game shop concept, one complete finished screen.
+Primary request: Refine the existing round-break card shop of the Chinese Mid-Autumn dice strategy game《今晚谁是状元》. Preserve its current dark ink-green shop identity while improving original narrative card illustrations, tactile materials, readability and a coherent hierarchy with the game's light paper/celadon interface.
+
+Style: warm and refined contemporary Chinese folk illustration, Minnan wood carving, restrained brass corners, celadon accents, cinnabar buttons, warm ivory paper card faces, dark green fabric tabletop. Original illustrated indie strategy card game. Crisp silhouettes, limited color shading, soft top-left warm light, strong usable contrast. Compact Chinese serif headings and clean readable UI labels. No photographic temple imagery or ornate fantasy RPG HUD.
+
+Composition: one flat front-facing landscape game UI screenshot, entire interface inside the frame, no browser or device frame. A slim ivory top header with a square red 博 seal and the game title. The shop occupies a large bordered ink-green inset below it. Left about 20% is a warm ivory cashier panel, right about 80% is the complete merchandise display. All eight cards and all eight independent prices must be visible at the same time, with the bottom row fully inside the frame.
+
+Left cashier panel: shop name "接碗小铺", large wallet "48 金币", exactly three small offering slots under "我的供奉", one quiet compact note for next-round field candidates. Bottom contains a clearly secondary green button "刷新 · 5 金币", tiny note "下次 10 金币", and a dominant wide cinnabar button "离店 · 下一轮". Keep this panel compact and make the leave button easy to find.
+
+Right: a subtle wood/cinnabar shop sign, then exactly three clearly labeled merchandise zones, no tabs. A narrow "神明供奉" zone contains exactly two larger portrait cards vertically stacked. Beside it, the top "技能手牌" zone contains exactly three portrait cards in one row; the bottom "场地布置" zone contains exactly three portrait cards in one row. Layout must fit the full screen. This is exactly 2 deity cards + 3 skill cards + 3 field cards, no extra cards anywhere.
+
+The eight cards, exact names and prices:
+1. "财神进宝" — "40 金币": kindly original short-bearded figure with red robe and black cap holding a gold ingot, moon-shaped golden halo, clear distinctive face.
+2. "月老牵线" — "45 金币": gentle white-bearded elder in red, a red thread connecting two jade pendants, clearly distinct from the first deity.
+3. "顺手牵羊" — "20 金币": a sleeve-covered hand playfully sneaking a mooncake prize token from a neighboring table.
+4. "厕所卡" — "20 金币": a small wooden door with a humorous "暂离" hanging sign and a flying paper slip.
+5. "大力出奇迹" — "25 金币": a rolled-up sleeve, energetic fist motion and ivory dice above a celadon bowl.
+6. "七星高照" — "30 金币": seven dice arranged within a seven-star celestial cloud map.
+7. "八仙过海" — "40 金币": eight dice sailing above stylized teal waves with eight-direction ornament.
+8. "乾坤换席" — "25 金币": six chairs around a round table with curved motion arrows and a subtle compass motif.
+
+Every card has a real coherent narrative illustration occupying about 55% of its face, not a reused empty icon badge. Clear short title, one brief effect/timing line, an independent bottom price and purchase strip. Deities have restrained gold edges, skills cinnabar/warm orange accents, fields celadon/dark green accents. Every price and primary action is readable. Avoid long rules text at concept scale. Preserve generous card separation and plain paper areas for actual HTML text rendering later. Add small tasteful corner patterns and restrained depth to the frames, not heavy bevels. Keep tiny English labels optional and understated.
+
+Constraints: exactly eight complete cards, all prices and both cashier controls visible, no cropping, no overlays, no modal, no collage, no tilted perspective. Strong distinction between ink-green background and bright ivory cards. Original art, no copied commercial game artwork. No watermark, no neon, no glassmorphism, no web admin dashboard, no ecommerce grid, no empty line-icon cards, no excessive decorative text. One polished coherent playable shop screen.

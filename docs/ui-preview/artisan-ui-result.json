@@ -1,0 +1,148 @@
+{
+  "layouts": [
+    {
+      "screen": "game",
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "dockBottom": 715.390625,
+      "dockTop": 629.59375,
+      "resultBottom": 545.984375
+    },
+    {
+      "screen": "game",
+      "width": 1536,
+      "height": 1024,
+      "scrollWidth": 1536,
+      "dockBottom": 1006,
+      "dockTop": 916.203125,
+      "resultBottom": 701.78125
+    },
+    {
+      "screen": "game",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "dockBottom": 750,
+      "dockTop": 664.203125,
+      "resultBottom": 613.984375
+    },
+    {
+      "screen": "game",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "dockBottom": 891.578125,
+      "dockTop": 739.78125,
+      "resultBottom": 686.78125
+    },
+    {
+      "screen": "game",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "dockBottom": 844,
+      "dockTop": 649,
+      "resultBottom": 582
+    },
+    {
+      "screen": "game",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "dockBottom": 740,
+      "dockTop": 549,
+      "resultBottom": 529
+    },
+    {
+      "screen": "shop",
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280,
+      "merchandiseBottom": 705.375,
+      "leaveBottom": 672.15625
+    },
+    {
+      "screen": "shop",
+      "width": 1536,
+      "height": 1024,
+      "scrollWidth": 1536,
+      "merchandiseBottom": 1002.78125,
+      "leaveBottom": 862.15625
+    },
+    {
+      "screen": "shop",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "merchandiseBottom": 734.96875,
+      "leaveBottom": 690.15625
+    },
+    {
+      "screen": "shop",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768,
+      "merchandiseBottom": 873.96875,
+      "leaveBottom": 880.15625
+    },
+    {
+      "screen": "shop",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "merchandiseBottom": 1613.34375,
+      "leaveBottom": 410.984375
+    },
+    {
+      "screen": "shop",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "merchandiseBottom": 1528.953125,
+      "leaveBottom": 400.984375
+    }
+  ],
+  "checks": [
+    "真实首页 → 角色设置 → 跳过剧情 → 手牌弹窗 → 掷骰 → 确认 → 机器人轮转 → 商店",
+    "真实商店刷新扣除 5 金币，三分区仍为八张卡",
+    "离店进入第二轮，保留真实游戏状态",
+    "财神进宝 的独立插画同时出现在卡面与详情",
+    "固定素材预览：八张插画加载、技能/场地/神明真实扣款与售罄、场地布置、刷新至余额 0 后禁用"
+  ],
+  "errors": [],
+  "generatedImages": [
+    {
+      "url": "http://127.0.0.1:5186/art/shop/wealth.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/matchmaker.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/steal.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/toilet.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/miracle.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/seven_dice.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/eight_dice.webp",
+      "loaded": true
+    },
+    {
+      "url": "http://127.0.0.1:5186/art/shop/shuffle.webp",
+      "loaded": true
+    }
+  ]
+}

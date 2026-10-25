@@ -1,0 +1,75 @@
+/* 动效沿用事件生命周期，只有 transform/opacity 运动，不增加结算等待。 */
+.effect-layer { --release-duration: 1100ms; }
+.effect-theme-dice { --effect-color: #477d69; --effect-target: #477d69; }
+.effect-theme-field { --effect-color: #4f7959; --effect-target: #4f7959; }
+.effect-theme-blessing { --effect-color: #aa7a2d; --effect-target: #aa7a2d; }
+.effect-theme-blessing.effect-kind-bond { --effect-color: #b04e62; --effect-target: #b04e62; }
+.effect-theme-transfer.is-hostile { --effect-color: #ad442e; --effect-target: #ad442e; }
+.effect-card-art { display: block; flex: 0 0 120px; width: 120px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #b19a64; border-radius: 7px 2px; background: #f7ecd5; }
+.effect-card-art .stock-art { width: 100%; height: 100%; border: 0; border-radius: 0; }
+.effect-card-art .stock-illustration { object-fit: contain; }
+.effect-card-art .stock-art-emblem { top: 50%; left: 50%; right: auto; width: 26px; height: 26px; transform: translate(-50%, -50%); }
+.effect-card-art .stock-art-emblem .lucide { width: 18px; height: 18px; }
+.effect-banner { align-items: center; max-width: min(580px, calc(100vw - 28px)); border-width: 1px; }
+.effect-banner > div { min-width: 0; }
+.effect-banner strong { font-family: var(--paper-serif, serif); overflow-wrap: anywhere; }
+.effect-outcome { align-self: center; }
+.effect-outcome-pending .effect-impact { display: none; }
+
+.skill-effect-scene { position: absolute; width: 180px; height: 180px; transform: translate(-50%, -50%); pointer-events: none; opacity: 0; animation: skill-scene-presence var(--release-duration) ease both; }
+.skill-effect-scene > svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.scene-dice { width: 235px; height: 235px; }
+.scene-field { width: 310px; height: 310px; }
+.skill-aura { fill: #fff8df90; stroke: currentColor; stroke-width: 1; stroke-dasharray: 2 7; opacity: .55; }
+.skill-fine-line { stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.skill-die-outline { fill: #fff8e6; stroke: currentColor; stroke-width: 2; }
+.skill-die-mark { stroke: currentColor; stroke-width: 1.2; opacity: .65; }
+.skill-dice-orbit { transform-origin: 100px 100px; animation: skill-dice-turn var(--release-duration) ease both; }
+.skill-medallion { fill: #f6df9c; stroke: currentColor; stroke-width: 2; }
+.skill-medallion-star { fill: #fff0bf; stroke: currentColor; stroke-width: 1.4; }
+.skill-seal-fill { fill: currentColor; opacity: .75; }
+.skill-transfer-burst { transform-origin: 100px 100px; animation: skill-token-bloom var(--release-duration) ease-out both; }
+.skill-shield-fill { fill: #d8ebdbdf; stroke: currentColor; stroke-width: 2.4; }
+.skill-shield-check { stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.skill-shield-form { transform-origin: 100px 100px; animation: skill-shield-rise var(--release-duration) ease both; }
+.skill-loop-line { stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.skill-redirect-loop { transform-origin: 100px 100px; animation: skill-loop-turn var(--release-duration) ease both; }
+.skill-seal-outline { fill: #fff1cba6; stroke: currentColor; stroke-width: 2; }
+.skill-leaf { fill: #dfd7a164; stroke: currentColor; stroke-width: 1.5; }
+.skill-heart-line { fill: #f0c5bf80; stroke: currentColor; stroke-width: 2; }
+.skill-blessing-seal { transform-origin: 100px 100px; animation: skill-seal-arrive var(--release-duration) ease both; }
+.skill-field-wave { stroke: currentColor; stroke-width: 1.5; transform-origin: 100px 100px; animation: skill-field-expand var(--release-duration) ease-out both; }
+.skill-field-wave.wave-1 { animation-delay: 55ms; }
+.skill-field-wave.wave-2 { animation-delay: 110ms; }
+.skill-sparks { stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; transform-origin: 100px 100px; animation: skill-sparks-open var(--release-duration) ease-out both; }
+.effect-outcome-pending .skill-transfer-burst, .effect-outcome-pending .skill-sparks { display: none; }
+.effect-kind-bond .effect-path { stroke-dasharray: none; stroke-width: 2; filter: drop-shadow(0 0 3px #d48a8470); }
+.effect-theme-field .effect-impact { border-style: double; width: 90px; height: 90px; }
+.effect-theme-guard .effect-impact { border-width: 2px; }
+
+@keyframes skill-scene-presence { 0%, 8% { opacity: 0; } 24%, 76% { opacity: .94; } 100% { opacity: 0; } }
+@keyframes skill-dice-turn { 0% { transform: rotate(-22deg) scale(.7); } 35% { transform: rotate(8deg) scale(1.03); } 72% { transform: rotate(-3deg) scale(1); } 100% { transform: rotate(6deg) scale(1.08); } }
+@keyframes skill-token-bloom { 0%, 40% { transform: scale(.55); opacity: 0; } 62%, 82% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.18); opacity: 0; } }
+@keyframes skill-shield-rise { 0% { transform: translateY(12px) scale(.65); } 30% { transform: translateY(0) scale(1.06); } 50%, 85% { transform: scale(1); } 100% { transform: scale(1.08); } }
+@keyframes skill-loop-turn { 0% { transform: rotate(-100deg) scale(.7); } 65% { transform: rotate(20deg) scale(1); } 100% { transform: rotate(45deg) scale(1.05); } }
+@keyframes skill-seal-arrive { 0% { transform: scale(1.25) rotate(-12deg); } 28% { transform: scale(.96) rotate(3deg); } 52%, 82% { transform: scale(1) rotate(0deg); } 100% { transform: scale(1.06); } }
+@keyframes skill-field-expand { 0%, 8% { transform: scale(.35); opacity: 0; } 32% { opacity: .8; } 100% { transform: scale(1.15); opacity: 0; } }
+@keyframes skill-sparks-open { 0%, 45% { transform: scale(.55) rotate(-7deg); opacity: 0; } 65% { opacity: 1; } 100% { transform: scale(1.15) rotate(7deg); opacity: 0; } }
+
+@media (max-width: 600px) {
+  .effect-card-art { flex-basis: 78px; width: 78px; }
+  .effect-banner { gap: 8px; padding: 10px; }
+  .effect-banner strong { font-size: 13px; line-height: 1.55; letter-spacing: 0; }
+  .effect-banner-players { font-size: 10px; }
+  .effect-outcome { font-size: 9px; padding: 3px; }
+  .skill-effect-scene { width: 136px; height: 136px; }
+  .scene-dice { width: 195px; height: 195px; }
+  .scene-field { width: 235px; height: 235px; }
+}
+/* 系统减弱动画时仍呈现卡名、双方姓名与结果，去掉位移和扩散。 */
+.effect-layer.is-reduced .skill-effect-scene { opacity: .45; animation: none; }
+.effect-layer.is-reduced .skill-effect-scene * { animation: none; }
+.effect-layer.is-reduced .skill-sparks { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .skill-effect-scene, .skill-effect-scene * { animation: none !important; }
+}

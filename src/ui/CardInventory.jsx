@@ -5,7 +5,9 @@ import { getAward } from '../game/config.js';
 import { canUseItem, legalTargets } from '../game/state.js';
 import { blessingsOf } from '../game/economy.js';
 import CardIcon from './CardIcon.jsx';
+import ShopArtwork from './ShopArtwork.jsx';
 import '../card-shop.css';
+import { talismanBuffs } from '../game/god-talismans';
 
 const stageName = timing => timing === 'after' ? '看结果后' : '掷骰前';
 
@@ -43,12 +45,17 @@ export default function CardInventory({ game, dispatch, onClose }) {
   const shown = owned.filter(item => filter === '全部' || (filter === '现在可用' ? canPlay(item.id) : stageName(item.timing) === filter));
   const targets = selected ? legalTargets(game, selected.id) : [];
   const target = game.players.find(entry => entry.id === targetIds[0]);
-  const godTargets = target ? blessingsOf(target).filter(buff => !['thunder', 'unlucky'].includes(buff.id)) : [];
+  const isTalisman = ['summon_god', 'dismiss_god'].includes(selectedId);
+  const godTargets = isTalisman ? talismanBuffs(game, selectedId, target, player) : target ? blessingsOf(target).filter(buff => !['thunder', 'unlucky'].includes(buff.id)) : [];
+  // 驱邪按神明和来源区分同名月老，其余神符保持原来的单神明选择。
+  const buffKey = buff => selectedId === 'exorcism' ? `${buff.id}:${buff.sourceId}` : buff.id;
+  const selectedGod = godTargets.find(buff => buffKey(buff) === buffId);
+  const needsGod = selected && ['god', 'selfGod'].includes(selected.target);
   const needsPlayer = selected && ['player', 'twoPlayers', 'award', 'god'].includes(selected.target);
   const needsDice = selected && ['die', 'twoDice', 'sourceDice'].includes(selected.target);
   const diceNeeded = selected?.target === 'die' ? 1 : 2;
   const playerNeeded = selected?.target === 'twoPlayers' ? 2 : 1;
-  const ready = !!selected && canPlay(selected.id) && (!needsPlayer || targetIds.length === playerNeeded) && (!needsDice || diceIndices.length === diceNeeded) && (selected.target !== 'award' || awardIndex !== '') && (selected.target !== 'god' || !!buffId) && (selected.target !== 'card' || !!cardId) && (selected.target !== 'sourceDice' || game.dice[diceIndices[0]] !== game.dice[diceIndices[1]]);
+  const ready = !!selected && canPlay(selected.id) && (!needsPlayer || targetIds.length === playerNeeded) && (!needsDice || diceIndices.length === diceNeeded) && (selected.target !== 'award' || awardIndex !== '') && (!needsGod || !!selectedGod) && (selected.target !== 'card' || !!cardId) && (selected.target !== 'sourceDice' || game.dice[diceIndices[0]] !== game.dice[diceIndices[1]]);
 
   useEffect(() => {
     const modal = dialog.current;
@@ -80,8 +87,11 @@ export default function CardInventory({ game, dispatch, onClose }) {
 
   function useSelected() {
     if (!ready) return;
-    dispatch({ type: 'USE_ITEM', item: selected.id, targetId: targetIds[0], targetIds, diceIndices, awardIndex: awardIndex === '' ? undefined : Number(awardIndex), buffId: buffId || undefined, cardId: cardId || undefined });
+    // 骰碗位于模态抽屉后方，改骰后先收起手牌，才能看见真实点数的演出。
+    const showDice = selected.timing === 'after' || ['miracle', 'mirror'].includes(selected.id);
+    dispatch({ type: 'USE_ITEM', item: selected.id, targetId: targetIds[0], targetIds, diceIndices, awardIndex: awardIndex === '' ? undefined : Number(awardIndex), buffId: selectedGod?.id || undefined, ...(selected.id === 'exorcism' ? { buffSourceId: selectedGod?.sourceId } : {}), cardId: cardId || undefined });
     clearSelection();
+    if (showDice) onClose();
   }
 
   return <dialog ref={dialog} className="card-inventory-dialog" onCancel={onClose} onClose={onClose} aria-labelledby="inventory-title">
@@ -91,15 +101,15 @@ export default function CardInventory({ game, dispatch, onClose }) {
       <div className="inventory-card-grid">{shown.map(item => {
         const available = canPlay(item.id);
         return <button key={item.id} className={`inventory-card card-skill ${selectedId === item.id ? 'is-selected' : ''} ${available ? 'is-available' : 'is-unavailable'}`} onClick={() => clearSelection(item.id)} aria-pressed={selectedId === item.id}>
-          <span className="inventory-card-quantity">×{player.items[item.id]}</span><CardIcon id={item.id} size={32}/><b>{item.name}</b><small>{available ? '现在可用' : stageName(item.timing)}</small>
+          <span className="inventory-card-quantity">×{player.items[item.id]}</span><span className="inventory-card-art"><ShopArtwork item={item} /></span><b>{item.name}</b><small>{available ? '现在可用' : stageName(item.timing)}</small>
         </button>;
       })}{!shown.length && <div className="inventory-empty"><Layers3 size={35}/><h3>{owned.length ? '这个时机暂时没有手牌' : '手牌暂时用完啦'}</h3><p>轮末去接碗小铺，补几张好招。</p></div>}</div>
-      {selected && <section className="inventory-selection" aria-labelledby="selected-card-title"><button className="inventory-back" onClick={() => clearSelection()}><ArrowLeft size={14}/> 返回手牌</button><div className="inventory-selected-heading"><CardIcon id={selected.id} size={35}/><div><span>{selected.group} · {stageName(selected.timing)}</span><h3 id="selected-card-title">{selected.name}</h3></div></div><p>{selected.description}</p>
+      {selected && <section className="inventory-selection" aria-labelledby="selected-card-title"><button className="inventory-back" onClick={() => clearSelection()}><ArrowLeft size={14}/> 返回手牌</button><div className="inventory-selected-heading"><CardIcon id={selected.id} size={35}/><div><span>{selected.group} · {stageName(selected.timing)}</span><h3 id="selected-card-title">{selected.name}</h3></div></div><div className="inventory-selected-art"><ShopArtwork item={selected} /></div><p>{selected.description}</p>
         {!canPlay(selected.id) && <p className="card-disabled-reason">{game.players[game.turnIndex]?.id !== player.id ? '请等到自己接碗时使用' : game.stage !== (selected.timing === 'after' ? 'review' : 'ready') ? `请在${stageName(selected.timing)}使用` : '当前没有合法目标或受到封印，手牌不会消耗'}</p>}
         {needsPlayer && <fieldset className="card-target-group"><legend>{selected.target === 'twoPlayers' ? '选择两位对手交换座位' : selected.id === 'gift' ? '赠送给谁' : selected.id === 'substitute' ? '选择预先指定的替身' : '选择目标'}</legend><div>{targets.map(entry => <button key={entry.id} className={targetIds.includes(entry.id) ? 'is-selected' : ''} aria-pressed={targetIds.includes(entry.id)} onClick={() => selectPlayer(entry.id)}>{entry.name}{targetIds.includes(entry.id) && <Check size={13}/>}</button>)}</div>{!targets.length && <p>暂无符合条件的目标。</p>}</fieldset>}
         {needsDice && <fieldset className="card-target-group"><legend>{selected.target === 'sourceDice' ? '依次选择来源骰、目标骰' : `选择${diceNeeded === 1 ? '一' : '两'}颗骰子`}</legend><div className="inventory-dice-options">{game.dice.map((value, index) => <button key={index} className={diceIndices.includes(index) ? 'is-selected' : ''} disabled={!canSelectDie(selected.id, value)} onClick={() => selectDie(index)} aria-pressed={diceIndices.includes(index)} aria-label={`第${index + 1}颗，${value}点${diceIndices.includes(index) ? '，已选' : ''}`}><DieFace value={value}/><small>{selected.target === 'sourceDice' && diceIndices.includes(index) ? diceIndices[0] === index ? '来源' : '目标' : `第 ${index + 1} 颗`}</small></button>)}</div>{selected.target === 'sourceDice' && diceIndices.length === 2 && <p className="card-help">第 {diceIndices[1] + 1} 颗将变成 {game.dice[diceIndices[0]]} 点。{game.dice[diceIndices[0]] === game.dice[diceIndices[1]] && '请选择点数不同的骰子。'}</p>}</fieldset>}
         {selected.target === 'award' && <label className="card-option-label">选择自己送出的奖项<select value={awardIndex} onChange={event => setAwardIndex(event.target.value)}><option value="">请选择一份奖项</option>{player.awards.map((id, index) => <option key={index} value={index}>{getAward(id)?.name} · {getAward(id)?.points} 分（第 {index + 1} 份）</option>)}</select></label>}
-        {selected.target === 'god' && target && <label className="card-option-label">解除哪一位神明<select value={buffId} onChange={event => setBuffId(event.target.value)}><option value="">请选择正面神明</option>{godTargets.map(buff => <option key={buff.id} value={buff.id}>{getItem(buff.id)?.name} · 第 {buff.untilRound} 轮到期</option>)}</select></label>}
+        {needsGod && (target || selected.target === 'selfGod') && <label className="card-option-label">{selected.id === 'summon_god' ? '请来哪一位神明' : selected.id === 'dismiss_god' ? '解除自己的哪一项神明负面效果' : '解除哪一位神明'}<select value={buffId} onChange={event => setBuffId(event.target.value)}><option value="">{selected.target === 'selfGod' ? '请选择神明负面效果' : '请选择正面神明'}</option>{godTargets.map(buff => <option key={`${buff.id}-${buff.sourceId}`} value={buffKey(buff)}>{getItem(buff.id)?.name} · 第 {buff.untilRound} 轮到期{selected.id === 'exorcism' ? ` · 来源：${game.players.find(entry => entry.id === buff.sourceId)?.name}` : ''}</option>)}</select></label>}
         {selected.target === 'card' && <label className="card-option-label">选择另一张技能卡回收<select value={cardId} onChange={event => setCardId(event.target.value)}><option value="">请选择待销毁的牌</option>{owned.filter(item => item.id !== selected.id).map(item => <option key={item.id} value={item.id}>{item.name} · 回收 {Math.floor(item.price * .6)} 金币</option>)}</select></label>}
         <button className="card-confirm-button" disabled={!ready} onClick={useSelected}>确认使用 <ArrowRight size={17}/></button><small className="inventory-use-note">消耗一张 · 使用后仍可继续出牌</small>
       </section>}

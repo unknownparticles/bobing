@@ -1,0 +1,83 @@
+{
+  "layouts": [
+    {
+      "phase": "home",
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280
+    },
+    {
+      "phase": "setup",
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280
+    },
+    {
+      "phase": "game",
+      "width": 1280,
+      "height": 720,
+      "scrollWidth": 1280
+    },
+    {
+      "phase": "home",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768
+    },
+    {
+      "phase": "setup",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768
+    },
+    {
+      "phase": "game",
+      "width": 768,
+      "height": 900,
+      "scrollWidth": 768
+    },
+    {
+      "phase": "home",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390
+    },
+    {
+      "phase": "setup",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390
+    },
+    {
+      "phase": "game",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390
+    },
+    {
+      "phase": "home",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320
+    },
+    {
+      "phase": "setup",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320
+    },
+    {
+      "phase": "game",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320
+    }
+  ],
+  "checks": [
+    "首页模式选中/非法人数禁用",
+    "角色设置与真实对局",
+    "手牌详情插画与不可用状态",
+    "真实掷骰、免费选骰和改骰释放效果"
+  ],
+  "errors": []
+}

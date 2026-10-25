@@ -1,0 +1,53 @@
+/* 将气泡放在横向对手栏外，十人桌滚动时仍能完整阅读。 */
+.paper-banter-lane {
+  position: relative;
+  height: 82px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.paper-speech-bubble {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(270px, calc(100% - 8px));
+  box-sizing: border-box;
+  padding: 8px 11px;
+  border: 1px solid #b99969;
+  border-radius: 11px 4px 11px 4px;
+  color: var(--paper-ink);
+  background: #fffaf0;
+  box-shadow: 0 4px 12px #69533214;
+  animation: paper-speech-appear 180ms ease-out both;
+  z-index: 5;
+}
+
+.paper-speech-bubble.is-attached::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: var(--speech-tail);
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #b99969;
+  border-left: 1px solid #b99969;
+  background: #fffaf0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.paper-speech-bubble .paper-avatar { width: 27px; height: 27px; flex-shrink: 0; border-width: 1px; }
+.paper-speech-bubble > div { min-width: 0; }
+.paper-speech-bubble b { display: block; color: var(--paper-red); font-size: 10px; line-height: 1.4; }
+.paper-speech-bubble p { margin: 2px 0 0; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+
+@keyframes paper-speech-appear {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paper-speech-bubble { animation: none; }
+}

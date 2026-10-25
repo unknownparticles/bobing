@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "开局无选派、无额外配套、零运气；货架从统一牌池随机抽取",
+    "真实购买积福与苦尽甘来，在同一局混合叠加；蓄势由拿到的牌触发",
+    "桌面、商店、手牌、图鉴移除固定流派标签；真实收集刷新保留"
+  ],
+  "errors": [],
+  "screenshots": [
+    "setup-mobile",
+    "fresh-table-mobile",
+    "random-shop-mobile",
+    "mixed-effects-mobile",
+    "achievements-mobile"
+  ]
+}

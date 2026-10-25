@@ -1,6 +1,7 @@
 import { evaluateDice, rollRank } from './rules';
 import { hasBuff } from './economy';
 import { queueVisual } from './visuals';
+import { candidateCount, effectiveLuck } from './archetypes';
 
 /** 使用注入随机数生成一颗骰子，场地改变的是公开权重。 */
 export function rollFace(game, rng) {
@@ -22,25 +23,40 @@ function candidate(game, player, rng) {
   return dice;
 }
 
-/** 好运/厄运同时存在则相互抵消，候选点数在动画开始前只确定一次。 */
+/** 运气决定整碗候选组数；内部择优不算额外投掷，不推进公开预告。 */
 export function generateRoll(game, rng) {
   const player = game.players[game.turnIndex];
-  const good = hasBuff(game, player, 'fortune') || player.lucky;
+  const luck = effectiveLuck(game, player);
   const bad = hasBuff(game, player, 'thunder') || player.unlucky;
+  const sources = [hasBuff(game, player, 'fortune') && '福神赐运', hasBuff(game, player, 'thunder') && '雷公压运', player.lucky && '福气贴', player.unlucky && '倒霉贴'].filter(Boolean);
   for (const id of ['fortune', 'scholar', 'thunder', 'unlucky']) {
     if (!hasBuff(game, player, id)) continue;
     const buff = player.buffs.find(entry => entry.id === id && (!entry.targetId || entry.targetId === player.id));
     const names = { fortune: '福神赐运', scholar: '文昌点红', thunder: '雷公压运', unlucky: '太岁作祟' };
     queueVisual(game, { kind: ['thunder', 'unlucky'].includes(id) ? 'attack' : 'skill', sourceId: buff.sourceId, targetId: player.id, icon: id, title: `${names[id]}影响${player.name}的本次掷骰` });
   }
-  const first = candidate(game, player, rng);
+  const candidates = Array.from({ length: candidateCount(game, player) }, () => candidate(game, player, rng));
+  // 厄运先抵消一层择优；完全没有运气时仍按原规则两组取差。
   player.lucky = false;
   player.unlucky = false;
-  if (Boolean(good) === Boolean(bad)) return first;
-  const second = candidate(game, player, rng);
-  const difference = rollRank(evaluateDice(second)) - rollRank(evaluateDice(first));
-  if (difference === 0) return second.join('') > first.join('') ? second : first;
-  return (good ? difference > 0 : difference < 0) ? second : first;
+  const selection = bad && luck === 0 ? 'worst' : 'best';
+  const selectedIndex = candidates.reduce((best, current, index) => {
+    const difference = rollRank(evaluateDice(current)) - rollRank(evaluateDice(candidates[best]));
+    if (difference === 0) return current.join('') > candidates[best].join('') ? index : best;
+    return (selection === 'worst' ? difference < 0 : difference > 0) ? index : best;
+  }, 0);
+  // 保存规则实际比较过的结果，演出不能重新掷骰或多推进一次公开预告。
+  game.rollPresentation = {
+    candidates, selectedIndex, selection,
+    label: sources.join(' · ') || (candidates.length === 1 ? '掷骰' : '好运择优'),
+    rollingIndices: Array.from({ length: game.diceCount }, (_, index) => index),
+  };
+  return candidates[selectedIndex];
+}
+
+/** 单次或局部重投共用记录；保留明确的选骰范围，即使重投点数恰好相同也要播放。 */
+export function describeSingleRoll(game, dice, rollingIndices, label) {
+  game.rollPresentation = { candidates: [[...dice]], selectedIndex: 0, selection: 'best', rollingIndices, label };
 }
 
 /** 大力卡严格使用60/30/10分支，不再经过场地改点或神明选组。 */
@@ -57,6 +73,6 @@ export function miracleRoll(game, rng) {
 
 /** 交给reducer的随机输入可复现；不把Math.random放进规则函数中。 */
 export function resolveAction(game, action, rng = Math.random) {
-  // 六名玩家开店共抽48张，预留完整随机输入，避免后排货架退化为固定结果。
-  return { ...action, entropy: Array.from({ length: 120 }, () => rng()) };
+  // 开店每人抽八张，另留机器人选择与场地抽签余量；大桌不能耗尽随机输入。
+  return { ...action, entropy: Array.from({ length: Math.max(120, game.players.length * 12) }, () => rng()) };
 }

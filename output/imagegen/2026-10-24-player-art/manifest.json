@@ -1,0 +1,74 @@
+{
+  "sheets": [
+    {
+      "sheet": "players-1.png",
+      "ids": [
+        "hero-a",
+        "hero-b",
+        "hero-c",
+        "chen"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    },
+    {
+      "sheet": "players-2.png",
+      "ids": [
+        "mei",
+        "wu",
+        "lin",
+        "jie"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    },
+    {
+      "sheet": "players-3.png",
+      "ids": [
+        "xu",
+        "qiao",
+        "zhou",
+        "su"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    },
+    {
+      "sheet": "players-4.png",
+      "ids": [
+        "tang",
+        "lu",
+        "ye",
+        "liang"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    },
+    {
+      "sheet": "players-5.png",
+      "ids": [
+        "fei",
+        "gu",
+        "xuguan",
+        "yan"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    },
+    {
+      "sheet": "players-6.png",
+      "ids": [
+        "an",
+        "shen"
+      ],
+      "tile_width": 576,
+      "tile_height": 768
+    }
+  ],
+  "avatarCrop": [
+    165,
+    48,
+    411,
+    294
+  ]
+}

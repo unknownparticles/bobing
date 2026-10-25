@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>卡牌插画总览</title>
+  <link rel="icon" href="/icons/bobing-mark.svg" type="image/svg+xml">
+  <style>
+    body { margin: 0; background: #f6eedb; color: #294236; font-family: sans-serif; }
+    main { max-width: 1320px; margin: auto; padding: 24px; }
+    header { margin-bottom: 28px; }
+    h1 { font: 600 28px 'Songti SC', serif; }
+    header p { color: #6d6954; line-height: 1.7; }
+    header a { color: #9e422e; }
+    section { margin-bottom: 30px; }
+    h2 { font: 600 23px 'Songti SC', serif; }
+    .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    figure { margin: 0; border: 1px solid #bba674; background: #fff6e3; }
+    img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; }
+    figcaption { padding: 12px; border-top: 1px solid #cfba8d; }
+    figcaption b { font: 600 16px 'Songti SC', serif; }
+    figcaption small { display: block; color: #756a50; margin-top: 5px; }
+    @media(max-width: 760px) { main { padding: 16px; } .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>一牌一画 · 卡牌插画总览</h1><p>神明 12 幅 · 技能 32 幅 · 场地 12 幅。每幅采用 16:9 完整构图。<br><a href="/docs/ui-preview/three-zone-shop.html">进入商店预览</a> · <a href="/">返回游戏</a></p></header>
+    <div id="gallery"></div>
+  </main>
+  <script type="module">
+    import { GODS, SKILLS, FIELDS } from '/src/game/catalog.js';
+    import { shopArtAssets } from '/src/ui/shop-art-assets.js';
+
+    // 使用与游戏相同的素材映射，方便逐张核对名称、比例和加载情况。
+    const gallery = document.getElementById('gallery');
+    for (const [title, items] of [['神明供奉', GODS], ['技能手牌', SKILLS], ['场地布置', FIELDS]]) {
+      const section = document.createElement('section');
+      const heading = document.createElement('h2');
+      heading.textContent = title;
+      const cards = document.createElement('div');
+      cards.className = 'gallery';
+      for (const item of items) {
+        const figure = document.createElement('figure');
+        const image = document.createElement('img');
+        image.src = shopArtAssets[item.id];
+        image.alt = item.name;
+        image.width = 512;
+        image.height = 288;
+        const caption = document.createElement('figcaption');
+        const name = document.createElement('b');
+        name.textContent = item.name;
+        const id = document.createElement('small');
+        id.textContent = item.id;
+        caption.append(name, id);
+        figure.append(image, caption);
+        cards.append(figure);
+      }
+      section.append(heading, cards);
+      gallery.append(section);
+    }
+  </script>
+</body>
+</html>

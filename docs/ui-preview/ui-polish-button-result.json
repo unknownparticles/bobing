@@ -1,0 +1,15 @@
+{
+  "focus": {
+    "width": "3px",
+    "style": "solid"
+  },
+  "hoverChanged": true,
+  "selected": true,
+  "close": {
+    "x": 1030,
+    "y": 120.25,
+    "width": 44,
+    "height": 44
+  },
+  "fallback": "summon_god"
+}

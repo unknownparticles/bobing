@@ -9,7 +9,8 @@
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: visible;
+  /* 横竖屏切换时轨迹会在下一帧重新测量，先将旧坐标裁在视口内。 */
+  overflow: hidden;
   background: transparent;
   z-index: 160;
   pointer-events: none;

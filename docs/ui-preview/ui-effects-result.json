@@ -1,0 +1,388 @@
+{
+  "scenes": [
+    {
+      "width": 1280,
+      "example": "dice",
+      "theme": "dice",
+      "duration": "1100ms",
+      "banner": {
+        "x": 276.6171875,
+        "y": 611.320556640625,
+        "width": 432.765625,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "transfer",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 231.5625,
+        "y": 600.109375,
+        "width": 522.875,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "attack",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 303.6484375,
+        "y": 612.109375,
+        "width": 378.703125,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "guard",
+      "theme": "guard",
+      "duration": "1100ms",
+      "banner": {
+        "x": 278.125,
+        "y": 611.9009399414062,
+        "width": 429.75,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "redirect",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 285.625,
+        "y": 612.109375,
+        "width": 414.75,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "substitute",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 285.625,
+        "y": 612.109375,
+        "width": 414.75,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "blessing",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 294.6328125,
+        "y": 612.109375,
+        "width": 396.734375,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "bond",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 276.6171875,
+        "y": 612.109375,
+        "width": 432.765625,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "field",
+      "theme": "field",
+      "duration": "1100ms",
+      "banner": {
+        "x": 294.6328125,
+        "y": 611.9260864257812,
+        "width": 396.734375,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 1280,
+      "example": "champion",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 285.625,
+        "y": 612.109375,
+        "width": 414.75,
+        "height": 93.5
+      }
+    },
+    {
+      "width": 390,
+      "example": "dice",
+      "theme": "dice",
+      "duration": "1100ms",
+      "banner": {
+        "x": 44.75,
+        "y": 727,
+        "width": 300.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "transfer",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 14,
+        "y": 727,
+        "width": 362,
+        "height": 79.28125
+      }
+    },
+    {
+      "width": 390,
+      "example": "attack",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 64.25,
+        "y": 726.7969970703125,
+        "width": 261.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "guard",
+      "theme": "guard",
+      "duration": "1100ms",
+      "banner": {
+        "x": 43.75,
+        "y": 726.80517578125,
+        "width": 302.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "redirect",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 51.25,
+        "y": 727,
+        "width": 287.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "substitute",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 51.25,
+        "y": 727,
+        "width": 287.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "blessing",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 57.75,
+        "y": 727,
+        "width": 274.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "bond",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 44.75,
+        "y": 726.7653198242188,
+        "width": 300.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "field",
+      "theme": "field",
+      "duration": "1100ms",
+      "banner": {
+        "x": 57.75,
+        "y": 726.7789916992188,
+        "width": 274.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 390,
+      "example": "champion",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 51.25,
+        "y": 727,
+        "width": 287.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "dice",
+      "theme": "dice",
+      "duration": "1100ms",
+      "banner": {
+        "x": 14,
+        "y": 623,
+        "width": 292,
+        "height": 79.28125
+      }
+    },
+    {
+      "width": 320,
+      "example": "transfer",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 14,
+        "y": 623,
+        "width": 292,
+        "height": 79.28125
+      }
+    },
+    {
+      "width": 320,
+      "example": "attack",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 29.25,
+        "y": 622.7777099609375,
+        "width": 261.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "guard",
+      "theme": "guard",
+      "duration": "1100ms",
+      "banner": {
+        "x": 14,
+        "y": 622.7986450195312,
+        "width": 292,
+        "height": 79.28125
+      }
+    },
+    {
+      "width": 320,
+      "example": "redirect",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 16.25,
+        "y": 622.801025390625,
+        "width": 287.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "substitute",
+      "theme": "redirect",
+      "duration": "1100ms",
+      "banner": {
+        "x": 16.25,
+        "y": 623,
+        "width": 287.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "blessing",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 22.75,
+        "y": 622.8010864257812,
+        "width": 274.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "bond",
+      "theme": "blessing",
+      "duration": "1100ms",
+      "banner": {
+        "x": 14,
+        "y": 622.8011474609375,
+        "width": 292,
+        "height": 79.28125
+      }
+    },
+    {
+      "width": 320,
+      "example": "field",
+      "theme": "field",
+      "duration": "1100ms",
+      "banner": {
+        "x": 22.75,
+        "y": 622.7305908203125,
+        "width": 274.5,
+        "height": 65.875
+      }
+    },
+    {
+      "width": 320,
+      "example": "champion",
+      "theme": "transfer",
+      "duration": "1100ms",
+      "banner": {
+        "x": 16.25,
+        "y": 623,
+        "width": 287.5,
+        "height": 65.875
+      }
+    }
+  ],
+  "layouts": [
+    {
+      "width": 1280,
+      "height": 900,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "10种事件×3种屏幕：六类效果、顶层显示、1100ms消失、来源/目标与减少动画通过",
+    "真实保护罩使用：库存2→1，保护生效；效果位于弹窗上方，关闭按钮仍可点击",
+    "真实抢夺：正确目标、扣牌、奖项转移；出招与已生效事件按原队列分别展示",
+    "负面技能生效保留攻击表现，避免误画成祝福"
+  ],
+  "errors": []
+}

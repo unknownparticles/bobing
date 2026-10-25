@@ -1,0 +1,52 @@
+/* 职业信息沿用纸面令牌；名字和技能说明允许自然换行，九人名单也不会撑宽手机。 */
+.career-avatar { background: var(--paper-jade); color: var(--paper-ink); }
+.career-avatar > b { font: 600 24px var(--paper-serif); transform: translate(-3px, -3px); }
+.career-avatar > svg { position: absolute; right: 3px; bottom: 3px; padding: 1px; background: var(--paper-raised); border-radius: 3px; }
+.career-style { margin: 5px 0 0; font-size: 12px; color: var(--paper-muted); line-height: 1.6; }
+.paper-rival .career-marker { display: block; margin: 5px auto 0; color: var(--paper-red-deep); font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.paper-rival .career-marker > svg { margin-right: 3px; }
+.paper-rival .career-short-status { display: block; margin-top: 3px; color: var(--paper-muted); font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.paper-game .paper-rivals.has-career-rivals.is-large-table > .paper-rival.paper-player-trigger { flex-basis: 108px; }
+.career-details-dialog { padding: 0; }
+.career-dialog-content { min-width: 0; }
+.career-totals b { overflow-wrap: anywhere; }
+.career-live-status { padding: 10px 12px; border: 1px solid var(--paper-line); border-radius: 5px; background: var(--paper-raised); color: var(--paper-red-deep); }
+.career-resources { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0; }
+.career-resources:empty { display: none; }
+.career-resources > div { min-width: 0; padding: 12px; background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 5px; }
+.career-resources dt { color: var(--paper-muted); font-size: 12px; }
+.career-resources dd { margin: 7px 0 0; font-size: 16px; font-weight: 600; overflow-wrap: anywhere; }
+.career-contact-warning { border-left: 3px solid var(--paper-red); padding-left: 10px; color: var(--paper-red-deep); }
+.chapter-roster { width: calc(100% - 64px); max-width: 1120px; margin: 32px auto 44px; }
+.chapter-roster-heading { display: flex; gap: 24px; justify-content: space-between; align-items: end; margin-bottom: 22px; }
+.chapter-roster-heading h1 { margin: 10px 0; font: 600 32px var(--paper-serif); }
+.chapter-roster-heading p, .chapter-roster-note { color: var(--paper-muted); font-size: 13px; line-height: 1.8; }
+.chapter-roster-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0; margin: 0; list-style: none; }
+.chapter-rival { min-width: 0; padding: 18px; border: 1px solid var(--paper-line); border-radius: 10px 3px; background: var(--paper-raised); }
+.chapter-rival.has-career { border-top: 3px solid var(--paper-red); }
+.chapter-rival > header { display: flex; align-items: center; gap: 12px; }
+.chapter-rival > header > div { min-width: 0; }
+.chapter-rival h2 { margin: 0 0 6px; font: 600 21px var(--paper-serif); overflow-wrap: anywhere; }
+.chapter-rival header small { color: var(--paper-muted); font-size: 12px; }
+.chapter-rival p { font-size: 13px; line-height: 1.85; overflow-wrap: anywhere; margin: 10px 0 0; }
+.chapter-rival .career-style { font-size: 12px; }
+.chapter-career-label { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; margin: 14px 0 0; border: 1px solid var(--paper-line); border-radius: 4px; color: var(--paper-red-deep); font-size: 11px; }
+.chapter-roster-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+@media (min-width: 701px) and (max-width: 1080px) {
+  .paper-game .paper-rival .career-marker, .paper-game .paper-rival .career-short-status { grid-column: 1 / -1; text-align: center; }
+}
+@media (max-width: 850px) {
+  .chapter-roster-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .chapter-roster { width: calc(100% - 32px); margin-top: 24px; }
+  .chapter-roster-heading { display: block; }
+  .chapter-roster-heading h1 { font-size: 28px; }
+  .chapter-roster-list { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .chapter-rival { padding: 16px; }
+  .chapter-roster-actions .paper-primary { width: 100%; }
+  .paper-rival .career-marker, .paper-rival .career-short-status { font-size: 9px; }
+  .paper-rival .career-avatar > b { font-size: 20px; }
+  .paper-rival .career-avatar > svg { width: 12px; height: 12px; right: 1px; bottom: 1px; }
+  .career-resources { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-24",
+  "endpoint": "https://api.openai-next.com/v1/chat/completions",
+  "authentication": "Bearer token read from local key file; omitted from this report",
+  "successful_audio_count": 0,
+  "results": [
+    {
+      "model": "chirp-v3",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416472898543907596e93ae3eGbUQmiw)",
+          "type": "shell_api_error"
+        }
+      }
+    },
+    {
+      "model": "chirp-v3-5",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v3-5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416470797057139096e93ae3LEOgNy7j)",
+          "type": "shell_api_error"
+        }
+      }
+    },
+    {
+      "model": "chirp-v4",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416464348599861996e93ae3FRXd5czC)",
+          "type": "shell_api_error"
+        }
+      }
+    },
+    {
+      "model": "chirp-v4-5",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v4-5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416462251616899596e93ae3yibcGZ07)",
+          "type": "shell_api_error"
+        }
+      }
+    },
+    {
+      "model": "chirp-v4-5+",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v4-5+",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416460975926802596e93ae3JntxddCz)",
+          "type": "shell_api_error"
+        }
+      }
+    },
+    {
+      "model": "chirp-v5",
+      "attempt_count": 2,
+      "http_status": 503,
+      "request": {
+        "model": "chirp-v5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate an original instrumental background music track for a cozy Chinese Mid-Autumn dice board game. Lighthearted and playful, acoustic guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light hand percussion. Warm intimate tabletop atmosphere, moderate tempo around 96 BPM, restrained dynamics so game sound effects stay audible. No vocals, no lyrics, no speech, no crowd noise, no heavy drums. Aim for a 60-second piece suitable for looping. Title: Moonlit Dice Table. Please generate the actual audio and return its download link."
+          }
+        ],
+        "stream": false
+      },
+      "last_response": {
+        "error": {
+          "message": " (request id: 2026102416455546053524696e93ae3170MMqeC)",
+          "type": "shell_api_error"
+        }
+      }
+    }
+  ],
+  "suno_task_protocol": {
+    "reference": "https://doc.newapi.pro/en/api/suno-music/",
+    "results": [
+      {
+        "url": "https://api.openai-next.com/suno/submit/music",
+        "request": {
+          "mv": "chirp-v4",
+          "gpt_description_prompt": "Lighthearted warm Chinese instrumental background music for a cozy Mid-Autumn dice board game. Guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light percussion. Moderate tempo 96 BPM, restrained dynamics, no heavy drums. No vocals, no lyrics, no speech or humming. Aim for a short piece suitable for looping.",
+          "make_instrumental": true
+        },
+        "http_status": 503,
+        "response": {
+          "error": {
+            "message": " (request id: 20261024165151212554596e93ae3QAAfxPga)",
+            "type": "shell_api_error"
+          }
+        },
+        "attempt_count": 2
+      },
+      {
+        "url": "https://api.openai-next.com/suno/submit/music",
+        "request": {
+          "mv": "chirp-v4-5",
+          "gpt_description_prompt": "Lighthearted warm Chinese instrumental background music for a cozy Mid-Autumn dice board game. Guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light percussion. Moderate tempo 96 BPM, restrained dynamics, no heavy drums. No vocals, no lyrics, no speech or humming. Aim for a short piece suitable for looping.",
+          "make_instrumental": true
+        },
+        "http_status": 503,
+        "response": {
+          "error": {
+            "message": " (request id: 2026102416525464879313796e93ae3gPMgc5iD)",
+            "type": "shell_api_error"
+          }
+        },
+        "attempt_count": 2
+      },
+      {
+        "url": "https://api.openai-next.com/suno/submit/music",
+        "request": {
+          "mv": "chirp-v5",
+          "gpt_description_prompt": "Lighthearted warm Chinese instrumental background music for a cozy Mid-Autumn dice board game. Guzheng and pipa plucks, gentle bamboo flute, subtle woodblock and light percussion. Moderate tempo 96 BPM, restrained dynamics, no heavy drums. No vocals, no lyrics, no speech or humming. Aim for a short piece suitable for looping.",
+          "make_instrumental": true
+        },
+        "http_status": 503,
+        "response": {
+          "error": {
+            "message": " (request id: 2026102416523370826126796e93ae3QuxafKgG)",
+            "type": "shell_api_error"
+          }
+        },
+        "attempt_count": 2
+      }
+    ],
+    "successful_audio_count": 0
+  }
+}

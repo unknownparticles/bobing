@@ -1,0 +1,52 @@
+/* 原生模态层沿用纸面令牌；列表单独滚动，让关闭按钮始终可达。 */
+.guide-dialog { color: var(--paper-ink); background: var(--paper); border: 1px solid var(--paper-line); border-radius: 12px 4px; box-shadow: 0 24px 80px #18392e40; padding: 0; max-height: calc(100dvh - 32px); max-width: calc(100vw - 28px); }
+.guide-dialog::backdrop { background: #162e25a8; }
+.player-details-dialog { width: 600px; overflow: hidden; }
+.player-details-heading { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border-bottom: 1px solid var(--paper-line); }
+.player-details-heading > div { flex: 1; min-width: 0; }
+.player-details-heading h2 { margin: 5px 0 0; font: 600 25px var(--paper-serif); overflow-wrap: anywhere; }
+.player-details-heading h2 small { margin-left: 8px; font: 12px var(--paper-sans); }
+.guide-close { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--paper-line); border-radius: 50%; background: var(--paper-raised); }
+.player-details-body { max-height: calc(100dvh - 145px); padding: 20px 22px; overflow-y: auto; overscroll-behavior: contain; }
+.player-prize-totals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.player-prize-totals > div { padding: 15px; background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: 6px; }
+.player-prize-totals span { display: block; font-size: 12px; color: var(--paper-muted); }
+.player-prize-totals b { display: block; margin-top: 6px; font: 600 32px var(--paper-serif); }
+.player-prize-totals small { margin-left: 7px; font-size: 12px; }
+.player-details-section { margin-top: 22px; }
+.player-details-section h3 { margin: 0 0 12px; font: 600 18px var(--paper-serif); }
+.player-details-section p { margin: 6px 0; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.player-award-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; }
+.player-award-list > div { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; gap: 8px; border-bottom: 1px solid var(--paper-line); font-size: 14px; }
+.player-award-list small { display: block; font-size: 11px; margin-top: 4px; color: var(--paper-muted); }
+.player-award-list b { white-space: nowrap; color: var(--paper-red-deep); }
+.player-details-note { color: var(--paper-muted); font-size: 12px !important; }
+.player-public-entry { display: flex; align-items: start; gap: 10px; padding-block: 10px; border-bottom: 1px solid var(--paper-line); }
+.player-public-entry > .card-symbol { flex-shrink: 0; }
+.player-public-entry b { font-size: 14px; }
+.player-public-entry small { display: block; margin-top: 5px; font-size: 11px; color: var(--paper-muted); line-height: 1.7; }
+.game-guide-dialog { width: 1120px; overflow-y: auto; overscroll-behavior: contain; }
+.game-guide-dialog .archive-page { min-height: 0; }
+.game-guide-dialog .paper-header { position: sticky; top: 0; z-index: 2; background: var(--paper); padding: 15px 22px; }
+.game-guide-dialog .archive-body { margin-block: 22px; }
+.game-guide-dialog .archive-tabs { margin-top: 20px; }
+.paper-guide-button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; background: transparent; border: 1px solid var(--paper-line); border-radius: 5px; padding: 7px 10px; font-size: 12px; white-space: nowrap; }
+.paper-player-trigger { cursor: pointer; color: inherit; font: inherit; text-align: inherit; }
+.paper-player-trigger:focus-visible, .guide-dialog button:focus-visible { outline: 2px solid var(--paper-red); outline-offset: 3px; }
+.paper-rival.paper-player-trigger { background: transparent; }
+.paper-rival.paper-player-trigger:hover { background: var(--paper-raised); }
+.paper-table-self.paper-player-trigger, .paper-self.paper-player-trigger { border: 0; background: transparent; }
+.archive-seen-filter { display: flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 12px; font-size: 13px; }
+.archive-seen-filter input { width: 17px; height: 17px; accent-color: var(--paper-red); }
+.archive-tabs { overflow-x: auto; }
+.archive-tabs button { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 700px) {
+  .player-details-heading { padding: 14px; }
+  .player-details-body { padding: 16px; }
+  .game-guide-dialog .paper-header { padding: 12px 14px; }
+  .game-guide-dialog .paper-brand small { display: none; }
+  .paper-guide-button { padding-inline: 7px; }
+  .paper-guide-button span { display: none; }
+  .archive-page .archive-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+  .archive-page .archive-tabs button { min-width: 0; padding-inline: 4px; font-size: 12px; }
+}

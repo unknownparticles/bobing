@@ -11,14 +11,16 @@ import { COUNTERCLOCKWISE_SEATS } from '/src/game/config.js';
 import { resolveAction } from '/src/game/rolls.js';
 import { initializeShop } from '/src/game/stock.js';
 import '/src/paper-theme.css';
+import '/src/styles/artisan-ui.css';
 
-// 复用真正的商店与规则；仅预览初始盘缠不同，正式对局从游戏首页开始。
+// 首批固定八张已配图商品，方便检查美术；购买与后续刷新仍使用真实规则。
 function Preview() {
   const [game, update] = useReducer(gameReducer, null, () => {
     const state = createGame(COUNTERCLOCKWISE_SEATS.map((seat, index) => ({id:index?'guest-'+index:'you',name:['林小满','小美','陈主管','阿杰','大林','老吴'][index],seat,gender:index===1?'female':'male'})));
     state.stage = 'shop';
     state.players[0].coins = 100;
     initializeShop(state, Math.random);
+    state.shopStock.you = { god: ['wealth', 'matchmaker'], skill: ['steal', 'toilet', 'miracle'], field: ['seven_dice', 'eight_dice', 'shuffle'] };
     state.event = '商店预览：100金币体验购买，正式对局资源独立。';
     return state;
   });

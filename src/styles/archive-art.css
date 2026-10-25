@@ -1,0 +1,24 @@
+/* 图鉴正文与状态保持真实文本；插画独立缩放，完整显示人物与成就物件。 */
+.archive-card-art, .archive-achievement-art { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #c6b17e; border-radius: 7px 2px; background: #f2e7ce; }
+.archive-card-art { margin-bottom: 14px; }
+.archive-card-art .stock-art { width: 100%; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; }
+.archive-card-art .stock-illustration { width: 100%; height: 100%; object-fit: contain; }
+.archive-generated-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.archive-card.is-undiscovered .archive-card-art { filter: saturate(.45); opacity: .84; }
+.archive-page .archive-card.is-used { border-color: #9f8c51; box-shadow: inset 0 0 0 2px #d5bd7d2b; }
+.archive-achievement-art { margin-bottom: 18px; }
+.archive-achievement:not(.is-complete) .archive-achievement-art { filter: saturate(.32); opacity: .8; }
+.archive-page .archive-achievement.is-complete { border-color: #ab8b45; background: linear-gradient(130deg, #fff8e6, #f4e7c6); box-shadow: inset 0 0 0 3px #e5c98524; }
+.archive-page .archive-achievement.is-complete .archive-achievement-art { border-color: #ad8f4c; }
+.archive-page .archive-achievement.is-complete .archive-achievement-heading > span { color: #7e5e24; }
+.archive-character-art { display: grid; place-items: center; width: min(100%, 224px); aspect-ratio: 3 / 4; margin: 0 auto 16px; overflow: hidden; border: 1px solid #c2ae7c; border-radius: 24px 24px 5px 5px; background: radial-gradient(ellipse at 50% 35%, #dbe6ce, #f6edda 72%); }
+.archive-character-art > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.archive-title .archive-achievement-art { margin-bottom: 14px; }
+.archive-title.is-selected .archive-achievement-art { border-color: #a84b31; }
+.archive-card-top { align-items: center; }
+.archive-card-top .archive-state { text-align: right; }
+@media (max-width: 700px) {
+  .archive-card-art { margin-bottom: 12px; }
+  .archive-achievement-art { margin-bottom: 14px; }
+  .archive-character-art { width: min(100%, 210px); }
+}

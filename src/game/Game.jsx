@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { scoreOf } from './state.js';
 import { useGame } from './useGame.js';
+import { useBanter } from './useBanter.js';
 import PaperGame from '../ui/PaperGame.jsx';
-import { MAX_ROUNDS } from './config.js';
+import { useGameAudio } from './useGameAudio.js';
 
-/** 六人桌与轮间商店；只派发操作，购买、消耗和结算统一由 reducer 校验。 */
-export default function Game({ players: initialPlayers, profile, muted, setMuted, onHome }) {
-  const { game, dispatch, dice } = useGame(initialPlayers);
+/** 单局桌面与轮间商店；模式配置决定人数和终局，晋级由 App 重新开局。 */
+export default function Game({ players: initialPlayers, match, profile, archive, rewards, storageError, onProgress, muted, setMuted, audio, onHome, onContinue }) {
+  const { game, dispatch, dice, presentation } = useGame(initialPlayers, match);
+  useGameAudio(game, presentation, audio);
+  const speech = useBanter(game);
   const [targetOpen, setTargetOpen] = useState(false);
   const [shakeReady, setShakeReady] = useState(false);
   const [motionMessage, setMotionMessage] = useState('');
@@ -17,6 +20,11 @@ export default function Game({ players: initialPlayers, profile, muted, setMuted
   const yourTurn = active.id === you.id;
   const ready = yourTurn && game.stage === 'ready';
   const rolling = game.stage === 'rolling';
+  useEffect(() => { onProgress?.(game); }, [game.id, game.events.length, game.stage, onProgress]);
+  const unlockedKey = archive?.unlockedContent.join(',') || '';
+  useEffect(() => {
+    if (archive) dispatch({ type: 'SYNC_UNLOCKS', unlockedContent: archive.unlockedContent });
+  }, [unlockedKey]);
 
   useEffect(() => {
     if (ready) rollButton.current?.focus({ preventScroll: true });
@@ -30,6 +38,8 @@ export default function Game({ players: initialPlayers, profile, muted, setMuted
   useEffect(() => {
     if (!shakeReady || !ready) return;
     const onMotion = event => {
+      // 原生模态层只隔离点击和键盘；查图鉴或奖项时也要拦住传感器掷骰。
+      if (document.querySelector('.guide-dialog[open]')) return;
       const acceleration = event.accelerationIncludingGravity || event.acceleration;
       if (!acceleration) return;
       const previous = motionRef.current;
@@ -51,14 +61,17 @@ export default function Game({ players: initialPlayers, profile, muted, setMuted
   useEffect(() => {
     // 只暴露可读快照供浏览器验收，不提供绕过规则修改金币或库存的入口。
     window.render_game_to_text = () => JSON.stringify({
-      mode: game.stage, round: game.round, maxRounds: MAX_ROUNDS, activeId: active.id,
-      order: game.players.map(player => player.id), dice: game.dice,
-      players: game.players.map(player => ({ id: player.id, name: player.name, seat: player.seat, coins: player.coins, items: player.items, awards: player.awards, score: scoreOf(player), protected: player.protected })),
-      pool: game.pool, field: game.field, diceCount: game.diceCount, fieldSubmissions: game.fieldSubmissions, event: game.event, visuals: game.visuals,
+      mode: game.stage, gameMode: game.match.mode, chapterIndex: game.match.chapterIndex,
+      id: game.id, cycle: game.match.cycle || 1, throwCount: game.throwCount, forecasts: game.forecasts,
+      playerCount: game.players.length, round: game.round, maxRounds: game.match.maxRounds, activeId: active.id,
+      order: game.players.map(player => player.id), godQueue: game.godQueue, dice: game.dice,
+      dicePresentation: { phase: presentation.phase, displayedDice: dice, rollingIndices: presentation.rollingIndices, revealedCount: presentation.revealedCount, candidateIndex: presentation.candidateIndex },
+      players: game.players.map(player => ({ id: player.id, name: player.name, title: player.title, career: player.career, careerTier: player.careerTier, careerState: player.careerState, style: player.style, seat: player.seat, archetype: player.archetype, branch: player.branch, luck: player.luck, missStreak: player.missStreak, stolenCount: player.stolenCount, coins: player.coins, items: player.items, awards: player.awards, buffs: player.buffs, score: scoreOf(player), protected: player.protected })),
+      pool: game.pool, field: game.field, diceCount: game.diceCount, fieldSubmissions: game.fieldSubmissions, event: game.event, visuals: game.visuals, speech,
       coordinateSystem: '屏幕左上为原点，x 向右，y 向下；从底部座位逆时针行动',
     });
     return () => { delete window.render_game_to_text; };
-  }, [game]);
+  }, [game, speech, presentation, dice]);
 
   /** iOS 需要用户点击后请求动作权限；拒绝时仍可使用掷骰按钮。 */
   const requestMotion = async () => {
@@ -91,8 +104,13 @@ export default function Game({ players: initialPlayers, profile, muted, setMuted
 
   return <PaperGame
     game={game}
+    archive={archive}
+    rewards={rewards?.[game.id]}
+    storageError={storageError}
+    speech={speech}
     dispatch={dispatch}
     dice={dice}
+    presentation={presentation}
     profile={profile}
     muted={muted}
     onToggleSound={() => setMuted(!muted)}
@@ -105,5 +123,6 @@ export default function Game({ players: initialPlayers, profile, muted, setMuted
     playItem={playItem}
     onRestart={restart}
     onHome={onHome}
+    onContinue={onContinue ? () => onContinue(game) : undefined}
   />;
 }

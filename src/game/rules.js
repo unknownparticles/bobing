@@ -70,7 +70,7 @@ export function evaluateDice(dice) {
 
 const championRanks = ['五子登科', '六杯黑', '遍地锦', '四点红', '状元插金花', '五红', '六杯红', '七杯黑', '七子锦', '七杯红', '八杯黑', '八子锦', '八杯红'];
 
-/** 数值只用于同分比较和选骰，不改变奖池或基础奖金。 */
+/** 等级用于选骰、同分排名与抢状元比较，不改变基础奖金。 */
 export function rollRank(result) {
   if (result.awardId === 'zhuangyuan') return 100 + championRanks.indexOf(result.label);
   return { duitang: 60, sanhong: 50, sijin: 40, erju: 30, yixiu: 20 }[result.awardId] || 0;

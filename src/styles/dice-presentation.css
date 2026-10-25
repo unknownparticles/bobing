@@ -1,0 +1,33 @@
+/* 顺着骰碗向下读完候选；窄屏仍让点数、奖型和取舍出现在同一行。 */
+.dice-presentation { width: min(100%, 560px); margin: 0 auto 14px; padding: 11px 13px; border: 1px solid #b8c4a6; border-radius: 10px; background: #fbf7e9eb; color: #354f3e; }
+.dice-presentation-title { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 0; font-size: 12px; line-height: 1.6; text-align: center; }
+.dice-presentation-title svg { flex: 0 0 auto; }
+.dice-candidates { list-style: none; display: grid; gap: 5px; padding: 0; margin: 9px 0 0; }
+.dice-candidates li { display: grid; grid-template-columns: 46px minmax(0, 1fr) 70px 40px; gap: 7px; align-items: center; padding: 8px; border: 1px solid #d4d9c3; border-radius: 6px; background: #f3f1e1; font-size: 11px; }
+.dice-candidates .is-kept { border-color: #52785d; background: #e5edda; box-shadow: inset 3px 0 #52785d; }
+.dice-candidates .is-discarded { opacity: .55; }
+.dice-candidates .is-pending { border-style: dashed; color: #777d69; }
+.dice-candidate-dice { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; min-height: 20px; }
+.paper-game .dice-candidate-dice .paper-die { width: 18px; height: 18px; box-shadow: 0 2px #c6b68d; transform: none; border-radius: 3px; }
+.dice-candidates b { font-size: 11px; font-weight: 500; overflow-wrap: anywhere; }
+.dice-candidates li > small { display: flex; align-items: center; justify-content: flex-end; gap: 2px; font-size: 10px; }
+.dice-face-changes { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 14px; margin-top: 10px; }
+.dice-face-changes > span { display: flex; align-items: center; gap: 7px; }
+.dice-face-changes small { font-size: 11px; }
+.paper-game .dice-face-changes .paper-die { width: 24px; height: 24px; transform: none; }
+.paper-die.is-highlighted { outline: 2px solid #bc8a3d; outline-offset: 4px; }
+.paper-die.is-changing svg { animation: dice-change-out 450ms ease-in both; }
+.paper-die.is-revealing svg { animation: dice-change-in 350ms ease-out both; }
+@keyframes dice-change-out { from { transform: scaleX(1); opacity: 1; } to { transform: scaleX(0); opacity: .2; } }
+@keyframes dice-change-in { from { transform: scaleX(0); opacity: .2; } to { transform: scaleX(1); opacity: 1; } }
+@media (max-width: 420px) {
+  .dice-presentation { padding: 9px 7px; }
+  .dice-candidates li { grid-template-columns: 36px minmax(0, 1fr) 52px 40px; gap: 5px; padding: 7px 5px; font-size: 10px; }
+  .dice-candidate-dice { gap: 3px; }
+  .paper-game .dice-candidate-dice .paper-die { width: 14px; height: 14px; }
+  .dice-candidates b { font-size: 10px; }
+  .dice-candidates li > small { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-die.is-changing svg, .paper-die.is-revealing svg { animation: none; }
+}

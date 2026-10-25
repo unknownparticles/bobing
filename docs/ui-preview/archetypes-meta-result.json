@@ -1,0 +1,47 @@
+{
+  "gameplay": {
+    "checks": [
+      "风水起手换位返单骰重投，公开三投预告→主角单骰→手牌单骰触发，成就及称号真实解锁且刷新保留",
+      "运气天赋与积福真实叠加，名片展示已佩戴称号",
+      "厚积薄发实际三轮无奖计数，第四轮自动三红爆发并清零",
+      "六/八/十人三章真实通关，解锁进阶天赋和禄运双全；刷新可开二周目，进阶分支重置成长，无重复奖励",
+      "经典十人、图鉴、成就、称号与320px窄屏入口无溢出"
+    ],
+    "errors": [],
+    "screenshots": [
+      "achievements-empty",
+      "setup-风水流",
+      "fengshui-desktop",
+      "forecast-mobile",
+      "forecast-claimed-mobile",
+      "summary-collection",
+      "title-equipped-mobile",
+      "collection-mobile",
+      "setup-运气流",
+      "luck-mobile",
+      "setup-厚积薄发",
+      "patience-ready-mobile",
+      "patience-burst-mobile",
+      "story-unlock-summary",
+      "newcycle-advanced-setup",
+      "newcycle-game-320",
+      "setup-偷盗流",
+      "classic-10-320",
+      "achievements-320"
+    ]
+  },
+  "shop": {
+    "checks": [
+      "真实购买双红吉位→选对手座位→布置→换位→整碗至少两红→风水成就与一投定魁解锁",
+      "偷盗流真实购得手就收，偷取实际奖项、每轮返5金币和自动保护同时生效"
+    ],
+    "errors": [],
+    "screenshots": [
+      "setup-风水流",
+      "seat-selection-mobile",
+      "seat-beneficiary-mobile",
+      "setup-偷盗流",
+      "theft-combo-desktop"
+    ]
+  }
+}

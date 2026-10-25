@@ -1,0 +1,40 @@
+{
+  "reports": [
+    {
+      "scenario": "thunder",
+      "twoThrows": true,
+      "keptWorst": true,
+      "throwCount": 1
+    },
+    {
+      "scenario": "mobile",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "scenario": "mobile",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "scenario": "fortune",
+      "candidates": 5,
+      "reducedMotion": true
+    },
+    {
+      "scenario": "face-change",
+      "before": 2,
+      "after": 4,
+      "drawerClosed": true
+    },
+    {
+      "scenario": "double-reroll",
+      "onlySelectedDice": true
+    },
+    {
+      "scenario": "single-reroll",
+      "onlySelectedDie": true
+    }
+  ],
+  "errors": []
+}

@@ -6,7 +6,7 @@ import {
   Gift, ArrowLeftRight, Scale, Feather, WandSparkles, Undo2, UserRound,
   Flag, MoveHorizontal, Shuffle, Ban, PackageOpen, Recycle, CornerUpLeft,
   Orbit, MoveRight, ListOrdered, Pentagon, Star, Octagon, Hexagon, Sun,
-  Eclipse, Sprout, Wheat,
+  Eclipse, Sprout, Wheat, LogIn, LogOut,
 } from 'lucide-react';
 
 const icons = {
@@ -19,11 +19,15 @@ const icons = {
   flip: FlipVertical2, copy_face: Copy, mirror: ScanFace, lucky_note: Ticket,
   unlucky_note: CloudDrizzle, disarm: Scissors, gift: Gift, exchange: ArrowLeftRight,
   equal_coins: Scale, cleanse: Feather, exorcism: WandSparkles, reflect: Undo2,
+  summon_god: LogIn, dismiss_god: LogOut,
   substitute: UserRound, priority: Flag, swap_seat: MoveHorizontal, swap_others: Shuffle,
   seal: Ban, lucky_bag: PackageOpen, recycle: Recycle, reverse: CornerUpLeft,
   shuffle: Orbit, rotate: MoveRight, leader_last: ListOrdered, five_dice: Pentagon,
   seven_dice: Star, eight_dice: Octagon, six_dice: Hexagon, red_table: Sun,
   black_table: Eclipse, small_table: Sprout, harvest: Wheat,
+  gather_luck: Sprout, secure_loot: Shield, forecast_three: ListOrdered, forecast_one: Crown,
+  bitter_sweet: Flame, never_too_late: HeartPulse, old_master: GraduationCap, double_steal: Swords,
+  thief_god: Hand, geomancer: Orbit, luck_blessing: Sparkles, lucky_seat: Cherry, four_twos: Dice2,
 };
 
 /** 每张牌使用独立 SVG 图案；图形是装饰，名称由相邻文本提供。 */

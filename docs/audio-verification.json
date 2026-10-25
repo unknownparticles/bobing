@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-24",
+  "assetCount": 22,
+  "allChecksPassed": true,
+  "totalBytes": 7664630,
+  "limitations": [
+    "技术检查不代表人工试听通过；合成音色未标为实录。",
+    "循环检测针对解码采样；不同浏览器的 MP3 循环调度仍可能产生间隔。"
+  ],
+  "results": [
+    {
+      "key": "bgm.home",
+      "src": "/audio/bgm-home.mp3",
+      "durationSeconds": 65.454535,
+      "peakDbfs": -7.19,
+      "rmsDbfs": -24.4,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": 0.00089476,
+      "decoded": true
+    },
+    {
+      "key": "bgm.table",
+      "src": "/audio/bgm-table.mp3",
+      "durationSeconds": 60.0,
+      "peakDbfs": -7.19,
+      "rmsDbfs": -24.45,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": 0.00115095,
+      "decoded": true
+    },
+    {
+      "key": "bgm.shop",
+      "src": "/audio/bgm-shop.mp3",
+      "durationSeconds": 55.384626,
+      "peakDbfs": -7.19,
+      "rmsDbfs": -23.1,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": 0.00137351,
+      "decoded": true
+    },
+    {
+      "key": "sfx.dice.roll",
+      "src": "/audio/dice-roll.wav",
+      "durationSeconds": 1.2,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -22.92,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.dice.settle",
+      "src": "/audio/dice-settle.wav",
+      "durationSeconds": 0.5,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -25.42,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.reward.win",
+      "src": "/audio/reward-win.wav",
+      "durationSeconds": 1.2,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -18.93,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.reward.champion",
+      "src": "/audio/reward-champion.wav",
+      "durationSeconds": 3.0,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -18.83,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.ui.click",
+      "src": "/audio/ui-click.wav",
+      "durationSeconds": 0.12,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -19.41,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.ui.confirm",
+      "src": "/audio/ui-confirm.wav",
+      "durationSeconds": 0.4,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -21.69,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.ui.back",
+      "src": "/audio/ui-back.wav",
+      "durationSeconds": 0.3,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -20.43,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.item.cast",
+      "src": "/audio/item-cast.wav",
+      "durationSeconds": 0.7,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -17.33,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.item.attack",
+      "src": "/audio/item-attack.wav",
+      "durationSeconds": 0.6,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -23.36,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.item.shield",
+      "src": "/audio/item-shield.wav",
+      "durationSeconds": 0.9,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -19.92,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.item.transfer",
+      "src": "/audio/item-transfer.wav",
+      "durationSeconds": 0.9,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -16.31,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.blessing.activate",
+      "src": "/audio/blessing-activate.wav",
+      "durationSeconds": 1.5,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -18.34,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.field.change",
+      "src": "/audio/field-change.wav",
+      "durationSeconds": 1.2,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -17.5,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.shop.open",
+      "src": "/audio/shop-open.wav",
+      "durationSeconds": 0.8,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -19.03,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.shop.buy",
+      "src": "/audio/shop-buy.wav",
+      "durationSeconds": 0.7,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -18.62,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.shop.refresh",
+      "src": "/audio/shop-refresh.wav",
+      "durationSeconds": 0.6,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -21.86,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.result.round",
+      "src": "/audio/result-round.wav",
+      "durationSeconds": 1.8,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -19.11,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.result.victory",
+      "src": "/audio/result-victory.wav",
+      "durationSeconds": 4.0,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -17.82,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    },
+    {
+      "key": "sfx.result.defeat",
+      "src": "/audio/result-defeat.wav",
+      "durationSeconds": 2.5,
+      "peakDbfs": -5.04,
+      "rmsDbfs": -18.12,
+      "clippedSamples": 0,
+      "loopBoundaryDelta": null,
+      "decoded": true
+    }
+  ]
+}

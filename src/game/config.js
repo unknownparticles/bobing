@@ -25,10 +25,10 @@ export const PRACTICE_ROLLS_PER_TABLE = 3;
 /** 从屏幕底部出发逆时针接碗，行动和顺序条共用这份座位顺序。 */
 export const COUNTERCLOCKWISE_SEATS = ['bottom', 'right-bottom', 'right-top', 'top', 'left-top', 'left-bottom'];
 
-/** 六人完成一轮后发放，金币不参与奖项积分与排名。 */
+/** 全桌完成一轮后发放，金币不参与奖项积分与排名。 */
 export const ROUND_COINS = 20;
 
-/** 完整行动八轮后结算，每位玩家获得相同的正式掷骰机会。 */
+/** 故事与快速模式完整行动八轮后结算；经典模式由奖池耗尽决定终局。 */
 export const MAX_ROUNDS = 8;
 
 /** 固定商品；每位玩家每种每轮限购一件，库存可以跨轮积累。 */

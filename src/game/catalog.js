@@ -1,20 +1,25 @@
 /** 完整商品牌库；价格、目标、时机和说明供商店、规则与机器人共用。 */
 export const GODS = [
-  {"id": "fortune", "name": "福神赐运", "price": 45, "description": "自己每次掷骰生成两组合法点数，自动保留奖型等级更高的一组；同等级取点数组合字典序较高的一组。", "category": "god", "timing": "shop", "target": "none", "effect": "fortune", "duration": 3},
+  {"id": "fortune", "name": "福神赐运", "price": 45, "description": "生效期间运气 +2，与本桌运气、福气贴叠加，有效运气最多5；每点运气增加一组整碗候选并择优。", "category": "god", "timing": "shop", "target": "none", "effect": "fortune", "duration": 3},
   {"id": "wealth", "name": "财神进宝", "price": 40, "description": "自己从奖池新领取奖项时，基础积分额外增加 25%，通过独立积分账本记录；不额外消耗奖池份数，转移、赠送、交换不重复产生奖金。", "category": "god", "timing": "shop", "target": "none", "effect": "wealth", "duration": 3},
   {"id": "scholar", "name": "文昌点红", "price": 40, "description": "自己正常掷骰时，若一颗四点都没有，将最低点的一颗改为四点；已经有红点则不改。", "category": "god", "timing": "shop", "target": "none", "effect": "scholar", "duration": 3},
   {"id": "salary", "name": "禄神添财", "price": 30, "description": "每轮结算额外获得 10 金币，不改变奖项积分。", "category": "god", "timing": "shop", "target": "none", "effect": "salary", "duration": 3},
   {"id": "land", "name": "土地照拂", "price": 30, "description": "购买技能卡享八折，向上取整；不折扣神明与场地，不与其他价格效果叠加。", "category": "god", "timing": "shop", "target": "none", "effect": "land", "duration": 3},
   {"id": "kitchen", "name": "灶君暖席", "price": 25, "description": "自己一次确认后的掷骰未获奖时得到 5 金币；出碗、上厕所和主动送礼不触发。", "category": "god", "timing": "shop", "target": "none", "effect": "kitchen", "duration": 3},
   {"id": "guardian", "name": "关帝护持", "price": 40, "description": "每轮抵挡第一次针对自己的负面技能；抵挡后本轮不再触发，下轮恢复一次。", "category": "god", "timing": "shop", "target": "none", "effect": "guardian", "duration": 3},
-  {"id": "longevity", "name": "寿星留席", "price": 30, "description": "免疫厕所卡造成的行动跳过；不免疫自己大力出碗等主动风险。", "category": "god", "timing": "shop", "target": "none", "effect": "longevity", "duration": 3},
-  {"id": "matchmaker", "name": "月老牵线", "price": 45, "description": "自选一位未缔结、与登记性别相反的角色，后续积分得失平分三轮；不追溯缔结前积分。", "category": "god", "timing": "shop", "target": "player", "effect": "matchmaker", "duration": 3},
+  {"id": "longevity", "name": "寿星留席", "price": 30, "description": "免疫厕所卡；本人正式投掷最终未领到奖项额外补5金币。跳过行动和大力出碗不补偿。", "category": "god", "timing": "shop", "target": "none", "effect": "longevity", "duration": 3},
+  {"id": "matchmaker", "name": "月老牵线", "price": 45, "description": "买后在场上轮初选择一位未缔结、与登记性别相反的角色；缔结后积分得失平分至本次供奉到期，不追溯此前积分。", "category": "god", "timing": "round-start", "target": "player", "effect": "matchmaker", "duration": 3},
   {"id": "champion", "name": "魁星点斗", "price": 35, "description": "自己每轮第一次实际领取三红、对堂或状元时额外得到 10 金币；库存耗尽未发奖时不触发。", "category": "god", "timing": "shop", "target": "none", "effect": "champion", "duration": 3},
-  {"id": "thunder", "name": "雷公压运", "price": 45, "description": "指定对手：其正常掷骰生成两组合法点数，自动保留奖型等级更低的一组；来源与剩余轮数公开。", "category": "god", "timing": "shop", "target": "player", "effect": "thunder", "duration": 3},
-  {"id": "unlucky", "name": "太岁作祟", "price": 40, "description": "指定对手：其每次正常掷骰后，若存在四点，将一颗四点改为一；每次只改一颗。", "category": "god", "timing": "shop", "target": "player", "effect": "unlucky", "duration": 3},
+  {"id": "thunder", "name": "雷公压运", "price": 45, "description": "每轮所有人行动前在场上指定一位对手，仅本轮其整碗投掷抵消一层运气择优；零运气时两组取较差者，与倒霉贴不叠加。下轮可重新选人，供奉持续三轮。", "category": "god", "timing": "round-start", "target": "player", "effect": "thunder", "duration": 3},
+  {"id": "unlucky", "name": "太岁作祟", "price": 40, "description": "每轮所有人行动前在场上指定一位对手，仅本轮其每次正常掷骰后将一颗四点改为一；下轮可重新选人，供奉持续三轮。", "category": "god", "timing": "round-start", "target": "player", "effect": "unlucky", "duration": 3},
+  { id: 'thief_god', name: '盗神借运', price: 40, description: '每轮本人行动开始时补一张顺手牵羊，库存最多三张；夺奖仍受保护、反弹和替身约束。', category: 'god', timing: 'shop', target: 'none', effect: 'thief_god', duration: 3 },
+  { id: 'geomancer', name: '地理仙', price: 35, description: '生效期间每轮第一次由自己成功换位后返还5金币；换位立刻改变吉位受益者。', category: 'god', timing: 'shop', target: 'none', effect: 'geomancer', duration: 3 },
+  { id: 'luck_blessing', name: '禄运双全', price: 45, description: '运气+1，轮末额外获得5金币；与福神及其他运气加成叠加，有效运气最多5。', category: 'god', timing: 'shop', target: 'none', effect: 'luck_blessing', duration: 3 },
 ];
 
 export const SKILLS = [
+  { id: 'summon_god', name: '请神符', price: 40, description: '掷骰前，手选对手的一位正面神明请到自己身上，立即生效并保留原到期轮次；月老不可请，供奉满三位或已有同名神明时不可请。会被关帝、反弹和替身防御。', category: 'skill', timing: 'before', target: 'god', effect: 'summon_god', group: '干扰' },
+  { id: 'dismiss_god', name: '送神符', price: 10, description: '掷骰前，选择自己当前承受的一项神明负面效果解除；保留对手供奉，下轮仍可再次发动。不解除倒霉贴、厕所或封印。', category: 'skill', timing: 'before', target: 'selfGod', effect: 'dismiss_god', group: '防守' },
   {"id": "reroll", "name": "重掷券", "price": 15, "description": "当前整组骰子作废，按当前场地的骰子数量重新掷一次。", "category": "skill", "timing": "after", "target": "none", "effect": "reroll", "group": "改骰"},
   {"id": "steal", "name": "顺手牵羊", "price": 20, "description": "选择一位未受保护且持有奖项的对手，从其当前持有的奖项中随机夺取一份，每份概率相同。", "category": "skill", "timing": "before", "target": "player", "effect": "steal", "group": "干扰"},
   {"id": "protect", "name": "保护罩", "price": 10, "description": "从使用到自己下一次行动开始，阻止对手夺取自己的奖项。沿用现有保护伞的效果，界面统一命名。", "category": "skill", "timing": "before", "target": "none", "effect": "protect", "group": "防守"},
@@ -31,8 +36,8 @@ export const SKILLS = [
   {"id": "flip", "name": "翻面见喜", "price": 10, "description": "选择一颗骰子翻到相对面，新点数为 7 减原点数。", "category": "skill", "timing": "after", "target": "die", "effect": "flip", "group": "改骰"},
   {"id": "copy_face", "name": "好事成双", "price": 15, "description": "先选来源骰子，再选另一颗目标骰子，将目标改成来源点数。", "category": "skill", "timing": "after", "target": "sourceDice", "effect": "copy_face", "group": "改骰"},
   {"id": "mirror", "name": "镜花水月", "price": 20, "description": "选择一位有同数量历史骰型的对手，复制其最近一次确认的点数直接进入结果确认；没有符合条件历史时不可用。", "category": "skill", "timing": "before", "target": "player", "effect": "mirror", "group": "改骰"},
-  {"id": "lucky_note", "name": "福气贴", "price": 15, "description": "本次掷骰生成两组，保留奖型较高的一组；与福神重复时不再增加候选组数量。", "category": "skill", "timing": "before", "target": "none", "effect": "lucky_note", "group": "改骰"},
-  {"id": "unlucky_note", "name": "倒霉贴", "price": 15, "description": "指定对手接下来一次掷骰取两组中较差者；与雷公不重复叠加组数。", "category": "skill", "timing": "before", "target": "player", "effect": "unlucky_note", "group": "干扰"},
+  {"id": "lucky_note", "name": "福气贴", "price": 15, "description": "下一次整碗投掷有效运气+2，可与福神和本桌运气叠加；总运气最多5，使用后不能重复贴。", "category": "skill", "timing": "before", "target": "none", "effect": "lucky_note", "group": "改骰"},
+  {"id": "unlucky_note", "name": "倒霉贴", "price": 15, "description": "指定对手下一次整碗投掷抵消一层运气择优；运气为零时两组取较差者。与雷公不重复叠加。", "category": "skill", "timing": "before", "target": "player", "effect": "unlucky_note", "group": "干扰"},
   {"id": "disarm", "name": "两手空空", "price": 20, "description": "指定一位有技能卡的对手，随机销毁其一张技能卡；不能销毁神明、场地或已打出的牌。", "category": "skill", "timing": "before", "target": "player", "effect": "disarm", "group": "干扰"},
   {"id": "gift", "name": "借花献佛", "price": 10, "description": "选择自己持有的一份奖项送给对手，获得 10 金币；送出和收到的积分变化都参与姻缘分账。", "category": "skill", "timing": "before", "target": "award", "effect": "gift", "group": "资源"},
   {"id": "exchange", "name": "礼尚往来", "price": 25, "description": "选择同样有奖项的对手，交换双方最高基础积分奖项；展示交换对象，不能凭空生成奖项。", "category": "skill", "timing": "before", "target": "player", "effect": "exchange", "group": "资源"},
@@ -47,11 +52,19 @@ export const SKILLS = [
   {"id": "seal", "name": "暂停施法", "price": 20, "description": "指定对手的下一次行动不能使用技能卡；神明被动仍生效，正常掷骰不受影响。", "category": "skill", "timing": "before", "target": "player", "effect": "seal", "group": "干扰"},
   {"id": "lucky_bag", "name": "拆个福袋", "price": 20, "description": "获得两张基础标价不超过 15 金币的随机技能卡，排除福袋本身；获得的新牌符合当前时机即可立即继续使用。", "category": "skill", "timing": "before", "target": "none", "effect": "lucky_bag", "group": "资源"},
   {"id": "recycle", "name": "旧物换钱", "price": 5, "description": "选择背包里另一张技能卡销毁，按其基础标价 60% 向下取整回收金币；不能回收正在用的回收卡、神明或场地。", "category": "skill", "timing": "before", "target": "card", "effect": "recycle", "group": "资源"},
+  { id: 'gather_luck', name: '积福', price: 15, description: '本桌运气+1，最多5。每点有效运气增加一组整碗候选，取奖型较好的结果。', category: 'skill', timing: 'before', target: 'none', effect: 'gather_luck', group: '养运' },
+  { id: 'secure_loot', name: '得手就收', price: 15, description: '本次行动下一次成功夺奖后自动获得保护；没得手不触发，行动结束前有效。', category: 'skill', timing: 'before', target: 'none', effect: 'secure_loot', group: '防守' },
+  { id: 'forecast_three', name: '三投定魁', price: 30, description: '公开预告：从下一投起，全场第三次实际投掷保底四点红。单骰重投也能抢触发；奖池空后仍按原规则抢状元。', category: 'skill', timing: 'before', target: 'none', effect: 'forecast_three', group: '预告' },
+  { id: 'bitter_sweet', name: '苦尽甘来', price: 15, description: '连续至少两次未领到奖项才能使用，下一次正式投掷保底三红并消耗蓄势，不把更好的自然奖型降级。', category: 'skill', timing: 'before', target: 'none', effect: 'bitter_sweet', group: '蓄势' },
+  { id: 'never_too_late', name: '莫欺老年穷', price: 35, description: '连续至少三次未领到奖项才能使用，下一次正式投掷保底四点红并消耗蓄势；发奖仍受真实库存约束。', category: 'skill', timing: 'before', target: 'none', effect: 'never_too_late', group: '爆发' },
+  { id: 'double_steal', name: '满载而归', price: 35, description: '从一位至少持有两份奖项的对手手中随机夺两份；防御链只判定一次，成功时真实转移两份。', category: 'skill', timing: 'before', target: 'player', effect: 'double_steal', group: '夺奖' },
+  { id: 'forecast_one', name: '一投定魁', price: 45, description: '公开预告：全场下一次实际投掷保底四点红，单骰重投也能触发。保证骰型，不凭空生成奖项。', category: 'skill', timing: 'before', target: 'none', effect: 'forecast_one', group: '预告' },
+  { id: 'old_master', name: '老骥伏枥', price: 25, description: '连续至少三次未领到奖项时使用，下一次正式投掷保底四点红并消耗蓄势，任何人都可使用。', category: 'skill', timing: 'before', target: 'none', effect: 'old_master', group: '爆发' },
 ];
 
 export const FIELDS = [
   {"id": "reverse", "name": "逆水行舟", "price": 20, "description": "下一轮改为顺时针接碗，只改变行动顺序，不额外行动。", "category": "field", "timing": "shop", "target": "none", "effect": "reverse", "duration": 1},
-  {"id": "shuffle", "name": "乾坤换席", "price": 25, "description": "下一轮开始时随机重排六个座位，随后按新座次逆时针行动；每人仍一次。", "category": "field", "timing": "shop", "target": "none", "effect": "shuffle", "duration": 1},
+  {"id": "shuffle", "name": "乾坤换席", "price": 25, "description": "下一轮开始时随机重排所有座位，随后按新座次逆时针行动；每人仍一次。", "category": "field", "timing": "shop", "target": "none", "effect": "shuffle", "duration": 1},
   {"id": "rotate", "name": "移步换景", "price": 15, "description": "所有人座位顺时针平移一格；下一轮从新的底部座位开始逆时针行动。", "category": "field", "timing": "shop", "target": "none", "effect": "rotate", "duration": 1},
   {"id": "leader_last", "name": "后来居上", "price": 20, "description": "下一轮按开始时积分从低到高行动；同分按原座次，不在轮中重新排序。", "category": "field", "timing": "shop", "target": "none", "effect": "leader_last", "duration": 1},
   {"id": "five_dice", "name": "五福临门", "price": 20, "description": "下一轮每次只掷五颗，奖型门槛保持原规则，不自动补骰。", "category": "field", "timing": "shop", "target": "none", "effect": "five_dice", "duration": 1},
@@ -62,6 +75,8 @@ export const FIELDS = [
   {"id": "black_table", "name": "红运暂歇", "price": 20, "description": "下一轮四点的抽取权重为其他点数的一半，即四点 1/11，其他各 2/11。", "category": "field", "timing": "shop", "target": "none", "effect": "black_table", "duration": 1},
   {"id": "small_table", "name": "小点成双", "price": 20, "description": "下一轮正常生成骰子后，将五点变一点、六点变两点，其余保持；让一点、两点更集中，确实改变同点奖型概率。显式改点技能作用于变换后的点数，不再重复变换。", "category": "field", "timing": "shop", "target": "none", "effect": "small_table", "duration": 1},
   {"id": "harvest", "name": "团圆丰收席", "price": 25, "description": "下一轮结算基础收入由 20 提高到 30 金币；禄神额外收入继续另算，积分不变。", "category": "field", "timing": "shop", "target": "none", "effect": "harvest", "duration": 1},
+  { id: 'lucky_seat', name: '双红吉位', price: 25, description: '选择一个真实座位，下一轮该座位每次实际投掷的整碗至少两个四点。换位立即改变受益者，保留更高的自然奖型。', category: 'field', timing: 'shop', target: 'seat', effect: 'lucky_seat', duration: 1 },
+  { id: 'four_twos', name: '四进宝座', price: 25, description: '选择一个真实座位，下一轮该座位每次实际投掷的整碗至少四个二点。重投也生效，保留更高的自然奖型。', category: 'field', timing: 'shop', target: 'seat', effect: 'four_twos', duration: 1 },
 ];
 
 export const CATALOG = [...GODS, ...SKILLS, ...FIELDS];

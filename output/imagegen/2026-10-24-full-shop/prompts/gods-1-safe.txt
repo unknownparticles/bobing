@@ -1,0 +1,19 @@
+Use case: illustration-story
+Production atlas: exactly 2 columns by 3 rows, 1024x864 total, each tile 512x288 (16:9). Six equal cells with exact boundaries x=512 and y=288/576. No gutters or labels.
+IMPORTANT: Draw SMALL COMPLETE SEATED FIGURINES, not bust portraits. Each deity is seated on a compact cushion. Include the ENTIRE figurine from the top of the highest hat or weapon down to the bottom of its cushion, BOTH hands and the ENTIRE props. Absolutely no human part, headdress or held object touches any edge. Each complete figure plus props fits within a centered rectangle x=92..420, y=48..240 IN ITS OWN TILE. The TOP 45 PIXELS AND BOTTOM 45 PIXELS OF EACH TILE ARE QUIET IVORY PAPER, no body parts there. Do not zoom into faces. The deity should occupy at most two-thirds of the tile height, surrounded by generous negative space. Wide landscape composition with balanced small cloud ornaments on left and right. If a weapon is too tall, hold it diagonally inside the safe rectangle. Never crop it.
+Style: warm refined original Chinese folk gouache, rich celadon and cinnabar, dark ink green outlines, antique gold accents, detailed rice-paper texture, soft warm light. Same consistent elegant game card illustration style for all six deities. Gentle original faces, complete anatomical hands, clear distinctive attributes. NO text, NO captions, NO pseudo-writing, NO numerals, NO frames, NO watermark. Any tablets are entirely blank.
+Strict row-major sequence:
+
+Cell row 1 column 1: 福神赐运：慈祥圆脸福神，朱红官袍与乌纱帽，两手分别托起一碗骰子，左侧金色祥云表示择优好运。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Cell row 1 column 2: 财神进宝：短须财神戴完整黑金官帽、红金衣袍，双手在胸前托住一枚金元宝，左右少量铜钱与金云。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Cell row 2 column 1: 文昌点红：儒雅青衣文昌，完整文士冠，右手朱笔点向左手托起的四点红骰，书卷与砚台点缀。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Cell row 2 column 2: 禄神添财：绿袍禄神，鹿角纹官帽，双手捧铜钱串与俸禄小盒，俸禄盒完整可见。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Cell row 3 column 1: 土地照拂：矮圆慈祥白须土地公，土黄官帽、青绿袍，一手拐杖、一手小牌，旁有竹叶和小袋铜钱。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Cell row 3 column 2: 灶君暖席：暖红衣灶君，手托热气腾腾的月饼盘与一小串铜钱，背后简洁炉火与屋檐，温暖护佑。 FULL SEATED FIGURINE WITH CUSHION, COMPLETE HAT, HANDS AND PROPS, WITHIN THE SAFE RECTANGLE.
+
+Before finishing verify six COMPLETE SMALL SEATED FIGURINES, with obvious blank space ABOVE every headdress and BELOW every cushion, no cut-off crowns, blades, sleeves, hands, halos or feet. Keep the exact 2x3 grid and 16:9 tiles.

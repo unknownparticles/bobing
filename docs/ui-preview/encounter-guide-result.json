@@ -1,0 +1,54 @@
+{
+  "checks": [
+    "首页空档案、对局内三类图鉴、角色与人物公开技能、关闭保留对局、模态层拦截摇一摇、390px/1280px布局",
+    "本人出牌与奖项明细、对手未使用手牌隐藏、对手公开重掷、奖项与公开历史查询、本人货架发现、刷新后持久保存、320px无溢出"
+  ],
+  "seen": 9,
+  "archive": {
+    "version": 1,
+    "discovered": [
+      "reroll",
+      "kitchen",
+      "guardian",
+      "swap_seat",
+      "secure_loot",
+      "steal",
+      "leader_last",
+      "eight_dice",
+      "six_dice"
+    ],
+    "used": [
+      "reroll"
+    ],
+    "characters": [
+      "hero-a",
+      "chen"
+    ],
+    "skills": [
+      "hero:hero-a"
+    ],
+    "unlockedContent": [],
+    "achievements": [],
+    "titles": [],
+    "selectedTitle": "",
+    "storyWins": {
+      "luck": 0,
+      "theft": 0,
+      "fengshui": 0,
+      "patience": 0
+    },
+    "cyclesCompleted": 0,
+    "storyClears": 0,
+    "exploredEffects": [],
+    "cursors": {
+      "c95d817c-8f09-4259-a506-4f3764907b41": {
+        "seq": 21,
+        "finalized": false,
+        "theft": 0,
+        "burst": false,
+        "maxLuck": 0
+      }
+    }
+  },
+  "errors": []
+}

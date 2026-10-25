@@ -1,0 +1,21 @@
+Use case: illustration-story
+Asset type: production illustration atlas for an original Chinese Mid-Autumn dice strategy card game.
+Create precisely TWO equal columns and 3 equal rows of standalone illustrations. Overall canvas 1024 by 864 pixels. Each cell is EXACTLY 512 by 288 pixels, a landscape 16:9 composition. Tile boundaries at x=512 and y=288,576,864 as applicable. No gutters, no outer margins, no shared scenery across cells, no borders, no labels. Each cell must be independently usable with exact grid cropping.
+Art direction: refined warm contemporary Chinese folk gouache illustration, hand-painted rice-paper texture, crisp ink-green outlines, celadon green, cinnabar red and restrained antique gold. Warm top-left light, clear silhouettes, simple limited color shading, detailed but legible at a 200px wide game card. Ivory paper background in every cell with tasteful Chinese cloud flourishes at the edges. Consistent style, subject scale and light across all cells.
+CRITICAL FRAMING: every deity figure is drawn from complete headdress down through the waist, both hands and every distinctive held object fully inside its landscape cell. Keep the entire head, hat, hands, beard and props within the inner 80% of the cell (at least 10% safe margin on all four sides). Never crop at the top of hats or at hands. Never draw a huge face close-up, never stretch a portrait to landscape. Arrange props to the left and right to naturally fill the 16:9 frame. For object scenes also keep complete important objects in this safe region. Respect anatomy. Card-ready storytelling scenes, not sparse UI icons.
+No text whatsoever: no Chinese or Latin characters, no numerals, no pseudo-writing, no card frames, no prices, no buttons, no captions, no watermark. Dice pips and directional arrows are allowed. Any paper, tablet or hanging sign must be entirely blank, not contain writing.
+Cells in strict row-major order, left to right then next row. The following names are instructions only; never print them:
+
+Row 1, column 1: 逆水行舟：青瓷骰碗放在圆桌中央，六把椅子外侧一条完整顺时针青绿箭头，轻盈水纹表现逆转。
+
+Row 1, column 2: 乾坤换席：俯视六把完整木椅围绕圆桌，多条交错的金色弧线随机连接不同座位，桌面小罗盘。
+
+Row 2, column 1: 移步换景：六把木椅绕同一圆桌整齐向顺时针平移一位，一条完整圆形箭头，无交错线。
+
+Row 2, column 2: 后来居上：三枚不同高度的奖章沿青绿台阶排列，小奖章沿金色小路先走，大王冠奖章留在后方等待。
+
+Row 3, column 1: 五福临门：恰好五颗清楚完整的象牙骰子呈扇形排列在青瓷碗内，五朵小金云，每颗骰子独立可数。
+
+Row 3, column 2: 七星高照：恰好七颗完整象牙骰子呈北斗七星构图，深墨绿星空与金色连线，每颗独立可数。
+
+FINAL CHECK: exactly two columns with precise equal 512x288 cells. Each scene fully contained, no figures or objects crossing cell boundaries. Every cell has a warm ivory background and complete subjects with generous safe margins. No labels or writing anywhere.

@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1280,
+    "height": 900,
+    "cards": {
+      "width": 327,
+      "padding": "16px"
+    },
+    "achievement": {
+      "width": 498,
+      "padding": "16px"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "cards": {
+      "width": 358,
+      "padding": "12px"
+    },
+    "achievement": {
+      "width": 358,
+      "padding": "16px"
+    }
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "cards": {
+      "width": 288,
+      "padding": "12px"
+    },
+    "achievement": {
+      "width": 288,
+      "padding": "16px"
+    }
+  }
+]

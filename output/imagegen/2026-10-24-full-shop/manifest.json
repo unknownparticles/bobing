@@ -1,0 +1,130 @@
+[
+  {
+    "sheet": "gods-1-safe.png",
+    "columns": 2,
+    "rows": 3,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "fortune",
+      "wealth",
+      "scholar",
+      "salary",
+      "land",
+      "kitchen"
+    ]
+  },
+  {
+    "sheet": "gods-2-safe.png",
+    "columns": 2,
+    "rows": 3,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "guardian",
+      "longevity",
+      "matchmaker",
+      "champion",
+      "thunder",
+      "unlucky"
+    ]
+  },
+  {
+    "sheet": "skills-1.png",
+    "columns": 2,
+    "rows": 4,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "reroll",
+      "steal",
+      "protect",
+      "toilet",
+      "miracle",
+      "reroll_one",
+      "reroll_two",
+      "keep_red"
+    ]
+  },
+  {
+    "sheet": "skills-2.png",
+    "columns": 2,
+    "rows": 4,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "paint_red",
+      "set_six",
+      "set_one",
+      "plus_one",
+      "minus_one",
+      "flip",
+      "copy_face",
+      "mirror"
+    ]
+  },
+  {
+    "sheet": "skills-3.png",
+    "columns": 2,
+    "rows": 4,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "lucky_note",
+      "unlucky_note",
+      "disarm",
+      "gift",
+      "exchange",
+      "equal_coins",
+      "cleanse",
+      "exorcism"
+    ]
+  },
+  {
+    "sheet": "skills-4.png",
+    "columns": 2,
+    "rows": 4,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "reflect",
+      "substitute",
+      "priority",
+      "swap_seat",
+      "swap_others",
+      "seal",
+      "lucky_bag",
+      "recycle"
+    ]
+  },
+  {
+    "sheet": "fields-1.png",
+    "columns": 2,
+    "rows": 3,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "reverse",
+      "shuffle",
+      "rotate",
+      "leader_last",
+      "five_dice",
+      "seven_dice"
+    ]
+  },
+  {
+    "sheet": "fields-2.png",
+    "columns": 2,
+    "rows": 3,
+    "tile_width": 512,
+    "tile_height": 288,
+    "ids": [
+      "eight_dice",
+      "six_dice",
+      "red_table",
+      "black_table",
+      "small_table",
+      "harvest"
+    ]
+  }
+]

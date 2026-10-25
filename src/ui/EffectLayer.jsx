@@ -2,7 +2,12 @@ import { useId, useLayoutEffect, useEffect, useRef, useState } from 'react';
 import { Crown, Gift, Swords, Shield, Undo2, UserRound, HeartHandshake, Coins, Orbit, Sparkles, ArrowRight, Ban } from 'lucide-react';
 import { Avatar } from './PaperPrimitives';
 import CardIcon from './CardIcon';
+import ShopArtwork from './ShopArtwork';
+import SkillEffectScene from './SkillEffectScene';
+import { effectPresentation } from './effect-presentation';
+import { VISUAL_DURATION_MS } from '../game/visuals';
 import '../effect-layer.css';
+import '../styles/skill-effects.css';
 
 const effectIcons = { champion: Crown, transfer: Gift, attack: Swords, shield: Shield, reflect: Undo2, substitute: UserRound, bond: HeartHandshake, score: Coins, field: Orbit, skill: Sparkles };
 const endpointRoles = {
@@ -10,7 +15,7 @@ const endpointRoles = {
   shield: ['守护', '受保护'], reflect: ['反弹者', '原施法者'], substitute: ['原目标', '替身'],
   bond: ['牵缘', '结缘'], score: ['来源', '获得'], field: ['发动', '作用'], skill: ['发动', '目标'],
 };
-const outcomeLabels = { applied: '已生效', blocked: '已抵挡', redirected: '已转移' };
+const outcomeLabels = { applied: '已生效', blocked: '已抵挡', redirected: '已转移', pending: '出招中' };
 
 /** 优先使用真实头像；离屏玩家使用有姓名的浮动端点，保证方向始终可辨。 */
 function measureEndpoint(playerId, side, width, height) {
@@ -73,7 +78,8 @@ export default function EffectLayer({ event, players = [], reducedMotion }) {
       const source = measureEndpoint(sourceId, 'source', width, height);
       const target = self ? source : measureEndpoint(targetId, 'target', width, height);
       const board = document.querySelector('.paper-play-area')?.getBoundingClientRect();
-      setLayout({ width, height, source, target, board });
+      const bowl = document.querySelector('.paper-play-area .paper-bowl-stage')?.getBoundingClientRect();
+      setLayout({ width, height, source, target, board, bowl });
     };
     const scheduleMeasure = () => {
       cancelAnimationFrame(frame);
@@ -109,7 +115,18 @@ export default function EffectLayer({ event, players = [], reducedMotion }) {
   const sourceName = sourcePlayer?.name || '牌桌';
   const targetName = targetPlayer?.name || '牌桌';
   const roles = endpointRoles[event.kind] || endpointRoles.skill;
-  const { source, target, width, height, board } = layout;
+  const { source, target, width, height, board, bowl } = layout;
+  const { theme, item, hostile } = effectPresentation(event);
+  // 改骰与场地围绕桌面，其余动效跟随真实目标，不改变结算方向。
+  const sceneAnchor = ['dice', 'field'].includes(theme) && (bowl || board)
+    ? { x: (bowl || board).left + (bowl || board).width / 2, y: (bowl || board).top + (bowl || board).height / 2 }
+    : target;
+  // 桌面离屏或目标贴边时，装饰留在视口内；来源和目标端点仍保持真实位置。
+  const sceneMargin = Math.min(theme === 'field' ? 155 : theme === 'dice' ? 120 : 90, width / 2 - 8);
+  const scenePoint = {
+    x: Math.max(sceneMargin, Math.min(width - sceneMargin, sceneAnchor.x)),
+    y: Math.max(sceneMargin, Math.min(height - sceneMargin, sceneAnchor.y)),
+  };
   // 弯曲回线与普通出招的上拱路径不同，反弹时更容易辨认来回关系。
   const bend = event.kind === 'reflect' ? 100 : -Math.min(120, Math.max(58, Math.abs(target.x - source.x) * 0.23));
   const controlX = (source.x + target.x) / 2 + (event.kind === 'reflect' ? 35 : 0);
@@ -120,10 +137,12 @@ export default function EffectLayer({ event, players = [], reducedMotion }) {
   const status = outcomeLabels[event.outcome] || outcomeLabels.applied;
   const description = `${sourceName}${self ? '对自己' : `对${targetName}`}：${event.title}，${status}`;
 
-  return <div ref={layerRef} popover="manual" className={`effect-layer effect-kind-${event.kind} effect-outcome-${event.outcome} ${reduce ? 'is-reduced' : ''} ${self ? 'is-self-effect' : ''}`}>
+  return <div ref={layerRef} popover="manual" style={{ '--release-duration': `${VISUAL_DURATION_MS}ms` }} data-effect-theme={theme} className={`effect-layer effect-theme-${theme} effect-kind-${event.kind} effect-outcome-${event.outcome} ${hostile ? 'is-hostile' : ''} ${reduce ? 'is-reduced' : ''} ${self ? 'is-self-effect' : ''}`}>
     <p className="effect-screen-reader" role="status" aria-live="polite">{description}</p>
-    <div className="effect-banner" style={board ? { top: Math.max(25, Math.min(height - 125, board.top + board.height * .48)), left: Math.max(130, Math.min(width - 130, board.left + board.width / 2)) } : undefined} aria-hidden="true">
-      <span className="effect-banner-icon"><EffectSymbol event={event} size={22} /></span>
+    {/* 真实改点直接在碗里播放，装饰骰子和中央横幅会遮挡前后点数。 */}
+    {!event.diceChange && <SkillEffectScene theme={theme} event={event} point={scenePoint} hostile={hostile} />}
+    <div className="effect-banner" style={board ? { top: Math.max(25, Math.min(height - 125, event.diceChange ? board.top + 24 : board.top + board.height * .48)), left: Math.max(130, Math.min(width - 130, board.left + board.width / 2)) } : undefined} aria-hidden="true">
+      {item ? <span className="effect-card-art"><ShopArtwork item={item} /></span> : <span className="effect-banner-icon"><EffectSymbol event={event} size={22} /></span>}
       <div><span className="effect-banner-players"><b>{sourceName}</b><ArrowRight size={14} /><b>{self ? '自己' : targetName}</b></span><strong>{event.title}</strong></div>
       <small className="effect-outcome">{event.outcome === 'blocked' && <Ban size={12} />}{status}</small>
     </div>

@@ -1,12 +1,19 @@
-import { useId } from 'react';
+import { useId, useState } from 'react';
 import CardIcon from './CardIcon';
+import { shopArtAssets } from './shop-art-assets';
+import '../styles/shop-artwork.css';
 
-/** 卡面使用可缩放插画建立材质与角色感；每张牌的SVG徽记仍按商品独立区分。 */
+/** 商品插画与详情共用；未配图或图片加载失败时，仍显示该商品自己的 SVG 徽记。 */
 export default function ShopArtwork({ item }) {
   const token = useId().replaceAll(':', '');
+  const [failedSource, setFailedSource] = useState(null);
+  const source = shopArtAssets[item.id];
   const god = item.category === 'god';
   const field = item.category === 'field';
   const warm = item.category === 'skill';
+  if (source && failedSource !== source) return <div className={`stock-art art-${item.category} has-illustration`} aria-hidden="true">
+    <img className="stock-illustration" src={source} width={512} height={288} alt="" loading="lazy" decoding="async" onError={() => setFailedSource(source)} />
+  </div>;
   return <div className={`stock-art art-${item.category}`} aria-hidden="true">
     <svg viewBox="0 0 220 180" className="stock-illustration" fill="none">
       <defs><radialGradient id={`${token}-sky`}><stop stopColor={god ? '#fff0bc' : field ? '#cfe1c3' : '#ffe4c2'} /><stop offset="1" stopColor={god ? '#c99c53' : field ? '#668d7a' : '#c87f5e'} /></radialGradient><linearGradient id={`${token}-cloth`} x2="1" y2="1"><stop stopColor="#ba5038" /><stop offset="1" stopColor="#65362e" /></linearGradient></defs>

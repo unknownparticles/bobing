@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "快速模式：角色设置后直入双人桌，八轮结算、重开资源重置、返回首页",
+    "故事模式：六→八→十人完整三章、两幕开场与回看/跳过、八轮夺冠晋级、资源重置、王中王通关",
+    "故事失利无晋级入口，重试保留本章六人并重置资源；十人桌行动末位自动滚入手机对手栏",
+    "经典人数范围2～10：拒绝1、小数、11与超大数",
+    "经典模式：十人自定义窄屏，双人实际超过八轮并耗尽51份奖池、立即结算、终局静止60秒及同模式重开"
+  ],
+  "errors": [],
+  "screenshots": [
+    "home-desktop",
+    "home-mobile",
+    "quick-mobile",
+    "quick-desktop",
+    "quick-summary",
+    "story-1-intro-desktop",
+    "story-1-intro-mobile",
+    "story-1-table-mobile",
+    "story-1-table-desktop",
+    "story-1-summary",
+    "story-2-intro-desktop",
+    "story-2-intro-mobile",
+    "story-2-table-mobile",
+    "story-2-table-desktop",
+    "story-2-summary",
+    "story-3-intro-desktop",
+    "story-3-intro-mobile",
+    "story-3-table-mobile",
+    "story-3-table-desktop",
+    "story-3-summary",
+    "story-loss-mobile",
+    "classic-10-mobile",
+    "classic-10-desktop",
+    "classic-summary"
+  ]
+}

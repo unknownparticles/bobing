@@ -1,0 +1,25 @@
+Use case: illustration-story
+Asset type: production illustration atlas for an original Chinese Mid-Autumn dice strategy card game.
+Create precisely TWO equal columns and 4 equal rows of standalone illustrations. Overall canvas 1024 by 1152 pixels. Each cell is EXACTLY 512 by 288 pixels, a landscape 16:9 composition. Tile boundaries at x=512 and y=288,576,864 as applicable. No gutters, no outer margins, no shared scenery across cells, no borders, no labels. Each cell must be independently usable with exact grid cropping.
+Art direction: refined warm contemporary Chinese folk gouache illustration, hand-painted rice-paper texture, crisp ink-green outlines, celadon green, cinnabar red and restrained antique gold. Warm top-left light, clear silhouettes, simple limited color shading, detailed but legible at a 200px wide game card. Ivory paper background in every cell with tasteful Chinese cloud flourishes at the edges. Consistent style, subject scale and light across all cells.
+CRITICAL FRAMING: every deity figure is drawn from complete headdress down through the waist, both hands and every distinctive held object fully inside its landscape cell. Keep the entire head, hat, hands, beard and props within the inner 80% of the cell (at least 10% safe margin on all four sides). Never crop at the top of hats or at hands. Never draw a huge face close-up, never stretch a portrait to landscape. Arrange props to the left and right to naturally fill the 16:9 frame. For object scenes also keep complete important objects in this safe region. Respect anatomy. Card-ready storytelling scenes, not sparse UI icons.
+No text whatsoever: no Chinese or Latin characters, no numerals, no pseudo-writing, no card frames, no prices, no buttons, no captions, no watermark. Dice pips and directional arrows are allowed. Any paper, tablet or hanging sign must be entirely blank, not contain writing.
+Cells in strict row-major order, left to right then next row. The following names are instructions only; never print them:
+
+Row 1, column 1: 点石成红：一支朱笔把一颗象牙骰的点数染为四点朱红，笔尖与红色墨滴清楚，旁边小砚台。
+
+Row 1, column 2: 六六大顺：一颗很清楚的正面六点骰子，被温暖金色祥云托起，左侧一支朱笔，六点只用黑色圆点。
+
+Row 2, column 1: 一点灵犀：一颗正面只有一个朱红圆点的象牙骰子，被轻巧的金色灵光触碰，青瓷小托盘与如意云。
+
+Row 2, column 2: 添一分运：一颗象牙骰旁一枚小黑点向骰面飞去，一条向上的金色箭头，青绿袖口的手轻轻加点，无数字无文字。
+
+Row 3, column 1: 退一步海阔：一只手从象牙骰面取走一枚小黑点，旁边温柔向下的青绿箭头和开阔波纹，无数字无文字。
+
+Row 3, column 2: 翻面见喜：一颗象牙骰在空中翻转，同时展示前后两个不同点数的面，完整青绿弧形箭头包围骰子。
+
+Row 4, column 1: 好事成双：两颗四点红骰并排，一只手持朱笔从左骰复制光芒到右骰，金色连接弧线，两个骰面清楚同点。
+
+Row 4, column 2: 镜花水月：一面圆形青铜镜，镜前一碗骰子与镜中另一碗骰子相互映照，月亮与水纹，镜框完整。
+
+FINAL CHECK: exactly two columns with precise equal 512x288 cells. Each scene fully contained, no figures or objects crossing cell boundaries. Every cell has a warm ivory background and complete subjects with generous safe margins. No labels or writing anywhere.

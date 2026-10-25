@@ -1,0 +1,590 @@
+[
+  {
+    "width": 1280,
+    "height": 720,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 199.46875,
+        "height": 112.1875,
+        "ratio": 1.7779944289693594,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 195.1875
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 199.46875,
+        "height": 112.1875,
+        "ratio": 1.7779944289693594,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 195.1875
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 202.84375,
+        "height": 114.09375,
+        "ratio": 1.777869076965215,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 197.09375
+      }
+    ],
+    "detail": {
+      "width": 318,
+      "height": 178
+    }
+  },
+  {
+    "width": 1536,
+    "height": 1024,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 247.75,
+        "height": 139.359375,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.953125
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 247.75,
+        "height": 139.359375,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.953125
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 247.40625,
+        "height": 139.15625,
+        "ratio": 1.777902537615091,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 247.421875,
+        "height": 139.171875,
+        "ratio": 1.7778152015268889,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 247.40625,
+        "height": 139.15625,
+        "ratio": 1.777902537615091,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 247.40625,
+        "height": 139.15625,
+        "ratio": 1.777902537615091,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 247.421875,
+        "height": 139.171875,
+        "ratio": 1.7778152015268889,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 247.40625,
+        "height": 139.15625,
+        "ratio": 1.777902537615091,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 294.765625
+      }
+    ],
+    "detail": {
+      "width": 318,
+      "height": 178
+    }
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 160.140625,
+        "height": 90.078125,
+        "ratio": 1.7777970511708587,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 168.265625
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 160.140625,
+        "height": 90.078125,
+        "ratio": 1.7777970511708587,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 168.265625
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 154.28125,
+        "height": 86.78125,
+        "ratio": 1.7778177889809146,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 164.96875
+      }
+    ],
+    "detail": {
+      "width": 318,
+      "height": 178
+    }
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 85.453125,
+        "height": 48.0625,
+        "ratio": 1.7779583875162548,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 189.25
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 85.453125,
+        "height": 48.0625,
+        "ratio": 1.7779583875162548,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 189.25
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 89.171875,
+        "height": 50.15625,
+        "ratio": 1.7778816199376948,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 89.1875,
+        "height": 50.15625,
+        "ratio": 1.7781931464174454,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 89.171875,
+        "height": 50.15625,
+        "ratio": 1.7778816199376948,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 89.171875,
+        "height": 50.15625,
+        "ratio": 1.7778816199376948,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 89.1875,
+        "height": 50.15625,
+        "ratio": 1.7781931464174454,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 89.171875,
+        "height": 50.15625,
+        "ratio": 1.7778816199376948,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 191.34375
+      }
+    ],
+    "detail": {
+      "width": 318,
+      "height": 178
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 141,
+        "height": 79.3125,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 224.5
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 141,
+        "height": 79.3125,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 224.5
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 87.328125,
+        "height": 49.109375,
+        "ratio": 1.7782373528475979,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 87.328125,
+        "height": 49.109375,
+        "ratio": 1.7782373528475979,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 87.34375,
+        "height": 49.125,
+        "ratio": 1.7779898218829517,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 87.328125,
+        "height": 49.109375,
+        "ratio": 1.7782373528475979,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 87.328125,
+        "height": 49.109375,
+        "ratio": 1.7782373528475979,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 87.34375,
+        "height": 49.125,
+        "ratio": 1.7779898218829517,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 194.3125
+      }
+    ],
+    "detail": {
+      "width": 306,
+      "height": 171
+    }
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "cards": [
+      {
+        "name": "财神进宝",
+        "category": "playing-card card-god ",
+        "width": 112,
+        "height": 63,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 203.390625
+      },
+      {
+        "name": "月老牵线",
+        "category": "playing-card card-god ",
+        "width": 112,
+        "height": 63,
+        "ratio": 1.7777777777777777,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 203.390625
+      },
+      {
+        "name": "顺手牵羊",
+        "category": "playing-card card-skill ",
+        "width": 69.328125,
+        "height": 38.984375,
+        "ratio": 1.7783567134268536,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      },
+      {
+        "name": "厕所卡",
+        "category": "playing-card card-skill ",
+        "width": 69.328125,
+        "height": 38.984375,
+        "ratio": 1.7783567134268536,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      },
+      {
+        "name": "大力出奇迹",
+        "category": "playing-card card-skill ",
+        "width": 69.34375,
+        "height": 39,
+        "ratio": 1.7780448717948718,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      },
+      {
+        "name": "七星高照",
+        "category": "playing-card card-field ",
+        "width": 69.328125,
+        "height": 38.984375,
+        "ratio": 1.7783567134268536,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      },
+      {
+        "name": "八仙过海",
+        "category": "playing-card card-field ",
+        "width": 69.328125,
+        "height": 38.984375,
+        "ratio": 1.7783567134268536,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      },
+      {
+        "name": "乾坤换席",
+        "category": "playing-card card-field ",
+        "width": 69.34375,
+        "height": 39,
+        "ratio": 1.7780448717948718,
+        "naturalWidth": 512,
+        "naturalHeight": 288,
+        "fit": "contain",
+        "cardHeight": 179.390625
+      }
+    ],
+    "detail": {
+      "width": 236,
+      "height": 132
+    }
+  }
+]

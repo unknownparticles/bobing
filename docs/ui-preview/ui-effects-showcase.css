@@ -1,0 +1,39 @@
+.effects-showcase .paper-header > a { color: #815c38; font-size: 12px; }
+.showcase-controls { width: calc(100% - 64px); max-width: 1340px; margin: 24px auto 10px; }
+.showcase-controls h1 { margin: 8px 0; font: 600 30px var(--paper-serif); }
+.showcase-controls p { font-size: 12px; line-height: 1.8; color: #706a54; }
+.showcase-motion { display: flex; gap: 7px; align-items: center; width: max-content; max-width: 100%; min-height: 44px; font-size: 12px; }
+.showcase-motion input { accent-color: #4f7053; }
+.showcase-examples { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.showcase-examples button { font-size: 12px; min-height: 44px; }
+.showcase-examples button[aria-pressed="true"] { border-color: #55734d; background: #dce8cf; box-shadow: inset 0 0 0 1px #55734d; }
+.showcase-layout { grid-template-columns: minmax(0, 1fr) 270px; align-items: start; }
+.showcase-table { border: 1px solid #b5a075; border-radius: 10px; background: #fff8e43d; min-height: 420px; padding: 16px !important; }
+.showcase-table .paper-rivals { flex-wrap: nowrap; }
+.showcase-table .paper-rival { display: block !important; text-align: center !important; }
+.showcase-table .paper-rival-avatar { margin: 0 auto 8px !important; }
+.effects-showcase .showcase-table .paper-bowl-stage { height: 230px; --bowl-width: 290px; }
+.showcase-self { display: flex; align-items: center; gap: 12px; align-self: center; padding-top: 12px; }
+.showcase-self b { font-size: 13px; }
+.showcase-self small { display: block; color: #7a7259; font-size: 10px; margin-top: 4px; }
+.showcase-resources { border: 1px solid #b8a06c; background: #fff6df; padding: 18px; border-radius: 8px 2px; }
+.showcase-resources h2 { font: 600 21px var(--paper-serif); margin: 0 0 18px; }
+.showcase-resources p { font-size: 11px; line-height: 1.8; color: #70674f; }
+.showcase-resources .paper-primary { width: 100%; font-size: 12px; margin: 8px 0; gap: 6px; }
+.showcase-resources > a { display: inline-block; color: #8d4c34; font-size: 12px; margin: 12px 0; }
+.showcase-icons { display: flex; gap: 24px; align-items: end; justify-content: center; }
+.showcase-icons span { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.showcase-icons small { color: #81765b; font-size: 10px; }
+.showcase-event { border-top: 1px solid #cbb98e; padding-top: 12px; }
+@media(max-width: 760px) {
+  .effects-showcase { padding-bottom: 24px; }
+  .showcase-controls { width: calc(100% - 28px); margin-top: 18px; }
+  .showcase-controls h1 { font-size: 26px; }
+  .showcase-examples { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .showcase-layout { display: block; }
+  .showcase-table { padding: 12px !important; }
+  .showcase-resources { margin-top: 16px; }
+  .showcase-table .paper-rivals { overflow-x: auto; padding-bottom: 8px; }
+  .showcase-table .paper-rival { flex: 0 0 60px; }
+  .effects-showcase .showcase-table .paper-bowl-stage { --bowl-width: 210px; height: 185px; }
+}

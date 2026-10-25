@@ -1,0 +1,25 @@
+Use case: illustration-story
+Asset type: production illustration atlas for an original Chinese Mid-Autumn dice strategy card game.
+Create precisely TWO equal columns and 4 equal rows of standalone illustrations. Overall canvas 1024 by 1152 pixels. Each cell is EXACTLY 512 by 288 pixels, a landscape 16:9 composition. Tile boundaries at x=512 and y=288,576,864 as applicable. No gutters, no outer margins, no shared scenery across cells, no borders, no labels. Each cell must be independently usable with exact grid cropping.
+Art direction: refined warm contemporary Chinese folk gouache illustration, hand-painted rice-paper texture, crisp ink-green outlines, celadon green, cinnabar red and restrained antique gold. Warm top-left light, clear silhouettes, simple limited color shading, detailed but legible at a 200px wide game card. Ivory paper background in every cell with tasteful Chinese cloud flourishes at the edges. Consistent style, subject scale and light across all cells.
+CRITICAL FRAMING: every deity figure is drawn from complete headdress down through the waist, both hands and every distinctive held object fully inside its landscape cell. Keep the entire head, hat, hands, beard and props within the inner 80% of the cell (at least 10% safe margin on all four sides). Never crop at the top of hats or at hands. Never draw a huge face close-up, never stretch a portrait to landscape. Arrange props to the left and right to naturally fill the 16:9 frame. For object scenes also keep complete important objects in this safe region. Respect anatomy. Card-ready storytelling scenes, not sparse UI icons.
+No text whatsoever: no Chinese or Latin characters, no numerals, no pseudo-writing, no card frames, no prices, no buttons, no captions, no watermark. Dice pips and directional arrows are allowed. Any paper, tablet or hanging sign must be entirely blank, not contain writing.
+Cells in strict row-major order, left to right then next row. The following names are instructions only; never print them:
+
+Row 1, column 1: 福气贴：一张完全无文字的朱砂方纸贴在青瓷碗边，金色好运云团包围两组骰子，其中一组更亮。
+
+Row 1, column 2: 倒霉贴：一张完全无文字的暗紫纸片飘向另一碗骰子，小乌云和垂落叶片表现暂时低运气，幽默而不恐怖。
+
+Row 2, column 1: 两手空空：两只摊开的空手，一张无文字技能纸牌被风卷走，纸牌背面有单纯云纹，桌上仅一片叶子。
+
+Row 2, column 2: 借花献佛：一双朱红袖手把金色月饼奖章送给另一双青绿袖手，回赠一串铜钱，完整礼物交换动作。
+
+Row 3, column 1: 礼尚往来：红袖与青袖两只手交换两枚不同形状的奖章，两条交叉金色弧线清楚显示互换。
+
+Row 3, column 2: 均分盘缠：两只青瓷钱碗放在天平两端，每碗相等数量铜钱，中间一双手公平分配钱币。
+
+Row 4, column 1: 金蝉脱壳：金色蝉从一层暗色纸壳中轻盈脱出，周围紫灰小云散开，青绿叶片和清亮月光。
+
+Row 4, column 2: 驱邪令：一支朱红令牌完全无字，金色光环把暗紫云气推出一座小神龛，青绿袖手坚定持令。
+
+FINAL CHECK: exactly two columns with precise equal 512x288 cells. Each scene fully contained, no figures or objects crossing cell boundaries. Every cell has a warm ivory background and complete subjects with generous safe margins. No labels or writing anywhere.

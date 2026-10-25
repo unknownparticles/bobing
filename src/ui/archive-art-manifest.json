@@ -1,0 +1,53 @@
+{
+  "cards": {
+    "thief_god": "art/archive/cards/thief_god.webp",
+    "geomancer": "art/archive/cards/geomancer.webp",
+    "luck_blessing": "art/archive/cards/luck_blessing.webp",
+    "summon_god": "art/archive/cards/summon_god.webp",
+    "dismiss_god": "art/archive/cards/dismiss_god.webp",
+    "gather_luck": "art/archive/cards/gather_luck.webp",
+    "secure_loot": "art/archive/cards/secure_loot.webp",
+    "forecast_three": "art/archive/cards/forecast_three.webp",
+    "bitter_sweet": "art/archive/cards/bitter_sweet.webp",
+    "never_too_late": "art/archive/cards/never_too_late.webp",
+    "double_steal": "art/archive/cards/double_steal.webp",
+    "forecast_one": "art/archive/cards/forecast_one.webp",
+    "old_master": "art/archive/cards/old_master.webp",
+    "lucky_seat": "art/archive/cards/lucky_seat.webp",
+    "four_twos": "art/archive/cards/four_twos.webp"
+  },
+  "achievements": {
+    "first_win": "art/archive/achievements/first_win.webp",
+    "story_clear": "art/archive/achievements/story_clear.webp",
+    "luck_master": "art/archive/achievements/luck_master.webp",
+    "theft_master": "art/archive/achievements/theft_master.webp",
+    "fengshui_master": "art/archive/achievements/fengshui_master.webp",
+    "forecast_master": "art/archive/achievements/forecast_master.webp",
+    "patience_master": "art/archive/achievements/patience_master.webp",
+    "all_paths": "art/archive/achievements/all_paths.webp"
+  },
+  "characters": {
+    "jie": "art/archive/characters/jie.webp",
+    "xu": "art/archive/characters/xu.webp",
+    "qiao": "art/archive/characters/qiao.webp",
+    "zhou": "art/archive/characters/zhou.webp",
+    "su": "art/archive/characters/su.webp",
+    "story:group:jie": "art/archive/characters/jie.webp",
+    "story:department:tang": "art/archive/characters/tang.webp",
+    "story:department:lu": "art/archive/characters/lu.webp",
+    "story:department:qiao": "art/archive/characters/qiao.webp",
+    "story:department:xu": "art/archive/characters/xu.webp",
+    "story:department:ye": "art/archive/characters/ye.webp",
+    "story:department:liang": "art/archive/characters/liang.webp",
+    "story:department:fei": "art/archive/characters/fei.webp",
+    "story:company:zhou": "art/archive/characters/zhou.webp",
+    "story:company:su": "art/archive/characters/su.webp",
+    "story:company:gu": "art/archive/characters/gu.webp",
+    "story:company:lu": "art/archive/characters/lu.webp",
+    "story:company:xuguan": "art/archive/characters/xuguan.webp",
+    "story:company:qiao": "art/archive/characters/qiao.webp",
+    "story:company:yan": "art/archive/characters/yan.webp",
+    "story:company:an": "art/archive/characters/an.webp",
+    "story:company:shen": "art/archive/characters/shen.webp"
+  }
+}

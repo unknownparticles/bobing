@@ -1,0 +1,7 @@
+/* 插画组件可独立用于手牌和动效，不依赖商店页面加载图片基础样式。 */
+.stock-art { position: relative; width: 100%; overflow: hidden; }
+.stock-illustration { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* 未配独立插画的商品仍靠自己的徽记辨认，不能只留下同类通用背景。 */
+.stock-art-emblem { position: absolute; top: 6px; right: 6px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #bba16b; border-radius: 50%; background: #faeac6ed; color: #795e35; }
+.stock-art-emblem .card-symbol-frame { display: none; }
+.stock-art-emblem .card-symbol { width: auto; height: auto; }

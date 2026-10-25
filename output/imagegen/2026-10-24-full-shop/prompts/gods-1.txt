@@ -1,0 +1,21 @@
+Use case: illustration-story
+Asset type: production illustration atlas for an original Chinese Mid-Autumn dice strategy card game.
+Create precisely TWO equal columns and 3 equal rows of standalone illustrations. Overall canvas 1024 by 864 pixels. Each cell is EXACTLY 512 by 288 pixels, a landscape 16:9 composition. Tile boundaries at x=512 and y=288,576,864 as applicable. No gutters, no outer margins, no shared scenery across cells, no borders, no labels. Each cell must be independently usable with exact grid cropping.
+Art direction: refined warm contemporary Chinese folk gouache illustration, hand-painted rice-paper texture, crisp ink-green outlines, celadon green, cinnabar red and restrained antique gold. Warm top-left light, clear silhouettes, simple limited color shading, detailed but legible at a 200px wide game card. Ivory paper background in every cell with tasteful Chinese cloud flourishes at the edges. Consistent style, subject scale and light across all cells.
+CRITICAL FRAMING: every deity figure is drawn from complete headdress down through the waist, both hands and every distinctive held object fully inside its landscape cell. Keep the entire head, hat, hands, beard and props within the inner 80% of the cell (at least 10% safe margin on all four sides). Never crop at the top of hats or at hands. Never draw a huge face close-up, never stretch a portrait to landscape. Arrange props to the left and right to naturally fill the 16:9 frame. For object scenes also keep complete important objects in this safe region. Respect anatomy. Card-ready storytelling scenes, not sparse UI icons.
+No text whatsoever: no Chinese or Latin characters, no numerals, no pseudo-writing, no card frames, no prices, no buttons, no captions, no watermark. Dice pips and directional arrows are allowed. Any paper, tablet or hanging sign must be entirely blank, not contain writing.
+Cells in strict row-major order, left to right then next row. The following names are instructions only; never print them:
+
+Row 1, column 1: 福神赐运：慈祥圆脸福神，朱红官袍与乌纱帽，两手分别托起一碗骰子，左侧金色祥云表示择优好运。
+
+Row 1, column 2: 财神进宝：短须财神戴完整黑金官帽、红金衣袍，双手在胸前托住一枚金元宝，左右少量铜钱与金云。
+
+Row 2, column 1: 文昌点红：儒雅青衣文昌，完整文士冠，右手朱笔点向左手托起的四点红骰，书卷与砚台点缀。
+
+Row 2, column 2: 禄神添财：绿袍禄神，鹿角纹官帽，双手捧铜钱串与俸禄小盒，俸禄盒完整可见。
+
+Row 3, column 1: 土地照拂：矮圆慈祥白须土地公，土黄官帽、青绿袍，一手拐杖、一手小牌，旁有竹叶和小袋铜钱。
+
+Row 3, column 2: 灶君暖席：暖红衣灶君，手托热气腾腾的月饼盘与一小串铜钱，背后简洁炉火与屋檐，温暖护佑。
+
+FINAL CHECK: exactly two columns with precise equal 512x288 cells. Each scene fully contained, no figures or objects crossing cell boundaries. Every cell has a warm ivory background and complete subjects with generous safe margins. No labels or writing anywhere.

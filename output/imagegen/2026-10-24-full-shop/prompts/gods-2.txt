@@ -1,0 +1,21 @@
+Use case: illustration-story
+Asset type: production illustration atlas for an original Chinese Mid-Autumn dice strategy card game.
+Create precisely TWO equal columns and 3 equal rows of standalone illustrations. Overall canvas 1024 by 864 pixels. Each cell is EXACTLY 512 by 288 pixels, a landscape 16:9 composition. Tile boundaries at x=512 and y=288,576,864 as applicable. No gutters, no outer margins, no shared scenery across cells, no borders, no labels. Each cell must be independently usable with exact grid cropping.
+Art direction: refined warm contemporary Chinese folk gouache illustration, hand-painted rice-paper texture, crisp ink-green outlines, celadon green, cinnabar red and restrained antique gold. Warm top-left light, clear silhouettes, simple limited color shading, detailed but legible at a 200px wide game card. Ivory paper background in every cell with tasteful Chinese cloud flourishes at the edges. Consistent style, subject scale and light across all cells.
+CRITICAL FRAMING: every deity figure is drawn from complete headdress down through the waist, both hands and every distinctive held object fully inside its landscape cell. Keep the entire head, hat, hands, beard and props within the inner 80% of the cell (at least 10% safe margin on all four sides). Never crop at the top of hats or at hands. Never draw a huge face close-up, never stretch a portrait to landscape. Arrange props to the left and right to naturally fill the 16:9 frame. For object scenes also keep complete important objects in this safe region. Respect anatomy. Card-ready storytelling scenes, not sparse UI icons.
+No text whatsoever: no Chinese or Latin characters, no numerals, no pseudo-writing, no card frames, no prices, no buttons, no captions, no watermark. Dice pips and directional arrows are allowed. Any paper, tablet or hanging sign must be entirely blank, not contain writing.
+Cells in strict row-major order, left to right then next row. The following names are instructions only; never print them:
+
+Row 1, column 1: 关帝护持：庄严红脸长须关帝，绿袍金甲，完整冠饰，左手护盾右手竖持青龙刀，护盾与刀刃均在画面内。
+
+Row 1, column 2: 寿星留席：白须高额寿星，完整头部，双手分别托寿桃与竹杖，身后柔和圆形护佑云气。
+
+Row 2, column 1: 月老牵线：白须红袍月老，完整发髻与头顶，双手各提一枚玉佩，两玉佩之间一条完整红线，温柔微笑。
+
+Row 2, column 2: 魁星点斗：原创新国风魁星，完整冠帽，蓝绿衣袍，一手朱笔一手金斗，红骰与金星环绕，两手与道具都完整。
+
+Row 3, column 1: 雷公压运：威严雷公，蓝灰衣袍与羽翼形冠饰，双手雷锤和凿子，背后一道闪电劈开两碗骰子的云气。
+
+Row 3, column 2: 太岁作祟：原创太岁精灵，赭红衣袍与根须冠，一手红四点骰一手黑一点骰，暗绿旋风表现运势降低，轻松而不恐怖。
+
+FINAL CHECK: exactly two columns with precise equal 512x288 cells. Each scene fully contained, no figures or objects crossing cell boundaries. Every cell has a warm ivory background and complete subjects with generous safe margins. No labels or writing anywhere.

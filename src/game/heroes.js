@@ -14,5 +14,5 @@ export const heroOf = player => player?.id === 'you' ? getHero(player.portrait) 
 /** A的免费重掷仅限自己的结果阶段，每轮一次，与手牌库存和封印相互独立。 */
 export function canUseHeroReroll(game) {
   const player = game.players[game.turnIndex];
-  return game.stage === 'review' && heroOf(player)?.id === 'hero-a' && player.heroRerollRound !== game.round;
+  return game.stage === 'review' && !game.visuals?.length && heroOf(player)?.id === 'hero-a' && player.heroRerollRound !== game.round;
 }

@@ -8,6 +8,7 @@ import '../stock-shop.css';
 import ShopArtwork from '../ui/ShopArtwork';
 import { refreshPrice } from './stock';
 import { heroOf } from './heroes';
+import { seatsForCount } from './modes';
 
 const zones = [
   { id: 'god', name: '神明供奉', subtitle: '请神入席 · 三轮庇佑', count: 2 },
@@ -27,8 +28,8 @@ function offerings(game, playerId) {
 export default function Shop({ game, dispatch }) {
   const player = game.players.find(entry => entry.id === 'you');
   const [selected, setSelected] = useState(null);
-  const [targetId, setTargetId] = useState('');
   const [replaceId, setReplaceId] = useState('');
+  const [fieldSeat, setFieldSeat] = useState(game.players.find(entry => entry.id === 'you').seat);
   const dialog = useRef(null);
   const heading = useRef(null);
   const ownGods = offerings(game, player.id);
@@ -44,8 +45,7 @@ export default function Shop({ game, dispatch }) {
   const bought = item => game.purchased?.[player.id]?.includes(item.id);
   const alreadyOffered = item => ownGods.some(buff => (buff.itemId || buff.id) === item.id);
 
-  const targets = selected?.target === 'player' ? game.players.filter(entry => entry.id !== player.id && (!['thunder', 'unlucky'].includes(selected.id) || !(entry.buffs || []).some(buff => buff.id === selected.id && buff.targetId === entry.id)) && (selected.id !== 'matchmaker' || (entry.gender && player.gender && !entry.partnerId && !player.partnerId && entry.gender !== player.gender && offerings(game, entry.id).length < 3))) : [];
-  const reason = !selected ? '' : bought(selected) ? '本轮已经购买' : priceOf(selected) > player.coins ? '金币不足，留待下回' : selected.category === 'god' && alreadyOffered(selected) ? '已在供奉这位神明' : selected.id === 'matchmaker' && ownGods.length >= 3 ? '姻缘需要双方都有空槽' : selected.target === 'player' && !targetId ? (targets.length ? '请先选择目标' : '没有符合条件的目标') : selected.category === 'god' && ownGods.length >= 3 && !replaceId ? '请明确选择替换的供奉' : '';
+  const reason = !selected ? '' : bought(selected) ? '本轮已经购买' : priceOf(selected) > player.coins ? '金币不足，留待下回' : selected.category === 'god' && alreadyOffered(selected) ? '已在供奉这位神明' : selected.category === 'god' && ownGods.length >= 3 && !replaceId ? '请明确选择替换的供奉' : '';
 
   useEffect(() => { heading.current?.focus(); }, []);
   useEffect(() => {
@@ -54,14 +54,13 @@ export default function Shop({ game, dispatch }) {
   }, [selected]);
 
   function inspect(item) {
-    setTargetId('');
     setReplaceId('');
     setSelected(item);
   }
 
   function purchase() {
     if (reason) return;
-    dispatch({ type: 'BUY', userId: player.id, item: selected.id, targetId: targetId || undefined, replaceId: replaceId || undefined });
+    dispatch({ type: 'BUY', userId: player.id, item: selected.id, replaceId: replaceId || undefined });
     setSelected(null);
   }
 
@@ -75,13 +74,22 @@ export default function Shop({ game, dispatch }) {
         const item = buff && buffItem(buff);
         return <span key={index} className={item ? 'is-filled' : ''} title={item ? `${item.name} · 第 ${buff.fromRound}–${buff.untilRound} 轮${buff.holderId !== player.id ? ` · 目标 ${game.players.find(entry => entry.id === buff.holderId)?.name}` : ''}` : '空供奉位'}>{item ? <><CardIcon id={item.id} size={22}/><small>{item.name}</small></> : <><span className="offering-empty">＋</span><small>待请神</small></>}</span>;
       })}</div></div>
-      {ownedFields.length > 0 && <label className="stock-owned-fields">我的场地背包<select value={submitted?.item || ''} onChange={event => dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: event.target.value || null })}><option value="">暂不布置场地</option>{ownedFields.map(item => <option key={item.id} value={item.id}>{item.name} ×{player.items[item.id]}</option>)}</select><small>刷新只换货架，背包场地仍可布置。</small></label>}
+      {/* 短屏只滚动补给说明，让刷新和离店始终留在柜台内。 */}
+      <div className="shop-counter-details">
+      {ownedFields.some(item => item.target === 'seat') && <label className="stock-owned-fields">下轮吉位座位<select value={fieldSeat} onChange={event => {
+        setFieldSeat(event.target.value);
+        if (getItem(submitted?.item)?.target === 'seat') dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: submitted.item, seat: event.target.value });
+      }}>{seatsForCount(game.players.length).map((seat, index) => <option key={seat} value={seat}>{index + 1}号座 · {game.players.find(entry => entry.seat === seat)?.name}</option>)}</select></label>}
+      {ownedFields.length > 0 && <label className="stock-owned-fields">我的场地背包<select value={submitted?.item || ''} onChange={event => dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: event.target.value || null, seat: fieldSeat })}><option value="">暂不布置场地</option>{ownedFields.map(item => <option key={item.id} value={item.id}>{item.name} ×{player.items[item.id]}</option>)}</select><small>刷新只换货架，背包场地仍可布置。</small></label>}
       <div className={`shop-field-note ${game.fieldSubmissions?.length ? 'has-candidates' : ''}`}><b>下轮场地候选</b>{game.fieldSubmissions?.length ? <ul>{game.fieldSubmissions.map(entry => <li key={entry.userId}>{game.players.find(person => person.id === entry.userId)?.name}<span>{getItem(typeof entry.item === 'string' ? entry.item : entry.item?.id)?.name}</span></li>)}</ul> : <p>还没人布置，下一轮仍是标准六骰。</p>}{submitted && <button className="shop-text-button" onClick={() => dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: null })}>撤回我的场地</button>}</div>
       {hero && <div className="shop-hero-talent"><CardIcon id={hero.icon} size={17} /><div><b>{hero.skill}</b><small>{hero.description}</small></div></div>}
+      </div>
+      <div className="shop-counter-actions">
       <button className="stock-refresh" disabled={player.coins < refreshCost} onClick={() => { setSelected(null); dispatch({ type: 'REFRESH_SHOP', userId: player.id }); }} aria-label={`刷新全部货架，${refreshCost}金币`}><RefreshCw size={18} /><span>{freeRefresh ? '精打细算 · 免费首刷' : '换一批好牌'}<small>整组刷新 · 已刷新 {refreshCount} 次</small></span><b>{refreshCost === 0 ? '免费' : refreshCost}<small>{refreshCost === 0 ? '本次' : '金币'}</small></b></button>
       <p className="stock-refresh-note">{player.coins < refreshCost ? '盘缠不足，暂时不能刷新' : `下次 ${refreshPrice(game, player.id, 1)} 金币 · ${hero?.id === 'hero-c' ? '下一轮首刷免费' : '下一轮重置为 5'}`}</p>
       <button className="shop-leave" onClick={() => dispatch({ type: 'NEXT_ROUND' })}>离店 · 开始下一轮 <ArrowRight size={18}/></button>
       <p className="shop-counter-tip">每种商品每轮限购一张。<br/>手牌可留存，符合时机即可连续使用。</p>
+      </div>
     </aside>
     <div className="shop-tabletop">
       <header className="shop-table-heading"><div><span className="shop-overline">MID-AUTUMN CARD EMPORIUM</span><h2>一桌好彩，一手好招。</h2></div><span className="stock-round-seal">本轮限定<b>捌张</b></span></header>
@@ -105,7 +113,7 @@ export default function Shop({ game, dispatch }) {
             <button className={`card-buy-tag ${isBought ? 'is-done' : ''}`} onClick={() => inspect(item)} disabled={isBought} aria-label={`${isBought ? '本轮已购买' : '购买'}${item.name}`}>
               {isBought ? <><Check size={14}/> 已售罄</> : <><Coins size={14}/><b>{priceOf(item)}</b><span>{short ? '攒点钱' : item.category === 'god' ? '供奉' : '购买'}</span></>}
             </button>
-            {zone.id === 'field' && count > 0 && <button className="card-submit-field" disabled={submitted?.item === item.id} onClick={() => dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: item.id })}>{submitted?.item === item.id ? '已布置候选' : '布置下轮'}</button>}
+            {zone.id === 'field' && count > 0 && <button className="card-submit-field" disabled={submitted?.item === item.id} onClick={() => dispatch({ type: 'SUBMIT_FIELD', userId: player.id, item: item.id, seat: fieldSeat })}>{submitted?.item === item.id ? '已布置候选' : '布置下轮'}</button>}
           </article>;
         })}</div>
         <footer className="stock-zone-description">{zone.subtitle}</footer>
@@ -115,12 +123,12 @@ export default function Shop({ game, dispatch }) {
     </div>
     <dialog className="card-detail-dialog" ref={dialog} onCancel={() => setSelected(null)} onClose={() => setSelected(null)}>{selected && <>
       <button className="card-dialog-close" aria-label="关闭商品详情" onClick={() => setSelected(null)}><X size={20}/></button>
-      <div className={`card-detail-art card-${selected.category}`}><CardIcon id={selected.id} size={65}/></div>
+      <div className={`card-detail-art card-${selected.category}`}><ShopArtwork item={selected} /></div>
       <span className="shop-overline">{timingLabel(selected)}</span><h2>{selected.name}</h2><p>{selected.description}</p>
-      {selected.category === 'god' && <p className="card-help">神明占一个供奉位，从第 {game.round + 1} 轮持续至第 {game.round + 3} 轮。</p>}
-      {selected.target === 'player' && <label className="card-option-label">{selected.id === 'matchmaker' ? '选择异性角色缔结姻缘' : '选择承受诅咒的对手'}<select value={targetId} onChange={event => setTargetId(event.target.value)}><option value="">请选择目标</option>{targets.map(entry => <option key={entry.id} value={entry.id}>{entry.name}</option>)}</select></label>}
-      {selected.category === 'god' && ownGods.length >= 3 && selected.id !== 'matchmaker' && <label className="card-option-label">供奉已满，选择一位替换<select value={replaceId} onChange={event => setReplaceId(event.target.value)}><option value="">请选择被替换的神明</option>{ownGods.map((buff, index) => <option key={`${buff.id}-${index}`} value={buff.id}>{buffItem(buff)?.name}</option>)}</select></label>}
+      {selected.category === 'god' && <p className="card-help">神明占一个供奉位，从第 {game.round + 1} 轮持续至第 {game.round + 3} 轮。需要指定角色的神明，请在离店后的轮初阶段发动。</p>}
+      {selected.category === 'god' && ownGods.length >= 3 && <label className="card-option-label">供奉已满，选择一位替换<select value={replaceId} onChange={event => setReplaceId(event.target.value)}><option value="">请选择被替换的神明</option>{ownGods.map((buff, index) => <option key={`${buff.id}-${index}`} value={buff.id}>{buffItem(buff)?.name}</option>)}</select></label>}
       {selected.category === 'field' && <p className="card-help">购买后，点击牌下方「布置下轮」。每人可提交一张，未中选的牌会退回。</p>}
+      {selected.target === 'seat' && <p className="card-help">购买后在柜台选择「下轮吉位座位」，再布置场地。座位收益对全场公开，可用换位牌争取。</p>}
       <div className="card-detail-cost"><span>你的盘缠 <b>{player.coins}</b></span><strong><Coins size={19}/>{priceOf(selected)}<small>金币</small></strong></div>
       {reason && <p className="card-disabled-reason" role="status">{reason}</p>}
       <button className="card-confirm-button" disabled={!!reason} onClick={purchase}>{selected.category === 'god' ? '确认供奉' : '买入手牌'} <ArrowRight size={17}/></button>

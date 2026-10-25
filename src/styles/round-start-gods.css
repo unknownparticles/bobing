@@ -1,0 +1,24 @@
+.round-start-gods { width: min(100%, 560px); margin: 18px auto; padding: 22px; border: 1px solid #abc0aa; border-radius: 18px; background: #faf6e9; color: #234d40; box-shadow: 0 8px 25px #204b3910; }
+.round-start-gods-heading { display: flex; align-items: center; gap: 12px; }
+.round-start-gods-heading span, .round-start-gods > small { font-size: 12px; color: #526852; }
+.round-start-gods h2 { margin: 4px 0 0; font-size: 21px; }
+.round-start-gods p { margin: 14px 0; line-height: 1.65; font-size: 14px; }
+.round-start-gods .card-target-group { margin: 15px 0; }
+.round-start-gods .card-target-group button { min-height: 44px; }
+.round-start-gods-actions { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; }
+.round-start-gods-actions .card-confirm-button { flex: 1; margin: 0; }
+.round-start-gods-skip { min-height: 44px; border: 0; background: transparent; color: #526852; text-decoration: underline; cursor: pointer; }
+.round-start-gods button:disabled { cursor: default; opacity: .5; }
+@media (max-width: 500px) {
+  .round-start-gods { padding: 16px; margin: 12px auto; }
+  .round-start-gods h2 { font-size: 19px; }
+  .round-start-gods-actions { flex-wrap: wrap; gap: 8px; }
+}
+
+/* 轮初只需要选人，手机隐藏禁用的接碗操作栏，避免遮住目标和确认按钮。 */
+@media (max-width: 700px) {
+  .paper-round-start .paper-action-dock { display: none; }
+}
+@media (max-width: 360px) {
+  .paper-page.paper-game .paper-header { gap: 3px; }
+}
