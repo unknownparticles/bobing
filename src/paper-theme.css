@@ -39,6 +39,7 @@ svg { flex-shrink: 0; vertical-align: middle; }
 .paper-avatar { display: inline-grid; place-items: center; position: relative; width: 54px; height: 54px; background: #e7dfca; border: 3px solid var(--paper-raised); border-radius: 50%; box-shadow: 0 0 0 1px var(--paper-line); overflow: hidden; flex-shrink: 0; color: #7b8067; }
 /* 现有素材是全身立绘；在固定圆形窗口中放大头肩，不修改原始图片。 */
 .paper-avatar img { position: absolute; width: 290%; max-width: none; height: auto; max-height: none; left: 50%; top: -20%; transform: translateX(-50%); object-fit: initial; }
+.paper-avatar.has-generated-avatar img { position: static; display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; transform: none; object-fit: contain; }
 .paper-page-step { color: var(--paper-muted); font-size: 12px; letter-spacing: 3px; }
 .paper-description { color: var(--paper-muted); font-size: 13px; line-height: 1.9; }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { BriefcaseBusiness, Calculator, ClipboardCheck, CodeXml, Crown, Dices, Handshake, Megaphone, Network, Package, Palette, ShieldCheck, ShoppingBag, Users, X } from 'lucide-react';
-import { getOfficial } from '../Art';
+import { getOfficial, hasPortraitArt } from '../Art';
 import { AWARDS } from '../game/config';
 import { careerOf, careerStatus } from '../game/careers';
 import { getItem } from '../game/catalog';
@@ -17,9 +17,9 @@ const occupationIcons = {
   xu: ShieldCheck, ye: Palette, liang: Megaphone, fei: ClipboardCheck, jie: Dices,
 };
 
-/** 有正式立绘就沿用；新同事用姓名和职业图标，避免冒用其他角色的形象。 */
+/** 有正式立绘或专用头像就沿用本人形象；都没有时才用姓名和职业图标占位。 */
 export function RivalAvatar({ player }) {
-  if (getOfficial(player.portrait)) return <Avatar portrait={player.portrait} name={player.name} />;
+  if (hasPortraitArt(player.portrait)) return <Avatar portrait={player.portrait} name={player.name} />;
   const Icon = occupationIcons[player.career] || occupationIcons[player.id] || BriefcaseBusiness;
   return <span className="paper-avatar career-avatar" aria-label={`${player.name}的职业头像`}><b>{player.name.slice(0, 1)}</b><Icon size={15} aria-hidden="true" /></span>;
 }

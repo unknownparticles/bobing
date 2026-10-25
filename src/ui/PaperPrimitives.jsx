@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { UserRound, Volume2, VolumeX } from 'lucide-react';
-import { ArtworkImage, getOfficial } from '../Art';
+import { ArtworkImage, getArchiveAvatar, getOfficial } from '../Art';
 import '../styles/bowl3d.css';
 
 // 首屏仍能先画静态骰碗；3D 库加载失败也不阻断入席或结算。
@@ -9,10 +9,12 @@ const BowlCanvas = lazy(() => import('../scene/bowl3d/BowlCanvas.jsx').catch(err
   return { default: () => null };
 }));
 
-/** 统一桌边头像：放大立绘上半部，避免把整个人物缩成难辨认的小图。 */
+/** 统一桌边头像：有正式立绘就放大立绘上半部，否则用同事头像，最后才退到通用图标。 */
 export function Avatar({ portrait, name, className = '' }) {
-  const asset = getOfficial(portrait);
-  return <span className={`paper-avatar ${className}`}>
+  const official = getOfficial(portrait);
+  const avatar = official ? null : getArchiveAvatar(portrait);
+  const asset = official || avatar;
+  return <span className={`paper-avatar ${avatar ? 'has-generated-avatar' : ''} ${className}`}>
     {/* 最大头像宽 54px，CSS 将立绘放大到 290%；按约 157px 选图以保留头肩细节。 */}
     {asset ? <ArtworkImage asset={asset} alt={`${name}的头像`} sizes="157px" loading="eager" /> : <UserRound aria-label={name} size={25} />}
   </span>;

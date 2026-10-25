@@ -1,0 +1,13 @@
+{
+  "model": "gpt-image-2",
+  "size": "1024x1024",
+  "quality": "high",
+  "characters": [
+    {
+      "id": "xu",
+      "subject": "小许，女性，年轻同事，浅青色针织衫，干练亲切，手持中秋小礼盒。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-231518/raw/xu.png",
+      "avatar": "public/art/archive/avatars/xu.webp"
+    }
+  ]
+}

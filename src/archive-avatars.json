@@ -1,0 +1,77 @@
+{
+  "tang": {
+    "src": "/art/archive/avatars/tang.webp",
+    "width": 384,
+    "height": 384
+  },
+  "lu": {
+    "src": "/art/archive/avatars/lu.webp",
+    "width": 384,
+    "height": 384
+  },
+  "qiao": {
+    "src": "/art/archive/avatars/qiao.webp",
+    "width": 384,
+    "height": 384
+  },
+  "xu": {
+    "src": "/art/archive/avatars/xu.webp",
+    "width": 384,
+    "height": 384
+  },
+  "ye": {
+    "src": "/art/archive/avatars/ye.webp",
+    "width": 384,
+    "height": 384
+  },
+  "liang": {
+    "src": "/art/archive/avatars/liang.webp",
+    "width": 384,
+    "height": 384
+  },
+  "fei": {
+    "src": "/art/archive/avatars/fei.webp",
+    "width": 384,
+    "height": 384
+  },
+  "zhou": {
+    "src": "/art/archive/avatars/zhou.webp",
+    "width": 384,
+    "height": 384
+  },
+  "su": {
+    "src": "/art/archive/avatars/su.webp",
+    "width": 384,
+    "height": 384
+  },
+  "gu": {
+    "src": "/art/archive/avatars/gu.webp",
+    "width": 384,
+    "height": 384
+  },
+  "xuguan": {
+    "src": "/art/archive/avatars/xuguan.webp",
+    "width": 384,
+    "height": 384
+  },
+  "yan": {
+    "src": "/art/archive/avatars/yan.webp",
+    "width": 384,
+    "height": 384
+  },
+  "an": {
+    "src": "/art/archive/avatars/an.webp",
+    "width": 384,
+    "height": 384
+  },
+  "shen": {
+    "src": "/art/archive/avatars/shen.webp",
+    "width": 384,
+    "height": 384
+  },
+  "jie": {
+    "src": "/art/archive/avatars/jie.webp",
+    "width": 384,
+    "height": 384
+  }
+}

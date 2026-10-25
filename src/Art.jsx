@@ -1,6 +1,7 @@
 import React from 'react';
 import artManifest from './art-manifest.json';
 import officialManifest from './official-art.json';
+import avatarManifest from './archive-avatars.json';
 import artVariants from './art-variants.json';
 import './art.css';
 
@@ -27,12 +28,24 @@ function resolveArtwork(manifest) {
 const art = resolveArtwork(artManifest);
 const official = resolveArtwork(officialManifest);
 
+/** 部门与公司同事的桌边头像；按 id 稳定寻址，避免和正式立绘或旧素材混淆。 */
+const avatars = Object.fromEntries(Object.entries(avatarManifest).map(([id, asset]) => {
+  const resolvePath = path => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+  return [id, { ...asset, src: resolvePath(asset.src) }];
+}));
+
 export const officialCharacters = official.filter(item => item.type === 'character');
 export const scenes = official.filter(item => item.type === 'scene');
 export const defaultPortrait = 'hero-a';
 
 /** 查询正式角色或场景；未知 id 返回 undefined，由展示组件提供占位。 */
 export function getOfficial(id) { return official.find(item => item.id === id); }
+
+/** 查询同事头像；正式立绘不在此列，头像只在没有全身立绘时使用。 */
+export function getArchiveAvatar(id) { return avatars[id]; }
+
+/** 是否已有可用形象：正式立绘或同事头像，二者皆无才由组件给出占位。 */
+export function hasPortraitArt(id) { return !!getOfficial(id) || !!getArchiveAvatar(id); }
 
 /** 复用清单中的响应式候选；sizes 应传入图片经 CSS 放大后的宽度。 */
 export function ArtworkImage({ asset, alt = '', className = '', sizes = '100vw', loading = 'lazy', fetchPriority = 'auto' }) {

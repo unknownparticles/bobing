@@ -1,0 +1,49 @@
+{
+  "model": "gpt-image-2",
+  "size": "1024x1024",
+  "quality": "high",
+  "characters": [
+    {
+      "id": "su",
+      "subject": "苏姐，女性，成熟亲切，米色职业套装，轻松微笑，手持无字资料夹。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/su.png",
+      "avatar": "public/art/archive/avatars/su.webp"
+    },
+    {
+      "id": "gu",
+      "subject": "顾工，男性，技术主管，细框眼镜，深青绿色休闲衬衫，沉稳细致，手持合上的笔记本电脑。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/gu.png",
+      "avatar": "public/art/archive/avatars/gu.webp"
+    },
+    {
+      "id": "xuguan",
+      "subject": "许冠，男性，销售主管，利落西装，朱红口袋巾，自信爽朗，手持中秋礼盒。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/xuguan.png",
+      "avatar": "public/art/archive/avatars/xuguan.webp"
+    },
+    {
+      "id": "yan",
+      "subject": "严主管，男性，测试主管，整洁青灰衬衫，严谨但友善，手持放大镜与无字检查板。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/yan.png",
+      "avatar": "public/art/archive/avatars/yan.webp"
+    },
+    {
+      "id": "an",
+      "subject": "安主管，女性，行政主管，浅青色职业套装，温暖可靠，手持茶盘与小月饼盒。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/an.png",
+      "avatar": "public/art/archive/avatars/an.webp"
+    },
+    {
+      "id": "shen",
+      "subject": "沈主管，女性，风控主管，深绿西装，冷静从容，手持一柄收起的小伞和无字资料夹。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/shen.png",
+      "avatar": "public/art/archive/avatars/shen.webp"
+    },
+    {
+      "id": "jie",
+      "subject": "阿杰，男性，年轻同事，蓝色休闲衬衫，开朗机灵，手持一颗象牙骰子。",
+      "raw": "output/imagegen/archive-avatar-regeneration/20261024-233004/raw/jie.png",
+      "avatar": "public/art/archive/avatars/jie.webp"
+    }
+  ]
+}

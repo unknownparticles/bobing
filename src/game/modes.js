@@ -72,20 +72,20 @@ export function seatsForCount(count) {
   return Array.from({ length: count }, (_, index) => index === 0 ? 'bottom' : `seat-${index}`);
 }
 
-/** 同桌角色的稳定身份；角色图鉴和入桌名单共用，不能用头像代替身份。 */
+/** 同桌角色的稳定身份；portrait 指向正式立绘或同事头像，角色图鉴和入桌名单共用，不能用头像代替身份。 */
 export const COLLEAGUES = [
   { id: 'chen', name: '陈主管', title: '鸿运型', portrait: 'chen', gender: 'male' },
   { id: 'mei', name: '小美', title: '稳健型', portrait: 'mei', gender: 'female' },
   { id: 'wu', name: '老吴', title: '掠夺型', portrait: 'wu', gender: 'male' },
   { id: 'lin', name: '大林', title: '控制型', portrait: 'lin', gender: 'male' },
-  { id: 'jie', name: '阿杰', title: '赌徒型', gender: 'male' },
-  { id: 'xu', name: '小许', title: '稳健型', gender: 'female' },
-  { id: 'qiao', name: '乔经理', title: '控制型', gender: 'female' },
-  { id: 'zhou', name: '周总', title: '鸿运型', gender: 'male' },
-  { id: 'su', name: '苏姐', title: '掠夺型', gender: 'female' },
+  { id: 'jie', name: '阿杰', title: '赌徒型', portrait: 'jie', gender: 'male' },
+  { id: 'xu', name: '小许', title: '稳健型', portrait: 'xu', gender: 'female' },
+  { id: 'qiao', name: '乔经理', title: '控制型', portrait: 'qiao', gender: 'female' },
+  { id: 'zhou', name: '周总', title: '鸿运型', portrait: 'zhou', gender: 'male' },
+  { id: 'su', name: '苏姐', title: '掠夺型', portrait: 'su', gender: 'female' },
 ];
 
-/** 按总人数创建独立身份；未配置立绘的同事使用现有通用头像。 */
+/** 按总人数创建独立身份；portrait 已覆盖正式立绘与同事头像，仍未配置形象的同事使用通用头像。 */
 export function createPlayers(profile, count, match) {
   const rivals = match?.mode === 'story' ? chapterRivals(match.chapterIndex) : COLLEAGUES;
   if (match?.mode === 'story' && rivals.length + 1 !== count) throw new RangeError('章节阵容与人数不符');
